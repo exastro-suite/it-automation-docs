@@ -432,9 +432,45 @@ animation: tabOpenContent 0.6s;
 #articleBody .tabContents .tabContent h3:first-child {
 margin-top: 0;
 }
-
+#articleBody .floatContents {
+letter-spacing: -0.4em;
+}
+#articleBody .halfContent {
+display: inline-block;
+width: 50%;
+letter-spacing: normal;
+vertical-align: top;
+}
+#articleBody .halfContent:nth-child(odd) {
+padding-right: 16px;
+}
+#articleBody .halfContent:nth-child(even) {
+padding-left: 16px;
+}
+#articleBody .floatContents .slide {
+float: none;
+width: 100%;
+margin-left: 0;
+}
+#articleBody .floatContents p {
+text-align: center;
+margin-left: 0;
+}
 
 @media screen and ( max-width: 1024px ){
+
+#articleBody .halfContent {
+display: block;
+width: 100%;
+}
+#articleBody .halfContent:nth-child(odd) {
+padding: 0;
+}
+#articleBody .floatContents .slide {
+width: 50%;
+margin: 0 auto;
+}
+
 } /* /1024px */
 
 @media screen and ( max-width: 640px ){
@@ -544,6 +580,9 @@ padding: 8px;
 }
 #articleBody .tabContents ul.tabMenu li a br {
 display: inline;
+}
+#articleBody .floatContents .slide {
+width: 100%;
 }
 
 } /* /640px */
