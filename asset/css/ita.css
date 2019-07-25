@@ -463,7 +463,8 @@ margin-left: 0;
 display: block;
 width: 100%;
 }
-#articleBody .halfContent:nth-child(odd) {
+#articleBody .halfContent:nth-child(odd),
+#articleBody .halfContent:nth-child(even) {
 padding: 0;
 }
 #articleBody .floatContents .slide {
@@ -532,8 +533,10 @@ font-size: 3vw;
 #articleBody h6 {
 font-size: 3vw;
 }
-#articleBody p {
+#articleBody p,
+#articleBody .floatContents p {
 margin: 16px 0 16px 1em;
+text-align: left;
 font-size: 3vw;
 }
 #articleBody ul,
