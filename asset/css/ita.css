@@ -30,8 +30,8 @@ animation: titleBackground 0.5s;
   0% { opacity: 0; }
 100% { opacity: 1; }
 }
-#website.home #articleTitle .background { background-image: url("../img/header_home.jpg"); }
-#website.en.home #articleTitle .background { background-image: url("../img/en_header_home.jpg"); }
+#website.index #articleTitle .background { background-image: url("../img/header_home.jpg"); }
+#website.en.index #articleTitle .background { background-image: url("../img/en_header_home.jpg"); }
 #article.overview #articleTitle .background { background-image: url("../img/header_overvier.jpg"); }
 #article.learn #articleTitle .background { background-image: url("../img/header_learn.jpg"); }
 #article.documents #articleTitle .background { background-image: url("../img/header_documents.jpg"); }
@@ -596,15 +596,15 @@ width: 100%;
    Home
 
 ** -------------------------------------------------- */
-#website.home #articleTitle {
+#website.index #articleTitle {
 max-width: 1920px; max-height: 100vh;
 height: 640px;
 margin: 0 auto;
 }
-#website.home #articleBody section {
+#website.index #articleBody section {
 padding: 96px 16px;
 }
-#website.home #articleBody h2 {
+#website.index #articleBody h2 {
 margin-bottom: 64px; padding: 16px 32px;
 background-color: rgba( 255, 255, 255, 0.5 );
 border: 1px solid #8095B0;
@@ -613,10 +613,10 @@ font-weight: bold;
 
 color: #002B62;
 }
-#website.home #articleBody p {
+#website.index #articleBody p {
 margin: 64px 0;
 }
-#website.home #articleBody #why h2 {
+#website.index #articleBody #why h2 {
 margin-bottom: 48px;
 }
 #articleBody #why ul {
@@ -712,7 +712,7 @@ animation: gearAnimation 5s linear infinite;
 
 @media screen and ( max-width: 1260px ){
 
-#website.home #articleTitle {
+#website.index #articleTitle {
 height: 480px;
 }
 #articleBody #why ul {
@@ -724,7 +724,7 @@ margin-left: 0;
 
 @media screen and ( max-width: 1024px ){
 
-#website.home #articleTitle {
+#website.index #articleTitle {
 height: 400px;
 }
 #articleBody #why li {
@@ -735,7 +735,7 @@ width: 50%;
 
 @media screen and ( max-width: 768px ){
 
-#website.home #articleTitle section .sectionInner {
+#website.index #articleTitle section .sectionInner {
 padding-top: 24px;
 }
 
@@ -743,21 +743,21 @@ padding-top: 24px;
 
 @media screen and ( max-width: 640px ){
 
-#website.home #articleTitle {
+#website.index #articleTitle {
 height: 480px;
 }
-#website.home #articleTitle .background,
-#website.en.home #articleTitle .background {
+#website.index #articleTitle .background,
+#website.en.index #articleTitle .background {
 background-image: url("../img/header_home_sp.jpg");
 }
-#website.home #articleBody section {
+#website.index #articleBody section {
 padding: 48px 16px;
 }
-#website.home #articleBody h2 {
+#website.index #articleBody h2 {
 margin-bottom: 32px; padding:  8px 16px;
 font-size: 4vw;
 }
-#website.home #articleBody #why h2 {
+#website.index #articleBody #why h2 {
 margin-bottom: 16px;
 }
 #articleBody #why ul {
@@ -799,7 +799,7 @@ font-size: 3.5vw;
 #articleBody #features dd {
 font-size: 3vw;
 }
-#website.home #articleBody p {
+#website.index #articleBody p {
 margin: 32px 0;
 font-size: 3vw;
 }
