@@ -156,8 +156,9 @@ Overview</h1>
 <nav id="contentsMenu">
   <ul>
     <li><a href="#systemLifeCycle" class="touch">システムライフサイクル <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#astrollOverview" class="touch">IT Automationの概要 <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#appliedUsage" class="touch">IT Automationの応用 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#astrollOverview" class="touch">概要 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#overallView" class="touch">システム構成 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#appliedUsage" class="touch">応用 <i class="fas fa-angle-down"></i></a></li>
   </ul>
 </nav>
 
@@ -203,6 +204,50 @@ Overview</h1>
   </div>
 </section>
 
+<section id="overallView">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em>のシステム構成（全体図）</h2>
+    
+    <p><span class="exImage"><img src="./asset/img/system_overall.png" alt="Overview"></span></p>
+
+    <h3>管理コンソール機能</h3>
+
+    <p>利用ユーザの権限設定を行う機能です。各ユーザに対して適切なロールの設定が可能です。</p>
+    
+    <h3>構築資材管理機能</h3>
+
+    <p>Exastro IT Automationで使用する資材（Playbook、ファイル）の管理を行います。<br>
+    Gitを利用した資材の更新履歴管理と、チェックイン/チェックアウト方式による、資材の払出/払戻管理を行います。<br>
+    また、各自動化ソフトウエア用_driverで使用している資材と紐付を行うことで、払戻し時に自動で資材を更新することが可能です。</p>
+    
+    <h3>基本コンソール機能</h3>
+    
+    <p>オペレーションの設定、実行、監視を行います。また過去の実行結果の参照も可能です。</p>
+    
+    <h3>各自動化ソフトウエアに対応したドライバー群</h3>
+    
+    <p>各自動化ソフトウエアで使用するplaybook・Movementの管理を行います。<br>
+    プレイブックとパラメータを別々に管理し、それらを組合わせてMovementを構成します。<br>
+    パラメータは変数として管理しているので、代入値管理から具体値の設定を行えます。</p>
+    
+    <h3>パラメータ（ホスト）用</h3>
+    
+    <p>パラメータの具体値を設定します。パラメータシートはオペレーション単位で作成することが可能です。<br>
+    パラメータ項目は各自動化ソフトウエア用_driverで管理している変数と紐つけることによって、変数の具体値として登録することができます。また、パラメータ値のメンテナンスはweb画面、エクセルシート・REST-APIで行うことができます。</p>
+    
+    <h3>パラメータ（ホストグループ用）</h3>
+    
+    <p>パラメータ値が各ホスト間で同一の場合や、グループ単位で同一の場合には、ホストグループとして定義を行い、パラメータ値の管理をまとめて行うことができます。<br>
+    また、ホストグループで設定を行った場合は、配下のホストが他のホストグループに異動した場合に、異動先のホストグループのパラメータ値が適用されるなどの利点があります。また、パラメータ値のメンテナンスはweb画面、エクセルシート・REST-APIで行うことができます。</p>
+    
+    <h3>トレーニング用ドキュメントについて</h3>
+    
+    <p>構成図上にドキュメントマークが付いている機能については、詳細を説明するドキュメント（スライド、PDFファイル）が有ります。メニュー「<a href="learn_ja.html">Learn</a>」→「<a href="learn_ja.html#quickStart">Exastro IT Automation を触ってみよう</a>」から、各ドキュメント名の資料を参照してください。</p>
+    
+
+  </div>
+</section>
 <section id="appliedUsage">
   <div class="sectionInner">
     <h2><em>Exastro IT Automation</em> の応用</h2>
@@ -256,6 +301,7 @@ Overview</h1>
           <ul class="footerMainMenuChildren">
             <li><a href="../docs/index_ja.html#why">Why Exastro</a></li>
             <li><a href="../docs/index_ja.html#suite">Exastro Suite</a></li>
+            <!--<li><a href="../docs/asset_ja.html">Asset</a></li>-->
           </ul>
         </li>
         <li id="footerIta">
