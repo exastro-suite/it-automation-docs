@@ -36,6 +36,7 @@ animation: titleBackground 0.5s;
 #article.learn #articleTitle .background { background-image: url("../img/header_learn.jpg"); }
 #article.documents #articleTitle .background { background-image: url("../img/header_documents.jpg"); }
 #article.downloads #articleTitle .background { background-image: url("../img/header_downloads.jpg"); }
+#article.asset #articleTitle .background { background-image: url("../img/header_asset.jpg"); }
 
 #articleTitle section {
 display: table;
@@ -121,7 +122,8 @@ text-align: center;
 #articleBody nav ul li:first-child {
 border-left: 1px solid #EFEFEF;
 }
-#articleBody nav a {
+#articleBody nav a,
+#articleBody nav span {
 display: block;
 padding: 16px 32px;
 border-right: 1px solid #EFEFEF;
@@ -130,15 +132,59 @@ text-decoration: none;
 font-size: 12px;
 color: #AAA;
 }
-#articleBody nav a.hover {
+#articleBody nav a.hover,
+#articleBody nav span.hover {
 background-color: #EFEFEF;
 }
-#articleBody nav a i {
+#articleBody nav a i,
+#articleBody nav span i {
 transition-duration: 0.3s;
 }
 #articleBody nav a.hover i {
 transform: translateY( 2px );
 }
+#articleBody nav span.hover i {
+opacity: 0.5;
+}
+#articleBody nav .toggleMenu {
+position: relative;
+}
+#articleBody nav .toggleMenu ul {
+display: none;
+}
+#articleBody nav .toggleMenu ul.open {
+position: fixed;
+top: 0; left: 0;
+z-index: 10000;
+width: auto;
+padding: 8px 0;
+background-color: #FFF;
+/* background-image: linear-gradient( -45deg, #FFFFFF 25%, #F6F6F6 25%, #F6F6F6 50%, #FFFFFF 50%, #FFFFFF 75%, #F6F6F6 75%, #F6F6F6 100%); */
+background-size: 8px 8px;
+border: 1px solid #DDD;
+border-radius: 4px;
+box-shadow: 0 0 8px rgba( 0,0,0,0.1 );
+}
+#articleBody nav .toggleMenu ul.open.over {
+left: auto!important;
+right: 4px;
+}
+#articleBody nav .toggleMenu ul.open li {
+border: none;
+background-color: #FFF;
+}
+#articleBody nav .toggleMenu ul.open li a {
+padding: 12px 24px;
+border: none;
+border-top: 1px solid #EFEFEF;
+white-space: nowrap;
+}
+#articleBody nav .toggleMenu ul.open li:last-child a {
+border-bottom: 1px solid #EFEFEF;
+}
+
+
+
 
 #articleBody {
 background: url("../../../docs/asset/img/content_back.png");
@@ -510,13 +556,22 @@ vertical-align: bottom;
 #articleBody nav ul li:nth-of-type( odd ) {
 border-right: 1px solid #EFEFEF;
 }
-#articleBody nav a {
+#articleBody nav a,
+#articleBody nav span {
 padding: 8px 16px;
 border: none;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 }
+#articleBody nav .toggleMenu ul {
+overflow: visible;
+}
+#articleBody nav .toggleMenu li {
+width: 100%;
+}
+
+
 #articleBody h2 {
 font-size: 4vw;
 }
