@@ -37,6 +37,7 @@ animation: titleBackground 0.5s;
 #article.documents #articleTitle .background { background-image: url("../img/header_documents.jpg"); }
 #article.downloads #articleTitle .background { background-image: url("../img/header_downloads.jpg"); }
 #article.asset #articleTitle .background { background-image: url("../img/header_asset.jpg"); }
+#article.newsroom #articleTitle .background { background-image: url("../img/header_newsroom.jpg"); }
 
 #articleTitle section {
 display: table;
