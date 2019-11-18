@@ -14,6 +14,7 @@
 <!-- InstanceParam name="pageType" type="text" value="website" -->
 <!-- InstanceParam name="pageTitle" type="text" value="index" -->
 
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,6 @@
 <!-- InstanceEndEditable -->
 <!-- Stylesheet and JavaScript -->
 <link rel="stylesheet" type="text/css" href="../docs/asset/css/common.css">
-<link rel="stylesheet" type="text/css" href="../docs/asset/css/home.css">
 <noscript><link rel="stylesheet" type="text/css" href="../docs/asset/css/noscript.css"></noscript>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
@@ -33,8 +33,9 @@
 <script src="../docs/asset/js/jquery-1.11.3.js"></script>
 <script src="../docs/asset/js/common.js"></script>
 
+
 <link rel="stylesheet" type="text/css" href="asset/css/ita.css">
-<script src="asset/js/ita.js"></script>
+<script src="../docs/asset/js/article.js"></script>
 
 <link rel="alternate" hreflang="en" href="https://exastro-suite.github.io/it-automation-docs/index.html">
 <link rel="alternate" hreflang="ja" href="https://exastro-suite.github.io/it-automation-docs/index_ja.html">
@@ -78,7 +79,7 @@
 <div id="titleArea">
 
 <div id="logo">
-<a href="#"><img src="../docs/asset/img/exastro.png" alt="Exastro"></a>
+<a href="#"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></a>
 </div>
 <div id="suiteList">
   <ul>
@@ -86,13 +87,13 @@
     <li class="exastro"><a href="../docs/index_ja.html">Exastro Home</a></li>
     <li class="ita"><a href="index_ja.html">IT Automation</a></li>
     <li class="pc"><span class="underConstruction">Playbook Collection</span></li>
-    <li class="oase"><span class="underConstruction">Operation Autonomy Support Engine</span></li>
+    <li class="oase"><span>Operation Autonomy Support Engine</span></li>
     
   </ul>
 </div>
 
 <div id="mainTitle">
-<a href="index_ja.html"><span>IT Automation</span></a>
+<a href="index_ja.html"><span><img src="asset/img/ita.svg" alt="IT Automation"></span></a>
 </div>
 
 </div>
@@ -146,8 +147,8 @@
 <!-- InstanceBeginEditable name="EditContentHeaderArea" --><h1><small>Exastro</small><br>
 IT Automation</h1>
 <p>Exastro IT Automationは<br>
-システムの設計・構築・運用に<br>
-付加価値を提供するためのOSSです。</p>
+システム情報をデジタル管理し、<br>
+設計・構築・運用に付加価値を提供するOSSです。</p>
 <ul>
   <li><a href="downloads_ja.html" class="touch">Download</a></li>
   <li><a href="#why" class="touch">Description</a></li>
@@ -166,21 +167,21 @@ IT Automation</h1>
         <dl>
           <dt><i class="fas fa-times-circle"></i>データ多重管理による<br>設計ミス</dt>
           <dd class="text"><i class="fas fa-check-circle"></i>データを一括で管理、二重管理による設計ミスを防ぎます。</dd>
-          <dd class="image"><img src="./asset/img/home_image01.jpg" alt="Exastro IT Automation 画面1"></dd>
+          <dd class="image"><span class="loupe touch"><img src="./asset/img/home_image01.jpg" alt="Exastro IT Automation 画面1"></span></dd>
         </dl>
       </li>
       <li>
         <dl>
           <dt><i class="fas fa-times-circle"></i>複雑な人手作業による<br>オペレーションミス</dt>
           <dd class="text"><i class="fas fa-check-circle"></i>構築作業は自動実行、実行状況をわかりやすく表示します。</dd>
-          <dd class="image"><img src="./asset/img/home_image02.jpg" alt="Exastro IT Automation 画面2"></dd>
+          <dd class="image"><span class="loupe touch"><img src="./asset/img/home_image02.jpg" alt="Exastro IT Automation 画面2"></span></dd>
         </dl>
       </li>
       <li>
         <dl>
           <dt><i class="fas fa-times-circle"></i>作業記録不足による<br>障害対応遅延</dt>
           <dd class="text"><i class="fas fa-check-circle"></i>作業記録をしっかりと管理、作業の成否をレポートします。</dd>
-          <dd class="image"><img src="./asset/img/home_image03.jpg" alt="Exastro IT Automation 画面3"></dd>
+          <dd class="image"><span class="loupe touch"><img src="./asset/img/home_image03.jpg" alt="Exastro IT Automation 画面3"></span></dd>
         </dl>
       </li>
     </ul>
@@ -190,45 +191,20 @@ IT Automation</h1>
 
 <section id="features">
   <div class="sectionInner">
-    <h2><em>Exastro IT Automation</em> の主な特徴です。</h2>
-    <ul>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> 複数のインタフェースを提供する</dt>
-          <dd>構築コードやパラメータを複数のインタフェース(Web、Excel、RestAPI)から一元管理できます。</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> 構築コードの再利用性を高める</dt>
-          <dd>構築コードをモジュール化して再利用性を高めることができます。実行時にはそれらを繋ぎ合わせて利用します。</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> 変数名などのタイプミスを防止する</dt>
-          <dd>構築コードを自動解析して変数名を割り出します。変数名は選択して利用するのでタイプミスは起こりません。</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> パラメータを世代管理する</dt>
-          <dd>変数に設定するパラメータを世代管理できます。過去に設計したパラメータを検索することも可能です。</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> 複数の自動化ソフトウェアをコントロールする</dt>
-          <dd>複数の自動化ソフトウェアをコントロールできます。自動化ソフトウェアの動作に必要なインプットデータを自動生成します。</dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt><i class="fas fa-cog"></i> 作業をリアルタイムで監視する</dt>
-          <dd>構築コードの実行状況をリアルタイムに監視できます。また、実行ログを収集し、実行の成否をレポートします。</dd>
-        </dl>
-      </li>
-    </ul>
+    <h2><em>Exastro IT Automation</em> の７つの特徴です。</h2>
+    <div id="featuresList">
+      <svg id="svgArea" width="100%" height="100%" >
+      </svg>
+      <ol>
+        <li><a href="overview_ja.html#feature1"><i class="fas fa-cog"></i>　マルチインタフェースとRBAC</a></li>
+        <li><a href="overview_ja.html#feature2"><i class="fas fa-cog"></i>　パラメータをグルーピング／履歴管理する</a></li>
+        <li><a href="overview_ja.html#feature3"><i class="fas fa-cog"></i>　IaCを解析して変数を刈り取る</a></li>
+        <li><a href="overview_ja.html#feature4"><i class="fas fa-cog"></i>　IaCをモジュール管理して再利用性を高める</a></li>
+        <li><a href="overview_ja.html#feature5"><i class="fas fa-cog"></i>　複数の自動化ソフトウェアを繋げて実行する</a></li>
+        <li><a href="overview_ja.html#feature6"><i class="fas fa-cog"></i>　自動化を止めない最後の切り札Pioneerモード</a></li>
+        <li><a href="overview_ja.html#feature7"><i class="fas fa-cog"></i>　実行状況をリアルタイムで監視する</a></li>
+      </ol>
+    </div>
     <p class="linkArea"><a href="./learn_ja.html" class="move"><span>Exastro IT Automation を始める <i class="fas fa-angle-right"></i></span></a></p>
   </div>
 </section>
@@ -265,7 +241,7 @@ IT Automation</h1>
   <div id="footerInner">
 
     <div id="footerAbout">
-      <div id="footerLogo"><img src="../docs/asset/img/exastro.png" alt="Exastro"></div>
+      <div id="footerLogo"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></div>
       <p>Exastro is an open source software suite for digitizing, automating and labor saving the system life cycle.</p>
     </div>
 
@@ -273,7 +249,7 @@ IT Automation</h1>
 
       <ul id="footerMainMenu">
         <li id="footerExastro">
-          <div class="footerMainMenuHome"><a href="../docs/index_ja.html">Exastro</a></div>
+          <div class="footerMainMenuHome"><a href="../docs/index_ja.html"><img src="../docs/asset/img/exastro_logotype.svg" alt="Exastro"></a></div>
           <ul class="footerMainMenuChildren">
             <li><a href="../docs/index_ja.html#why">Why Exastro</a></li>
             <li><a href="../docs/index_ja.html#suite">Exastro Suite</a></li>
@@ -282,12 +258,21 @@ IT Automation</h1>
           </ul>
         </li>
         <li id="footerIta">
-          <div class="footerMainMenuHome"><a href="index_ja.html">IT Automation</a></div>
+          <div class="footerMainMenuHome"><a href="index_ja.html"><img src="asset/img/ita.svg" alt="IT Automation"></a></div>
           <ul class="footerMainMenuChildren">
             <li><a href="overview_ja.html" class="overview">Overview</a></li>
             <li><a href="learn_ja.html" class="learn">Learn</a></li>
             <li><a href="documents_ja.html" class="documents">Documents</a></li>
             <li><a href="downloads_ja.html" class="downloads">Downloads</a></li>
+          </ul>
+        </li>
+        <li id="footerOase">
+          <div class="footerMainMenuHome"><a href="../operation-autonomy-support-engine-docs/index_ja.html"><img src="../operation-autonomy-support-engine-docs/asset/img/oase.svg" alt="OASE | Operation Autonomy Support Engine"></a></div>
+          <ul class="footerMainMenuChildren">
+            <li><a href="../operation-autonomy-support-engine-docs/overview_ja.html" class="overview">Overview</a></li>
+            <!--<li><a href="../operation-autonomy-support-engine-docs/learn_ja.html" class="learn">Learn</a></li>
+            <li><a href="../operation-autonomy-support-engine-docs/documents_ja.html" class="documents">Documents</a></li>
+            <li><a href="../operation-autonomy-support-engine-docs/downloads_ja.html" class="downloads">Downloads</a></li>-->
           </ul>
         </li>
       </ul>
@@ -327,6 +312,7 @@ IT Automation</h1>
 
 
 <!-- InstanceBeginEditable name="EditFooterArea" -->
+<script>featuresSvgLineDraw();</script>
 <!-- InstanceEndEditable -->
 
 

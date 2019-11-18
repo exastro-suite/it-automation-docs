@@ -14,6 +14,7 @@
 <!-- InstanceParam name="pageType" type="text" value="article" -->
 <!-- InstanceParam name="pageTitle" type="text" value="overview" -->
 
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,6 @@
 <!-- InstanceEndEditable -->
 <!-- Stylesheet and JavaScript -->
 <link rel="stylesheet" type="text/css" href="../docs/asset/css/common.css">
-<link rel="stylesheet" type="text/css" href="../docs/asset/css/home.css">
 <noscript><link rel="stylesheet" type="text/css" href="../docs/asset/css/noscript.css"></noscript>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
@@ -33,8 +33,9 @@
 <script src="../docs/asset/js/jquery-1.11.3.js"></script>
 <script src="../docs/asset/js/common.js"></script>
 
+
 <link rel="stylesheet" type="text/css" href="asset/css/ita.css">
-<script src="asset/js/ita.js"></script>
+<script src="../docs/asset/js/article.js"></script>
 
 <link rel="alternate" hreflang="en" href="https://exastro-suite.github.io/it-automation-docs/overview.html">
 <link rel="alternate" hreflang="ja" href="https://exastro-suite.github.io/it-automation-docs/overview_ja.html">
@@ -78,7 +79,7 @@
 <div id="titleArea">
 
 <div id="logo">
-<a href="#"><img src="../docs/asset/img/exastro.png" alt="Exastro"></a>
+<a href="#"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></a>
 </div>
 <div id="suiteList">
   <ul>
@@ -86,13 +87,13 @@
     <li class="exastro"><a href="../docs/index_ja.html">Exastro Home</a></li>
     <li class="ita"><a href="index_ja.html">IT Automation</a></li>
     <li class="pc"><span class="underConstruction">Playbook Collection</span></li>
-    <li class="oase"><span class="underConstruction">Operation Autonomy Support Engine</span></li>
+    <li class="oase"><span>Operation Autonomy Support Engine</span></li>
     
   </ul>
 </div>
 
 <div id="mainTitle">
-<a href="index_ja.html"><span>IT Automation</span></a>
+<a href="index_ja.html"><span><img src="asset/img/ita.svg" alt="IT Automation"></span></a>
 </div>
 
 </div>
@@ -155,57 +156,80 @@ Overview</h1>
 <!-- InstanceBeginEditable name="EditContentBodyArea" -->
 <nav id="contentsMenu">
   <ul>
-    <li><a href="#systemLifeCycle" class="touch">システムライフサイクル <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#astrollOverview" class="touch">概要 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#overview" class="touch">概要 <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#appliedUsage" class="touch">応用 <i class="fas fa-angle-down"></i></a></li>
   </ul>
 </nav>
 
-<section id="systemLifeCycle">
-  <div class="sectionInner">
-    <h2><em>Exastro IT Automation</em> が目指すシステムライフサイクル</h2>
-    <p><span class="exImage"><img src="../it-automation-docs/asset/img/system.png" alt="システムライフサイクルサポート"></span></p>
-  </div>
-</section>
-
-<section id="astrollOverview">
+<section id="overview">
   <div class="sectionInner">
     <h2><em>Exastro IT Automation</em> の概要</h2>
 
-    <p><span class="exImage"><img src="../it-automation-docs/asset/img/system_overview.png" alt="概要イメージ図"></span></p>
+    <p><span class="exImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/system_overview.png" alt="概要イメージ図"></span></span></p>
+    
 
-    <h3>一元管理されたシステムのパラメータを様々な手段でメンテナンス可能</h3>
+    <h3 id="feature1" class="toggleHeading">マルチインタフェースとRBAC</h3>
+    
+    <div class="toggleText">
+      <div class="rightImage image25"><img src="./asset/img/system_management.png" alt="マルチインターフェース"></div>
+      <p>ユーザ操作を3種類の<em>I/F（Web, Excel, Rest API）</em>から実行できます。またどのI/Fからの操作でも<em>「誰が・いつ・何をしたか？」を記録</em>します。</p>
+      <hr>
+      <div class="rightImage"><dl class="image"><dt>RBACの例</dt><dd><span class="loupe touch"><img src="../it-automation-docs/asset/img/rbac_image.png" alt="RBACの例"></span></dd><dd class="note">※ユーザ1は、メニューCに対して『メンテナンス可』と『閲覧のみ』両方の権限がありますが、『メンテナンス可』の権限が優先されます。</dd></dl></div>
+      <p>RBAC（Role-based access control）を備えており、開発者、作業者、運用者といった役割りを定義でき、<em>その役割りごとに出来ること（参照のみ、更新、実行）を制御</em>できます。</p>
+    </div>
+    
+    <h3 id="feature2" class="toggleHeading">パラメータをグルーピング／履歴管理する</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/parameters_image.png" alt="グルーピング/履歴管理"></span></div>
+    <p>システムのパラメータ情報を<em>グルーピング／履歴管理</em>できます。</p>
+    </div>
+    
+    <h3 id="feature3" class="toggleHeading">IaCを解析して変数を刈り取る</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/iac_analysis_image.png" alt="IaCを解析"></span><span class="note">※誤りがなければ、新たに「VAR_name」という変数を登録<br>同じく誤りがなければ、IaCを管理する</span></div>
+    <p>ITAではIaCがアップロードされるとまず<strogn>IaCに誤りが無いか解析</strogn>します。誤りがなければ、IaCの記述から<em>変数名を刈り取って管理</em>します。変数名を選択式で利用するので<em>誤植等のヒューマンエラーは起きません</em>。</p>
+    </div>
+    
+    <h3 id="feature4" class="toggleHeading">IaCをモジュール管理して再利用性を高める</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/iac_module_image.png" alt="モジュール管理"></span></div>
+    <p>ITAではIaC(Playbook等)を一発モノで終わらせず<em>再利用して利用し続けられるように、モジュール化して作業時に組み立てる</em>ことが可能です。</p>
+    </div>
 
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/system_management.png" alt="メンテナンス"></div>
+    <h3 id="feature5" class="toggleHeading">複数の自動化ソフトウェアを繋げて実行する</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/ita_chain_image.png" alt="複数の自動化ソフトウェアを繋げる"></span></div>
+    <p>複数の自動化ソフトウェアを繋げて<em>一本の作業フローを定義</em>できます。また自動化ソフトウェアの動作に必要な<em>投入データを自動生成</em>します。</p>
+    <p class="note">例（Ansibleの場合）：必要なPlaybookを集めて繋げ、ノード毎にパラメータからhost_varsを作る</p>
+    </div>
+    
+    <h3 id="feature6" class="toggleHeading">自動化を止めない最後の切り札Pioneerモード</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/ita_pioneer_image.png" alt="Pioneerモード"></span></div>
+    <p>Ansibleのどのモジュールを使っても自動化できない場合に、手動作業を挟んでしまうと自動化のメリットが半減します。そこで、<em>自動化を止めない最後の切り札として、ITAではPioneerモードをご用意</em>しています。</p>
+    </div>
+    
+    <h3 id="feature7" class="toggleHeading">実行状況をリアルタイムで監視する</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/realtime_image.png" alt="実行状況をリアルタイム把握"></span></div>
+    <p>ITAは<em>手動作業と比較して遜色なく実行状況をリアルタイム把握できることを重視</em>しています。また実行結果（作業エビデンス）を欲しい時にダウンロードできるなど、<em>作業記録をしっかりと管理</em>します。</p>
+    </div>
 
-    <p>IT Automationを利用すれば、システムに投入するパラメータを一元管理できます。パラメータはWeb UIを利用して簡単にメンテナンスを行うことができます。<br>
-    またWeb UIの他にも、使い慣れたExcelシートを利用したり、IT AutomationのREST APIを利用したりしてメンテナンスを行うことができます。</p>
-
-    <h3>構築コードをモジュール化して管理することによる再利用性の向上</h3>
-
-    <div class="rightImage image25"><img src="../it-automation-docs/asset/img/system_module.png" alt="モジュール"></div>
-
-    <p>IT Automationは構築コードをモジュール化して管理できます。<br>
-    IT Automationを利用したシステムの自動構築は、モジュール化された構築コードを繋ぎ合わせてワークフローを作成し、そのワークフローとパラメータを組み合わせることで実行されます。そのため、共通的な構築コードを切り出してモジュール化することにより、構築コードを様々なワークフローで再利用することができます。</p>
-
-    <h3>自動化ソフトウェアの実行管理</h3>
-
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/system_run.png" alt="ワークフロー"></div>
-    <p>ワークフローを構成する構築コードは、ANSIBLEをはじめとした自動化ソフトウェアによって実行されます。どの自動化ソフトウェアを動作させるのかは、構築作業の内容と自動化ソフトウェアの特徴とのマッチングで選択して頂くことが可能です。</p>
-
-    <h3>実行状況をリアルタイムで監視</h3>
-
-    <div class="rightImage"><img src="../it-automation-docs/asset/img/system_realtime.png" alt="リアルタイムで監視"></div>
-
-    <p>自動化ソフトウェアによる構築コードの実行状況をリアルタイムに監視できます。<br>
-    ワークフローの途中に保留ポイントを設けることができます。また実行途中に想定外の事象が発生した場合に緊急停止できます。<br>
-    実行後には実行ログを収集し、実行の成否をレポートします。</p>
   </div>
 </section>
 
 <section id="appliedUsage">
   <div class="sectionInner">
     <h2><em>Exastro IT Automation</em> の応用</h2>
+    
+    <h3><em>Exastro IT Automation</em> が目指すシステムライフサイクル</h3>
+    <p><span class="exImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/system.png" alt="システムライフサイクルサポート"></span></span></p>
 
     <h3>システムのインベントリ情報の取得と収集</h3>
     <p>自動化ソフトウェアの構築コードでインベントリ情報を取得すれば、それらのインベントリ情報はIT Automationに自動収集できます。<br>
@@ -244,7 +268,7 @@ Overview</h1>
   <div id="footerInner">
 
     <div id="footerAbout">
-      <div id="footerLogo"><img src="../docs/asset/img/exastro.png" alt="Exastro"></div>
+      <div id="footerLogo"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></div>
       <p>Exastro is an open source software suite for digitizing, automating and labor saving the system life cycle.</p>
     </div>
 
@@ -252,7 +276,7 @@ Overview</h1>
 
       <ul id="footerMainMenu">
         <li id="footerExastro">
-          <div class="footerMainMenuHome"><a href="../docs/index_ja.html">Exastro</a></div>
+          <div class="footerMainMenuHome"><a href="../docs/index_ja.html"><img src="../docs/asset/img/exastro_logotype.svg" alt="Exastro"></a></div>
           <ul class="footerMainMenuChildren">
             <li><a href="../docs/index_ja.html#why">Why Exastro</a></li>
             <li><a href="../docs/index_ja.html#suite">Exastro Suite</a></li>
@@ -261,12 +285,21 @@ Overview</h1>
           </ul>
         </li>
         <li id="footerIta">
-          <div class="footerMainMenuHome"><a href="index_ja.html">IT Automation</a></div>
+          <div class="footerMainMenuHome"><a href="index_ja.html"><img src="asset/img/ita.svg" alt="IT Automation"></a></div>
           <ul class="footerMainMenuChildren">
             <li><a href="overview_ja.html" class="overview">Overview</a></li>
             <li><a href="learn_ja.html" class="learn">Learn</a></li>
             <li><a href="documents_ja.html" class="documents">Documents</a></li>
             <li><a href="downloads_ja.html" class="downloads">Downloads</a></li>
+          </ul>
+        </li>
+        <li id="footerOase">
+          <div class="footerMainMenuHome"><a href="../operation-autonomy-support-engine-docs/index_ja.html"><img src="../operation-autonomy-support-engine-docs/asset/img/oase.svg" alt="OASE | Operation Autonomy Support Engine"></a></div>
+          <ul class="footerMainMenuChildren">
+            <li><a href="../operation-autonomy-support-engine-docs/overview_ja.html" class="overview">Overview</a></li>
+            <!--<li><a href="../operation-autonomy-support-engine-docs/learn_ja.html" class="learn">Learn</a></li>
+            <li><a href="../operation-autonomy-support-engine-docs/documents_ja.html" class="documents">Documents</a></li>
+            <li><a href="../operation-autonomy-support-engine-docs/downloads_ja.html" class="downloads">Downloads</a></li>-->
           </ul>
         </li>
       </ul>
