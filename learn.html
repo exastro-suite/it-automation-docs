@@ -187,7 +187,7 @@ Learn</h1>
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQOPxmyEqChIiov1Yr5BaCE2-Jqx1ANpMkzL63B8u_yx5c1NWaMH6H8jFvGMmvxzbwvMYBHaLsb9-wE/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           </div>
         </div>
         <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
@@ -221,44 +221,38 @@ Learn</h1>
   
     <h2><em>Exastro IT Automation</em> system configuration(Overall view)</h2>
     
-    <p><span class="exImage"><img src="./asset/img/en_system_overall.png" alt="Overview"></span></p>
+    <p><span class="loupe touch"><span class="exImage"><img src="./asset/img/en_system_overall.png" alt="Overview"></span></span></p>
 
-    <h3 class="toggleHeading">Management Console  function</h3>
+    <!--<h3 class="toggleHeading">Management Console  function</h3>
     
     <div class="toggleText">
-      <p>Under construction.</p>
+      <p>●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●</p>
     </div>
     
     <h3 class="toggleHeading">File contrl management/File contrl check-in/check-out function</h3>
 
     <div class="toggleText">
-      <p>Under construction.</p>
+      <p>●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●</p>
     </div>
     
     <h3 class="toggleHeading">Management Console function</h3>
     
     <div class="toggleText">
-      <p>Under construction.</p>
+      <p>●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●</p>
     </div>
     
     <h3 class="toggleHeading">Drivers corresponding to each automation software</h3>
     
     <div class="toggleText">
-      <p>Under construction.</p>
+      <p>●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●</p>
     </div>
     
-    <h3 class="toggleHeading">Parameter(Host)</h3>
+    <h3 class="toggleHeading">Parameter(Host/Host Group)</h3>
     
     <div class="toggleText">
-      <p>Under construction.</p>
+      <p>●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●●●●●●　●●●●●　●●●●●</p>
     </div>
-    
-    <h3 class="toggleHeading">Parameter(Host Group)</h3>
-    
-    <div class="toggleText">
-      <p>Under construction.</p>
-    </div>
-
+-->
   </div>
 </section>
 
@@ -271,9 +265,74 @@ Learn</h1>
     <div class="slide">
       <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQWKZ4cqbRRC1x8DJzaFRl16obibmScovMSGbD2vHiJ9EyNHrchFP_bK4bdL_q_SNUyyZf3LdROn9-u/embed?start=false&loop=false&delayms=3000">
         <img src="asset/img/view_slide.jpg" alt="View slide">
-        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+      <div class="slideCode">
+        <dl>
+          <dt>Reference 4 Sample Collection of Playbook</dt>
+          <dd class="note">*The character code is "UTF-8", the line feed code is "LF", and the extension is "yml" format. Keep the indents in mind.</dd>
+          <dd>
+
+
+
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Make Work Directory demonstration
+  file:
+    path: <span class="any">/tmp/demodirectory</span>
+    state: <span class="any">directory</span>
+    mode: <span class="any">0755</span>
+
+</pre>
+
+
+
+          </dd>
+          <dd>
+
+
+
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Sample User add
+  user:
+    name: <span class="any">ITA</span>
+    createhome: <span class="any">no</span>
+    uid: <span class="any">4401</span>
+    group: <span class="any">users</span>
+
+</pre>
+
+
+
+          </dd>
+          <dd>
+      
+      
+      
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Collect Files
+  fetch:
+    src=<span class="any">/etc/hosts</span>
+    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
+    flat=yes
+
+</pre>
+
+
+
+          </dd>
+        </dl>
+      </div>
+      <div class="slideMenu">
+        <ul>
+          <li class="viewSlide touch"><span>View slide</span></li>
+          <li class="sampleCode touch"><span>Sample code</span></li>
+        </ul>
       </div>
     </div>
+    
     <p>This a quick start document to allow you to quickly familiarize yourself with the user interface of Exastro IT Automation. IT Automation controls multiple northbound automation softwares, such as ANSIBLE.<br>
     In this quick start document, ANSIBLE is selected as the automation software because of its broad scope.<br>
     In order to provide a smooth introduction, the functions listed below have been omitted from this quick start document, however, they are important features of IT Automation and their use is recommended to get the most out of the software.</p>

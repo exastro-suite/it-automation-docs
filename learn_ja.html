@@ -192,7 +192,7 @@ Learn</h1>
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRA7IHqceBllWqatIoNGrj296wvyLJJNDEhiViQNsbcaVdKVWnGCmMaoySGe2cE3InGQvd8IR2J9btq/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           </div>
         </div>
         <p>お手持ちの環境に IT Automationをすぐにインストールするためのインストールマニュアルです。</p>
@@ -206,7 +206,7 @@ Learn</h1>
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQ--6l8_vumAtuP1fuorSRrOMGby4AgycPqnbYV2fNQTtumUT6s-gJLGnzd66GcfUphSwxMrCUpt0ff/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           </div>
         </div>
         <p>お手持ちの環境によっては、外部との通信を制限されている場合がございます。</p>
@@ -234,7 +234,7 @@ Learn</h1>
     <div class="slide wide only">
       <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vTaMmwLkzrMcQiv9UptGz7yA1VIg01XBO9HbJUomE9MNx_LVAhgVAj3pOg4ZBEaMZr97sgsxi_fZ1kE/embed?start=false&loop=false&delayms=3000">
         <img src="asset/img/view_slide_wide.jpg" alt="View slide">
-        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </div>
     
@@ -247,7 +247,7 @@ Learn</h1>
   
     <h2><em>Exastro IT Automation</em>のシステム構成（全体図）</h2>
     
-    <p><span class="exImage"><span class="loupe touch"><img src="./asset/img/system_overall.png" alt="Overview"></span></span></p>
+    <p><span class="loupe touch"><span class="exImage"><img src="./asset/img/system_overall.png" alt="Overview"></span></span></p>
 
     <h3 class="toggleHeading">管理コンソール機能</h3>
     
@@ -297,7 +297,71 @@ Learn</h1>
     <div class="slide">
       <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRzVW3oqV4XPgIin9LM-g74lj_0WT9edz8RrV9GkFEgtYOrAmo6NmjxEaGlYLjKg0F7h7f13CauQaLA/embed?start=false&loop=false&delayms=3000">
         <img src="asset/img/view_slide.jpg" alt="View slide">
-        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+        <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+      <div class="slideCode">
+        <dl>
+          <dt>参考④ プレイブックサンプル集</dt>
+          <dd class="note">※文字コードは"UTF-8"、改行コードは"LF"、拡張子は"yml"形式。また、インデントにご注意下さい。</dd>
+          <dd>
+
+
+
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Make Work Directory demonstration
+  file:
+    path: <span class="any">/tmp/demodirectory</span>
+    state: <span class="any">directory</span>
+    mode: <span class="any">0755</span>
+
+</pre>
+
+
+
+          </dd>
+          <dd>
+
+
+
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Sample User add
+  user:
+    name: <span class="any">ITA</span>
+    createhome: <span class="any">no</span>
+    uid: <span class="any">4401</span>
+    group: <span class="any">users</span>
+
+</pre>
+
+
+
+          </dd>
+          <dd>
+      
+      
+      
+<!-- Playbook sample -->
+<pre class="playbook clipboard-copy">
+- name: Collect Files
+  fetch:
+    src=<span class="any">/etc/hosts</span>
+    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
+    flat=yes
+
+</pre>
+
+
+
+          </dd>
+        </dl>
+      </div>
+      <div class="slideMenu">
+        <ul>
+          <li class="viewSlide touch"><span>View slide</span></li>
+          <li class="sampleCode touch"><span>Sample code</span></li>
+        </ul>
       </div>
     </div>
     <p>IT Automationのインタフェースをスムーズに体感頂くために、クイックスタートをご用意しました。 </p>
@@ -323,7 +387,12 @@ Learn</h1>
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vSEFS-vhB1-qge_Hh6TARVrIjcE0tWVoGUXuM3rkFMdKrUd210LIwoEh8yayRFE2oMefVLepMFS0MOx/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+          <div class="slideMenu">
+            <ul>
+              <li class="viewSlide touch"><span>View slide</span></li>
+            </ul>
           </div>
         </div>
         <p><a href="asset/Learn_ja/ITA-base_classroom lecture_ja.pdf" class="download" download="IT Automation BASE 座学編"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
@@ -331,15 +400,39 @@ Learn</h1>
       <!-- practice -->
       <div id="practice" class="halfContent">
         <h3><em>Exastro IT Automation</em> <strong>実習</strong>編</h3>
+        
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRdGEP_hpGksX24Vqf2teZdHSXT8D-mZ7f_go7SC8_oO0EVIUThITeuO-3SNFReDeJjCM_Af3LLwII6/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+          <div class="slideCode">
+          <dl>
+          <dt>3.2事前準備 IaCの作成</dt>
+          <dd class="note">※文字コードは"UTF-8"、改行コードは"LF"、拡張子は"yml"形式。また、インデントにご注意下さい。</dd>
+          <dd>
+
+<pre class="playbook clipboard-copy">
+- name: Make Work Directory demonstration
+  file:
+    path: <span class="any">"/tmp/{{VAR_DIRECTORY}}"</span>
+    state: <span class="any">directory</span>
+    mode: <span class="any">0755</span>
+
+</pre>
+
+          </dd>
+          </dl>
+          </div>
+          <div class="slideMenu">
+            <ul>
+              <li class="viewSlide touch"><span>View slide</span></li>
+              <li class="sampleCode touch"><span>Sample code</span></li>
+            </ul>
           </div>
         </div>
         <p><a href="asset/Learn_ja/ITA-base_practice_ja.pdf" class="download" download="IT Automation BASE 実習編"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
       </div>
-      
     </div>
 
   </div>
@@ -363,7 +456,7 @@ Learn</h1>
         <div class="slide">
           <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vREYK6sT79nzzz90CpEelqXRzspk3QwifHKNztUEnLo8yLzNa9Ze6iNhB7aAzsIrMHBOEZKZ0dQnHda/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div><div class="slideInner">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           </div>
         </div>
         <p><a href="asset/Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf" class="download" download="IT Automation ホストグループ管理・パラメータシート作成 座学編"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
