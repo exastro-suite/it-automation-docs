@@ -86,7 +86,7 @@
     
     <li class="exastro"><a href="../docs/index.html">Exastro Home</a></li>
     <li class="ita"><a href="index.html">IT Automation</a></li>
-    <li class="pc"><a href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.md" target="_blank">Playbook Collection</a></li>
+    <li class="pc"><a href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.md" target="_blank" rel="noopener">Playbook Collection</a></li>
     <li class="oase"><span>Operation Autonomy Support Engine</span></li>
     
   </ul>
@@ -110,18 +110,18 @@
 </ul>
 
 <ul id="subMenu">
-<li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
-<li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank"><i class="fab fa-facebook-square"></i></a><span>Facebook</span></li>
-<li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
-<li><a href="https://github.com/exastro-suite" class="github" target="_blank"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
+<li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
+<li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a><span>Facebook</span></li>
+<li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
+<li><a href="https://github.com/exastro-suite" class="github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
 <li><span class="share subMenuPlus touch"><i class="fas fa-share-alt"></i></span><span>Share</span></li>
 <li><span class="language subMenuPlus touch"><i class="fas fa-globe"></i></span><span>Language</span></li>
 </ul>
 
 <ul id="shareMenu"> 
-  <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
-  <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank"><i class="fab fa-line"></i><span>LINE</span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank" rel="noopener"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+  <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank" rel="noopener"><i class="fab fa-line"></i><span>LINE</span></a></li>
 </ul>
 
 <ul id="languageMenu">
@@ -167,35 +167,61 @@ Overview</h1>
   
     <h2><em>Exastro IT Automation</em> Overview</h2>
 
-    <p><span class="exImage"><img src="./asset/img/en_system_overview.png" alt="Overview"></span></p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/en_system_overview.png" alt="Overview"></span></span></p>
 
-    <h3>Centrally manage IaCs and parameters from multiple user interfaces</h3>
+    <h3 id="feature1" class="toggleHeading">Multiple user interfaces &amp; Role Base Access Control</h3>
+    
+    <div class="toggleText">
+      <div class="rightImage image25"><img src="./asset/img/en_system_management.png" alt="3 types of Interfaces (Web, Excel, and Rest API)"></div>
+      <p>User operations can be executed by 3 types of Interfaces (Web, Excel, and Rest API). ITA also records operation information from any Interface such as “who did it, when, what?”</p>
+      <hr>
+      <div class="rightImage"><dl class="image"><dt>Example of RBAC</dt><dd><span class="loupe touch"><img src="../it-automation-docs/asset/img/rbac_image_en.png" alt="Example of RBAC"></span></dd><dd class="note">*User 1 has both "Can perform maintenance" and "View only" permissions for Menu C but "Can perform maintenance" has higher priority.</dd></dl></div>
+      <p>With role-based access control (RBAC), user can define roles such as developer, operator, users, and control what each role can do such as view only, update, execute.</p>
+    </div>
+    
+    <h3 id="feature2" class="toggleHeading">Function to manage parameters' change history</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/parameters_image_en.png" alt="grouped and history"></span></div>
+      <p>System parameter information can be grouped and history can be managed.</p>
+    </div>
+    
+    <h3 id="feature3" class="toggleHeading">Function to prevent typos of variable names</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/iac_analysis_image_en.png" alt="Analyzes for errors in IaC"></span><span class="note">*If there is no error, register a new variable named "VAR_name", in addition if there is no same error, IaC is managed in adequate manner.</span></div>
+      <p>In ITA, when IaC is uploaded, it will first analyze whether there is any error in IaC. If there is no error, the variable name from the IAC description is obtained and managed. Since variable names are used in selection formulas, human errors such as typographical errors do not occur.</p>
+    </div>
+    
+    <h3 id="feature4" class="toggleHeading">Function to improve the reusability of the IaC</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/iac_module_image_en.png" alt="IaC can be modularized and assembled"></span></div>
+      <p>ITA can reuse IaC (Playbook, etc.) without ending it in one attempt, IaC can be modularized and assembled at the time of work.</p>
+    </div>
 
-    <div class="leftImage image25"><img src="./asset/img/en_system_management.png" alt="Management"></div>
-
-    <p>With IT Automation you can centrally manage the parameters to be input into the system using IT Automation's web user interface, spreadsheets (Excel), or a machine interface (Rest API).</p>
-
-    <h3>Modularizing and managing IaCs for improved reusability</h3>
-
-    <div class="rightImage image25"><img src="./asset/img/en_system_module.png" alt="Module"></div>
-
-    <p>IT Automation helps you to modularize and manage IaCs.<br>
-    When you use IT Automation to build a system automatically, IT Automation joins together the modularized IaCs to create a workflow, and combines that workflow with the parameters to execute.<br>
-    This allows you to take generic IaCs, modularize them, and reuse them in various workflows.</p>
-
-    <h3>Automation software execution management with <em>Exastro IT Automation</em></h3>
-
-    <div class="leftImage image25"><img src="asset/img/system_run.png" alt="Workflow"></div>
-
-    <p>The IaCs that make up the workflow are executed by appropriate automation software, such as ANSIBLE. You can choose which automation software to use based on the system integration you want to execute and the features of the automation software.</p>
-
-    <h3>Real-time monitoring of execution status by <em>Exastro IT Automation</em></h3>
-
-    <div class="rightImage"><img src="./asset/img/en_system_realtime.png" alt="Real-time monitoring"></div>
-
-    <p>You can monitor the execution status of automation software in real time using IT Automation's interface.<br>
-    A hold point can be placed in the middle of your workflow and you can also perform an emergency stop if an unexpected event occurs during workflow execution.<br>
-    IT Automation generates execution logs and reports failed or successful executions. </p>
+    <h3 id="feature5" class="toggleHeading">Function to control multiple automation tools (incl. Ansible)</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/ita_chain_image_en.png" alt="automation flow"></span></div>
+      <p>User can connect multiple automation software to define a single work flow. In addition, input data necessary for the operation of automation software is automatically generated.</p>
+      
+      <p class="note">Example (In case of Ansible): Collect and connect the required Playbook and create host_vars from the parameters for each node.</p>
+    </div>
+    
+    <h3 id="feature6" class="toggleHeading">The last way to continue automation: pioneer mode</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/ita_pioneer_image_en.png" alt="Pioneer mode"></span></div>
+      <p>If User can't automate by using any of the Ansible modules, then the benefits of automation will be reduce down to half. Therefore ITA offers Pioneer mode which acts as trump card which doesn't stop the automation.</p>
+    </div>
+    
+    <h3 id="feature7" class="toggleHeading">Real-time monitoring of execution status</h3>
+    
+    <div class="toggleText">
+    <div class="rightImage"><span class="loupe touch"><img src="../it-automation-docs/asset/img/realtime_image_en.png" alt="Real-time monitoring"></span></div>
+      <p>ITA emphasize great importance to real-time understanding of execution status compared to manual work. It also manages the work record firmly, such as downloading execution results (work evidence) according to user convenience.</p>
+    </div>
 
   </div>
 </section>
@@ -207,7 +233,7 @@ Overview</h1>
     
     <h3>System life cycle using <em>Exastro IT Automation</em></h3>
     
-    <p><span class="exImage"><img src="./asset/img/en_system.png" alt="System life cycle support"></span></p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/en_system.png" alt="System life cycle support"></span></span></p>
   
     <h3>Acquisition and collection of system inventories</h3>
 
@@ -235,7 +261,7 @@ Overview</h1>
 
 
 <!-- Go To TOP -->
-<div id="topMove"><a href="#" class="touch"><i class="fas fa-arrow-up"></i><span>Page Top</span></a></div>
+<div id="topMove"><a href="#" class="touch anker"><i class="fas fa-arrow-up"></i><span>Page Top</span></a></div>
 
 
 
@@ -278,10 +304,10 @@ Overview</h1>
       </ul>
 
       <ul id="footerSubMenu">
-        <li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
-        <li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank"><i class="fab fa-facebook-square"></i></a><span>facebook</span></li>
-        <li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
-        <li><a href="https://github.com/exastro-suite" class="github" target="_blank"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
+        <li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
+        <li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a><span>facebook</span></li>
+        <li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
+        <li><a href="https://github.com/exastro-suite" class="github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
       </ul>
 
       <div id="footerShareMenu">
@@ -289,9 +315,9 @@ Overview</h1>
           <dt><i class="fas fa-share-alt"></i><span>Share</span></dt>
           <dd>
             <ul> 
-              <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
-              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
-              <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank"><i class="fab fa-line"></i><span>LINE</span></a></li>
+              <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank" rel="noopener"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+              <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank" rel="noopener"><i class="fab fa-line"></i><span>LINE</span></a></li>
             </ul>
           </dd>
         </dl>
