@@ -1,0 +1,861 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/ita.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144561796-1');
+</script>
+<!-- InstanceParam name="pageLanguage" type="text" value="ja" -->
+<!-- InstanceParam name="pageType" type="text" value="article" -->
+<!-- InstanceParam name="pageTitle" type="text" value="case" -->
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#002B62">
+<meta http-equiv="content-language" content="ja">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Case | Exastro IT Automation</title>
+<!-- InstanceEndEditable -->
+<!-- Stylesheet and JavaScript -->
+<link rel="stylesheet" type="text/css" href="../docs/asset/css/common.css">
+<noscript><link rel="stylesheet" type="text/css" href="../docs/asset/css/noscript.css"></noscript>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+<link href="../docs/asset/font/fontawesome/css/all.min.css" rel="stylesheet">
+<script src="../docs/asset/js/jquery-1.11.3.js"></script>
+<script src="../docs/asset/js/common.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="asset/css/ita.css">
+<script src="../docs/asset/js/article.js"></script>
+
+<link rel="alternate" hreflang="en" href="https://exastro-suite.github.io/it-automation-docs/case.html">
+<link rel="alternate" hreflang="ja" href="https://exastro-suite.github.io/it-automation-docs/case_ja.html">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+
+<meta name="keywords" content="Exastro, Exastro Suite, OSS">
+<meta name="description" content="Exastro IT Automationはシステムライフサイクルにおける以下の問題に対する解決策を提供します。データ多重管理による設計ミス、複雑な人手作業によるオペレーションミス、作業記録不足による障害対応遅延。">
+<meta name="thumbnail" content="https://exastro-suite.github.io/docs/asset/img/ogp_twitter_image.jpg" />
+<meta property="og:description" content="Exastro IT Automationはシステムライフサイクルにおける以下の問題に対する解決策を提供します。データ多重管理による設計ミス、複雑な人手作業によるオペレーションミス、作業記録不足による障害対応遅延。">
+<link rel="image_src" href="https://exastro-suite.github.io/it-automation-docs/asset/img/ogp_image.jpg">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://exastro-suite.github.io/it-automation-docs/index_ja.html">
+<meta property="og:title" content="Exastro Suite">
+<meta property="og:image" content="https://exastro-suite.github.io/it-automation-docs/asset/img/ogp_image.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Exastro Suite">
+<meta name="twitter:image" content="https://exastro-suite.github.io/docs/asset/img/ogp_twitter_image.jpg">
+
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body id="article" class="ita case ja">
+
+<div id="container">
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v4.0"></script>
+
+
+<header>
+<div id="header">
+
+<div id="titleArea">
+
+<div id="logo">
+<a href="#"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></a>
+</div>
+<div id="suiteList">
+  <ul>
+    
+    <li class="exastro"><a href="../docs/index_ja.html">Exastro Home</a></li>
+    <li class="ita"><a href="index_ja.html">IT Automation</a></li>
+    <li class="pc"><a href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md" target="_blank" rel="noopener">Playbook Collection</a></li>
+    <li class="oase"><span>Operation Autonomy Support Engine</span></li>
+    
+  </ul>
+</div>
+
+<div id="mainTitle">
+<a href="index_ja.html"><span><img src="asset/img/ita.svg" alt="IT Automation"></span></a>
+</div>
+
+</div>
+
+<nav>
+
+<ul id="mainMenu">
+<li class="sp"><a href="index_ja.html" class="home"><i class="fas fa-home"></i><span>Home</span></a></li>
+<li><a href="overview_ja.html" class="overview"><i class="fas fa-server"></i><span>Overview</span></a></li>
+<li><a href="learn_ja.html" class="learn"><i class="fas fa-school"></i><span>Learn</span></a></li>
+<li><a href="case_ja.html" class="case"><i class="fas fa-book"></i><span>Case</span></a></li>
+<li><a href="documents_ja.html" class="documents"><i class="fas fa-file-alt"></i><span>Documents</span></a></li>
+<li><a href="downloads_ja.html" class="downloads"><i class="fas fa-download"></i><span>Downloads</span></a></li>
+</ul>
+
+<ul id="subMenu">
+<li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
+<li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a><span>Facebook</span></li>
+<li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
+<li><a href="https://github.com/exastro-suite" class="github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
+<li><span class="share subMenuPlus touch"><i class="fas fa-share-alt"></i></span><span>Share</span></li>
+<li><span class="language subMenuPlus touch"><i class="fas fa-globe"></i></span><span>Language</span></li>
+</ul>
+
+<ul id="shareMenu"> 
+  <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank" rel="noopener"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+  <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank" rel="noopener"><i class="fab fa-line"></i><span>LINE</span></a></li>
+</ul>
+
+<ul id="languageMenu">
+<li><!-- InstanceBeginEditable name="EditHeaderLanguageMenuArea" --><a href="case.html" class="en">English</a>
+<!-- InstanceEndEditable --></li>
+<li><span>Japanese</span></li>
+</ul>
+
+</nav>
+</div>
+</header>
+
+
+
+
+
+<main>
+
+<article>
+
+<div id="articleTitle">
+<section>
+<div class="sectionInner">
+<!-- InstanceBeginEditable name="EditContentHeaderArea" -->
+<h1><small>Exastro IT Automation</small><br>
+Case</h1>
+<!-- InstanceEndEditable -->
+</div>
+</section>
+</div>
+
+<div id="articleBody">
+<!-- InstanceBeginEditable name="EditContentBodyArea" -->
+<section>
+<div class="sectionInner">
+<h2><em>Exastro IT Automation</em> 導入事例</h2>
+
+<ul id="caseList">
+  <!-- Case -->
+  <li>
+    <a href="#case001" class="touch">
+      <dl>
+        <dt clsas="image"><img src="asset/case/case001/list_image.png" alt="構成管理を活用した大規模キャリアシステムの作業自動化"></dt>
+        <dd class="title">構成管理を活用した大規模キャリアシステムの作業自動化</dd>
+        <dd class="tag">
+          <div class="subTitle">Keywords</div>
+          <ul>
+            <li class="function">SCM構成管理</li>
+            <li class="function">パラメータシート</li>
+            <li class="function">自動化ソフトウェア連携</li>
+            <li class="function">データポータビリティ</li>
+            <li class="function">ActiveDirectry連携</li>
+            <li class="cooperation">AnsibleTower/Engine</li>
+            <li class="cooperation">AnsiblePioneerモジュール</li>
+          </ul>
+        </dd>
+      </dl>
+    </a>
+  </li>
+  <!-- Case -->
+  <li>
+    <a href="#case002" class="touch">
+      <dl>
+        <dt clsas="image"><img src="asset/case/case002/list_image.png" alt="コンソールサーバ経由でセッティング"></dt>
+        <dd class="title">数万台のネットワーク機器をコンソールサーバ経由でセッティングしました</dd>
+        <dd class="tag">
+          <div class="subTitle">Keywords</div>
+          <ul>
+            <li class="function">パラメータシート</li>
+            <li class="function">自動化ソフトウェア連携</li>
+            <li class="cooperation">AnsibleTower/Engine</li>
+            <li class="other">SmartCS</li>
+          </ul>
+        </dd>
+        <dd class="name">
+          <div class="subTitle">Related equipment</div>
+          <ul>
+            <li>SmartCS / セイコーソリューションズ株式会社</li>
+          </ul>
+        </dd>
+      </dl>
+    </a>
+  </li>
+  <!-- Case -->
+  <li>
+    <a href="#case003" class="touch">
+      <dl>
+        <dt clsas="image"><img src="asset/case/case003/list_image.png" alt="サービス影響予測"></dt>
+        <dd class="title">システムの構成管理を活用した機器停止のサービス影響予測</dd>
+        <dd class="tag">
+          <div class="subTitle">Keywords</div>
+          <ul>
+            <li class="function">SCM構成管理</li>
+            <li class="function">パラメータシート</li>
+          </ul>
+        </dd>
+      </dl>
+    </a>
+  </li>
+  
+</ul>
+
+</div>
+</section>
+
+<!-- Case -->
+<section id="case001" class="caseContent">
+  <div class="sectionInner">
+
+    <div class="caseContentWrap">
+    
+      <div class="caseContentBar">
+        <ul class="buttonMenu">
+          <li><button class="fullScreenButton touch" title="フルスクリーン"><i class="fas fa-expand"></i></button></li>
+          <li><button class="closeButton touch" title="閉じる"><i class="fas fa-times"></i></button></li>
+        </ul>
+      </div>
+      
+      <div class="caseContentMain">
+      
+        <div class="caseContentHeader">
+          <div class="title">
+            <h2>
+              構成管理を活用した<br>
+              <strong>大規模キャリアシステム</strong>の作業自動化
+            </h2>
+            <div class="caseStatus">
+            <div class="caseStatusInner">
+              <dl class="function">
+                <dt>機能</dt>
+                <dd>
+                  <ul>
+                    <li class="on">SCM構成管理</li>
+                    <li class="on">パラメータシート</li>
+                    <li class="on">自動化ソフトウェア連携</li>
+                    <li class="on">データポータビリティ</li>
+                    <li class="on">ActiveDirectry連携</li>
+                    <li>資材管理</li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="cooperation">
+                <dt>連携</dt>
+                <dd>
+                  <ul>
+                    <li class="on">AnsibleTower/Engine</li>
+                    <li class="on">AnsiblePioneerモジュール</li>
+                    <li>DSC</li>
+                    <li>Openstack</li>
+                    <li>Cobbler</li>
+                    <li>Git</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="caseContentBody">
+          <div class="caseContentBodyInner01">
+            <div class="caseContentBodyBlock01">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 事例の概要</span></h3>
+              </div>
+              <div class="caseOutline">
+                <div class="caseOutlineText space">
+                
+                  <div class="problem">
+                    <div class="inner">
+                      <h4><i class="fas fa-exclamation-triangle"></i> 課題</h4>
+                      <div class="caseContentText">
+                        <p>システムのパラメータが時系列で構成管理できておらず、またPlaybookの部品化ができておらず、構築および運用における<em>作業の自動化/効率化が実現できていなかった</em>。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="solveTheProblem"><span>IT Automationを導入</span></div>
+
+                  <div class="solve">
+                    <div class="inner">
+                      <h4><i class="fas fa-check-square"></i> 解決策</h4>
+                      <div class="caseContentText">
+                        <p>Exastro IT Automationの機能で<br>
+                        ・<em>システムのパラメータを構成管理</em><br>
+                        ・<em>Ansible Playbookを部品管理</em><br>
+                        することで設計～構築、および運用のフェーズを繋げて、<em>作業の自動化を実現した</em>。</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="caseOutlineImage">
+                  <span class="loupe touch"><img src="asset/case/case001/main_image.png" alt="概要図"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseContentBodyInner02">
+            <div class="caseContentBodyBlock02 full">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-chart-line"></i> 導入後の効果</span></h3>
+              </div>
+              <div class="caseResult">
+                
+                <div class="result">
+                  <div class="inner">
+                    <h4><i class="fas fa-thumbs-up"></i> 効果</h4>
+                    <div class="caseContentText">
+                      <h5>例1：運用監視設定作業</h5>
+                      <div class="rightImage image33"><img src="asset/case/case001/graph1.png" alt="75%削減"></div>
+                      <h6 style="background-color: #D33333;">構成管理/自動化前</h6>
+                      <p><em>年間4億円の作業工数</em>で実施していた</p>
+                      <h6 style="background-color: #60C60D;">構成管理/自動化後</h6>
+                      <p><em>年間1億円の作業工数</em>で実施できるようになった<em>(75%削減)</em></p>
+                      <h5>例2：運用コマンドリストメンテナンス作業</h5>
+                      <div class="rightImage image33"><img src="asset/case/case001/graph2.png" alt="80%削減"></div>
+                      <h6 style="background-color: #D33333;">構成管理/自動化前</h6>
+                      <p><em>年間4,000万円の作業工数</em>で実施していた</p>
+                      <h6 style="background-color: #60C60D;">構成管理/自動化後</h6>
+                      <p><em>年間800万円の作業工数</em>で実施できるようになった<em>(80%削減)</em><br>
+                      メンテナンスまでのリードタイムが不要となり即時反映がされることで利便性も向上した。</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          </div>          
+        </div>
+
+        <div class="caseContentFooter">
+          <ul>
+            <li><button class="closeButton touch"><i class="fas fa-times"></i> 閉じる</button></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case 01 -->
+<section id="case002" class="caseContent">
+  <div class="sectionInner">
+
+    <div class="caseContentWrap">
+    
+      <div class="caseContentBar">
+        <ul class="buttonMenu">
+          <li><button class="fullScreenButton touch" title="フルスクリーン"><i class="fas fa-expand"></i></button></li>
+          <li><button class="closeButton touch" title="閉じる"><i class="fas fa-times"></i></button></li>
+        </ul>
+      </div>
+      
+      <div class="caseContentMain">
+      
+        <div class="caseContentHeader">
+          <div class="title">
+            <h2>
+              <strong>数万台</strong>のネットワーク機器を<br>
+              コンソールサーバ経由でセッティング
+            </h2>
+            <div class="caseStatus">
+            <div class="caseStatusInner">
+              <dl class="function">
+                <dt>機能</dt>
+                <dd>
+                  <ul>
+                    <li>SCM構成管理</li>
+                    <li class="on">パラメータシート</li>
+                    <li class="on">自動化ソフトウェア連携</li>
+                    <li>データポータビリティ</li>
+                    <li>ActiveDirectry連携</li>
+                    <li>資材管理</li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="cooperation">
+                <dt>連携</dt>
+                <dd>
+                  <ul>
+                    <li class="on">AnsibleTower/Engine</li>
+                    <li>AnsiblePioneerモジュール</li>
+                    <li>DSC</li>
+                    <li>Openstack</li>
+                    <li>Cobbler</li>
+                    <li>Git</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="caseContentBody">
+          <div class="caseContentBodyInner01">
+            <div class="caseContentBodyBlock01">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 事例の概要</span></h3>
+              </div>
+              <div class="caseOutline">
+                <div class="caseOutlineText">
+                
+                  <div class="problem">
+                    <div class="inner">
+                      <h4><i class="fas fa-exclamation-triangle"></i> 課題</h4>
+                      <div class="caseContentText">
+                        <p><em>大量のネットワーク機器の初期設定</em>を行う必要があった。しかし、シリアルコンソール経由で手作業で初期設定を行うと多くの工数が必要であり、また大量の設定値を表計算ソフトで管理するのにも限界があった。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="solveTheProblem"><span>IT Automationを導入</span></div>
+
+                  <div class="solve">
+                    <div class="inner">
+                      <h4><i class="fas fa-check-square"></i> 解決策</h4>
+                      <div class="caseContentText">
+                        <p>シリアルコンソールはSmartCSで集約することで、SSH経由で同時に複数のネットワーク機器を設定可能にした。また、<em>大量の設定値はExastro IT Automationで一元管理</em>し、Ansibleを呼び出すことでネットワーク機器の初期設定の自動化が可能になった。</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="caseOutlineImage">
+                  <span class="loupe touch"><img src="asset/case/case002/main_image.png" alt="概要図"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseContentBodyInner02">
+            <div class="caseContentBodyBlock02">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-chart-line"></i> 導入後の効果</span></h3>
+              </div>
+              <div class="caseResult">
+                
+                <div class="result">
+                  <div class="inner">
+                    <h4><i class="fas fa-thumbs-up"></i> 効果</h4>
+                    <div class="caseContentText">
+                      <p>スイッチなど6種類のネットワーク機器の初期設定を自動化することができ、<em>2,000台/月のリリースを達成</em>した。</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="caseContentBodyBlock03">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-server"></i> 関連機器の紹介</span></h3>
+              </div>
+              <div class="caseInstall">
+                <table>
+                  <tr>
+                    <th>メーカー</th><td><img src="asset/case/case002/logo.png" alt="セイコーソリューションズ株式会社" style="max-width: 320px; width: 100%;"></td>
+                  </tr>
+                  <tr>
+                    <th>機器名</th><td><a href="https://www.seiko-sol.co.jp/products/console-server/" target="_blank">SmartCS</a></td>
+                  </tr>
+                  <!--<tr>
+                    <th>参考URL</th><td><a href="https://www.seiko-sol.co.jp/products/console-server/" target="_blank">https://www.seiko-sol.co.jp/products/console-server/</a></td>
+                  </tr>-->
+                </table>
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="caseContentFooter">
+          <ul>
+            <li><button class="closeButton touch"><i class="fas fa-times"></i> 閉じる</button></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case 02 -->
+<section id="case003" class="caseContent">
+  <div class="sectionInner">
+
+    <div class="caseContentWrap">
+    
+      <div class="caseContentBar">
+        <ul class="buttonMenu">
+          <li><button class="fullScreenButton touch" title="フルスクリーン"><i class="fas fa-expand"></i></button></li>
+          <li><button class="closeButton touch" title="閉じる"><i class="fas fa-times"></i></button></li>
+        </ul>
+      </div>
+      
+      <div class="caseContentMain">
+      
+        <div class="caseContentHeader">
+          <div class="title">
+            <h2>
+              システムの構成管理を活用した<br>
+              機器停止の<strong>サービス影響予測</strong>
+            </h2>
+            <div class="caseStatus">
+              <div class="caseStatusInner">
+                <dl class="function">
+                  <dt>機能</dt>
+                  <dd>
+                    <ul>
+                      <li class="on">SCM構成管理</li>
+                      <li class="on">パラメータシート</li>
+                      <li>自動化ソフトウェア連携</li>
+                      <li>データポータビリティ</li>
+                      <li>ActiveDirectry連携</li>
+                      <li>資材管理</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="cooperation">
+                  <dt>連携</dt>
+                  <dd>
+                    <ul>
+                      <li>AnsibleTower/Engine</li>
+                      <li>AnsiblePioneerモジュール</li>
+                      <li>DSC</li>
+                      <li>Openstack</li>
+                      <li>Cobbler</li>
+                      <li>Git</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="caseContentBody">
+          <div class="caseContentBodyInner01">
+            <div class="caseContentBodyBlock01">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 事例の概要</span></h3>
+              </div>
+              <div class="caseOutline">
+                <div class="caseOutlineText">
+                
+                  <div class="problem">
+                    <div class="inner">
+                      <h4><i class="fas fa-exclamation-triangle"></i> 課題</h4>
+                      <div class="caseContentText">
+                        <p>大規模キャリアシステムにおいて、計画および突発の機器停止によるサービス影響の調査に多くの工数がかかっていた。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="solveTheProblem"><span>IT Automationを導入</span></div>
+
+                  <div class="solve">
+                    <div class="inner">
+                      <h4><i class="fas fa-check-square"></i> 解決策</h4>
+                      <div class="caseContentText">
+                        <p>Exastro IT Automationの機能で<em>システムを構成管理</em>することにより、機器停止による<em>サービス影響を自動予測</em>することを可能とした。</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="caseOutlineImage">
+                  <span class="loupe touch"><img src="asset/case/case003/main_image.png" alt="概要図"></span>
+                  <span class="note">※影響予測はITAが提供する画面フレームワークを使ってカスタム開発。</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseContentBodyInner02">
+            <div class="caseContentBodyBlock02">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-chart-line"></i> 導入後の効果</span></h3>
+              </div>
+              <div class="caseResult">
+                
+                <div class="result">
+                  <div class="inner">
+                    <h4><i class="fas fa-thumbs-up"></i> 効果</h4>
+                    <div class="caseContentText">
+                      <p>1回の調査で約80万円の工数/費用を要していたところ、本施策により工数不要となった。年間約120回の調査があったので<em>約9,400万円/年の削減効果</em>が確認された。</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="caseContentBodyBlock03 none">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-server"></i> 関連機器の紹介</span></h3>
+              </div>
+              <div class="caseInstall">
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="caseContentFooter">
+          <ul>
+            <li><button class="closeButton touch"><i class="fas fa-times"></i> 閉じる</button></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Case tmp -->
+<section id="sampleCase00" class="caseContent">
+  <div class="sectionInner">
+
+    <div class="caseContentWrap">
+    
+      <div class="caseContentBar">
+        <ul class="buttonMenu">
+          <li><button class="fullScreenButton touch" title="フルスクリーン"><i class="fas fa-expand"></i></button></li>
+          <li><button class="closeButton touch" title="閉じる"><i class="fas fa-times"></i></button></li>
+        </ul>
+      </div>
+      
+      <div class="caseContentMain">
+      
+        <div class="caseContentHeader">
+          <div class="title">
+            <h2>
+              メインタイトル
+            </h2>
+            <div class="caseStatus">
+              <dl class="function">
+                <dt>機能</dt>
+                <dd>
+                  <ul>
+                    <li class="on">SCM構成管理</li>
+                    <li class="on">パラメータシート</li>
+                    <li>自動化ソフトウェア連携</li>
+                    <li>データポータビリティ</li>
+                    <li>ActiveDirectry連携</li>
+                    <li>資材管理</li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="cooperation">
+                <dt>連携</dt>
+                <dd>
+                  <ul>
+                    <li>AnsibleTower/Engine</li>
+                    <li>AnsiblePioneerモジュール</li>
+                    <li>DSC</li>
+                    <li>Openstack</li>
+                    <li>Cobbler</li>
+                    <li>Git</li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="other">
+                <dt>その他</dt>
+                <dd>
+                  <ul>
+                    <li>AWS</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        
+        <div class="caseContentBody">
+          <div class="caseContentBodyInner01">
+            <div class="caseContentBodyBlock01">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 事例の概要</span></h3>
+              </div>
+              <div class="caseOutline">
+                <div class="caseOutlineText">
+                課題
+                </div>
+                <div class="caseOutlineImage">
+                図
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="caseContentBodyInner02">
+            <div class="caseContentBodyBlock02">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 導入後の効果</span></h3>
+              </div>
+              <div class="caseResult">
+              結果
+              </div>
+            </div>
+            <div class="caseContentBodyBlock03">
+              <div class="caseContentTitle">
+                <h3><span><i class="fas fa-clipboard-list"></i> 導入先の紹介</span></h3>
+              </div>
+              <div class="caseInstall">
+              導入先
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="caseContentFooter">
+          <ul>
+            <li><button class="closeButton touch"><i class="fas fa-times"></i> 閉じる</button></li>
+          </ul>
+        </div>
+        
+      </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- InstanceEndEditable -->
+</div>
+
+</article>
+
+</main>
+
+
+
+
+
+<!-- Go To TOP -->
+<div id="topMove"><a href="#" class="touch anker"><i class="fas fa-arrow-up"></i><span>Page Top</span></a></div>
+
+
+
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div id="footerInner">
+
+    <div id="footerAbout">
+      <div id="footerLogo"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></div>
+      <p>Exastro is an open source software suite for digitizing, automating and labor saving the system life cycle.</p>
+    </div>
+
+    <div id="footerMenu">
+
+      <ul id="footerMainMenu">
+        <li id="footerExastro">
+          <div class="footerMainMenuHome"><a href="../docs/index_ja.html"><img src="../docs/asset/img/exastro_logotype.svg" alt="Exastro"></a></div>
+          <ul class="footerMainMenuChildren">
+            <li><a href="../docs/index_ja.html#why">Why Exastro</a></li>
+            <li><a href="../docs/index_ja.html#suite">Exastro Suite</a></li>
+            <li><a href="../docs/newsroom_ja.html">News Room</a></li>
+            <li><a href="../docs/asset_ja.html">Asset</a></li>
+          </ul>
+        </li>
+        <li id="footerIta">
+          <div class="footerMainMenuHome"><a href="index_ja.html"><img src="asset/img/ita.svg" alt="IT Automation"></a></div>
+          <ul class="footerMainMenuChildren">
+            <li><a href="overview_ja.html" class="overview">Overview</a></li>
+            <li><a href="learn_ja.html" class="learn">Learn</a></li>
+            <li><a href="case_ja.html" class="case">Case</a></li>
+            <li><a href="documents_ja.html" class="documents">Documents</a></li>
+            <li><a href="downloads_ja.html" class="downloads">Downloads</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul id="footerSubMenu">
+        <li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
+        <li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a><span>facebook</span></li>
+        <li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
+        <li><a href="https://github.com/exastro-suite" class="github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
+      </ul>
+
+      <div id="footerShareMenu">
+        <dl>
+          <dt><i class="fas fa-share-alt"></i><span>Share</span></dt>
+          <dd>
+            <ul> 
+              <li><a href="https://twitter.com/intent/tweet?text=Exastro%20IT%20Automation&amp;url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;hashtags=Exastro,ITA,IT_Automation,OSS" target="_blank" rel="noopener"><i class="fab fa-twitter"></i><span>Tweet</span></a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs&amp;src=sdkpreparse" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+              <li><a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fexastro%2dsuite%2egithub%2eio%2fit%2dautomation%2ddocs" target="_blank" rel="noopener"><i class="fab fa-line"></i><span>LINE</span></a></li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+
+    </div><!-- /#footerMenu -->
+
+  </div><!-- /#footerInner -->
+
+  <div id="copyright">
+    <p><small>Copyright © 2019 NEC Corporation</small></p>
+  </div>
+
+</footer>
+
+
+
+
+
+<!-- InstanceBeginEditable name="EditFooterArea" -->
+<!-- InstanceEndEditable -->
+
+
+
+
+
+</div><!-- /#container -->
+
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+</body>
+<!-- InstanceEnd --></html>
