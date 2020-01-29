@@ -159,9 +159,10 @@ Learn</h1>
 <!-- InstanceBeginEditable name="EditContentBodyArea" -->
 <nav id="contentsMenu">
   <ul>
+    <li><a href="#functions" class="touch anker">Functions <i class="fas fa-angle-down"></i></a></li>
+		<li><a href="#deploy" class="touch anker">Deploy <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#introduction" class="touch anker">Installation <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#overallView" class="touch anker">Overall view <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#quickStart" class="touch anker">Quick start <i class="fas fa-angle-down"></i></a></li>
+		<li><a href="#quickStart" class="touch anker">Quick start <i class="fas fa-angle-down"></i></a></li>
     <li class="toggleMenu"><span class="touch">Function introduction <i class="fas fa-bars"></i></span>
       <ul>
         <li><a href="#ansible" class="touch anker">Coordination between Ansible <i class="fas fa-angle-down"></i></a></li>
@@ -170,63 +171,10 @@ Learn</h1>
   </ul>
 </nav>
 
-<section id="introduction">
-  <div class="sectionInner">
-
-    <h2><em>Exastro IT Automation</em> Installation</h2>
-
-    <p>Exastro IT Automation has 3 types of installation: online, offline and manual.<br>
-    See below for information on how to get started.</p>
-
-    <div class="tabContents">
-    
-      <ul class="tabMenu">
-        <li><a href="#onlineInstall" class="touch">Online<br>
-        Installation</a></li>
-        <li><a href="#offlineInstall" class="touch">Offline<br>
-        Installation</a></li>
-        <li><a href="#manualInstall" class="touch">Manual<br>
-        Installation</a></li>
-      </ul>
-
-      <div id="onlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>Online</strong> Installation</h3>
-        <div class="slide">
-          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRHXDVNpCFyR6BQy6qFZMhPyMzxFW9vVbBtBSczHlF9U2uohr3K_auwygGriqptGQ/embed?start=false&loop=false&delayms=3000">
-            <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-          </div>
-        </div>
-        <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
-        <p>IT Automation can be installed on any operating systems that are compatible with Red Hat Enterprise Linux, and an Internet connection is required.</p>
-        <p>After installation is complete, by using the Quick Start guide below you can immediately experience IT Automation's powerful interface!</p>
-        <p><a href="asset/Learn/ITA-online-install_en.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download slide<i class="note">(PDF)</i></a></p>
-      </div>
-
-      <div id="offlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>Offline</strong> Installation</h3>
-        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
-        <p>In some environments, you may not be able to communicate with the outside.</p>
-        <p>Even in such a case in order to use Exastro IT Automation, we will introduce the offline installation procedure.</p>
-      </div>
-
-      <div id="manualInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>Manual</strong> Installation</h3>
-        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
-        <p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
-        <p>However, Exastro IT Automation has a Web function / AP function, and an HA configuration can be constructed by placing each function redundantly.</p>
-        <p>In manual installation, we plan to introduce the procedure of HA configuration.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="overallView">
+<section id="functions">
   <div class="sectionInner">
   
-    <h2><em>Exastro IT Automation</em> system configuration(Overall view)</h2>
+    <h2><em>Exastro IT Automation</em> Provided functions(Overall view)</h2>
     
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/en_system_overall.png" alt="Overview"></span></span></p>
 
@@ -268,6 +216,86 @@ Learn</h1>
       <p>Central management / history management of system configuration (parameter of each host or host group).<br>
       Define parameter of manage target freely.<br>
       Associate parameter values with IaC(Playbook, etc.) parameters.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="deploy">
+  <div class="sectionInner">
+
+    <h2><em>Exastro IT Automation</em> Deployment example</h2>
+
+    <div class="tabContents">
+      <!-- tab menu -->
+      <ul class="tabMenu">
+        <li><a href="#deploy_allInOne" class="touch">All-in-One Configuration</a></li>
+        <li><a href="#deploy_highAvailability" class="touch">High availability Configuration</a></li>
+      </ul>
+
+      <div id="deploy_allInOne" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>All-in-One</strong> Configuration</h3>
+        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_all_in_one_en.png" alt="All-in-One Configuration"></span></span></p>
+      </div>
+
+      <div id="deploy_highAvailability" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>High availability</strong> Configuration</h3>
+        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_high_availability_en.png" alt="High availability Configuration"></span></span></p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section id="introduction">
+  <div class="sectionInner">
+
+    <h2><em>Exastro IT Automation</em> Installation</h2>
+
+    <p>Exastro IT Automation has 3 types of installation: All-in-On(Online), All-in-One(Offline) and High availability(Manual).<br>
+    See below for information on how to get started.</p>
+
+    <div class="tabContents">
+    
+      <ul class="tabMenu">
+        <li><a href="#onlineInstall" class="touch">All-in-One<br>
+        (Online)</a></li>
+        <li><a href="#offlineInstall" class="touch">All-in-One<br>
+        (Offline)</a></li>
+        <li><a href="#manualInstall" class="touch">High availability<br>
+        (Manual)</a></li>
+      </ul>
+
+      <div id="onlineInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>All-in-One(Online)</strong></h3>
+        <div class="slide">
+          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQOPxmyEqChIiov1Yr5BaCE2-Jqx1ANpMkzL63B8u_yx5c1NWaMH6H8jFvGMmvxzbwvMYBHaLsb9-wE/embed?start=false&loop=false&delayms=3000">
+            <img src="asset/img/view_slide.jpg" alt="View slide">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+        </div>
+        <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
+        <p>IT Automation can be installed on any operating systems that are compatible with Red Hat Enterprise Linux, and an Internet connection is required.</p>
+        <p>After installation is complete, by using the Quick Start guide below you can immediately experience IT Automation's powerful interface!</p>
+        <p><a href="asset/Learn/ITA-online-install_en.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download slide<i class="note">(PDF)</i></a></p>
+      </div>
+
+      <div id="offlineInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>All-in-One(Offline)</strong></h3>
+        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
+        <p>In some environments, you may not be able to communicate with the outside.</p>
+        <p>Even in such a case in order to use Exastro IT Automation, we will introduce the offline installation procedure.</p>
+      </div>
+
+      <div id="manualInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>High availability(Manual)</strong></h3>
+        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
+        <p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
+        <p>However, Exastro IT Automation has a Web function / AP function, and an HA configuration can be constructed by placing each function redundantly.</p>
+        <p>In manual installation, we plan to introduce the procedure of HA configuration.</p>
+      </div>
+
     </div>
 
   </div>

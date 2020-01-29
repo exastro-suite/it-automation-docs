@@ -158,76 +158,20 @@ Learn</h1>
 <!-- InstanceBeginEditable name="EditContentBodyArea" -->
 <nav id="contentsMenu">
   <ul>
-    <li><a href="#introduction" class="touch anker">導入手順 <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#understanding" class="touch anker">ITAを知る <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#overallView" class="touch anker">システム構成 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#functions" class="touch anker">提供機能 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#deploy" class="touch anker">デプロイ例 <i class="fas fa-angle-down"></i></a></li>
+    <li><a href="#introduction" class="touch anker">導入手順 <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#quickStart" class="touch anker">クイックスタート <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#base" class="touch anker">BASE <i class="fas fa-angle-down"></i></a></li>
     <li class="toggleMenu"><span class="touch anker">機能紹介 <i class="fas fa-bars"></i></span>
       <ul>
-        <li><a href="#hgPs" class="touch anker">ホストグループ管理・メニュー作成 <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#hgPs" class="touch anker">ホストグループ管理・パラメータシート作成 <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#ansible" class="touch anker">Ansibleとの連携 <i class="fas fa-angle-down"></i></a></li>
       </ul>
     </li>
   </ul>
 </nav>
-
-<section id="introduction">
-  <div class="sectionInner">
-  
-    <h2><em>Exastro IT Automation</em> を導入しよう</h2>
-    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオンラインインストール、オフラインインストール、マニュアルインストールの3つの中から環境に合った方法で導入してください。</p>
-
-    <div class="tabContents">
-      <!-- tab menu -->
-      <ul class="tabMenu">
-        <li><a href="#onlineInstall" class="touch">Online<br>
-        Install</a></li>
-        <li><a href="#offlineInstall" class="touch">Offline<br>
-        Install</a></li>
-        <li><a href="#manualInstall" class="touch">Manual<br>
-        Install</a></li>
-      </ul>
-      <!-- onlineInstall -->
-      <div id="onlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>オンライン</strong>インストール</h3>
-        <div class="slide">
-          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQVTKP-2zYPF1VMADx-JGqTJ5wNZ2wGTBe_Ka-EYhEZoFvzsaNwgnADzVQDZBZVZA/embed?start=false&loop=false&delayms=3000">
-            <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-          </div>
-        </div>
-        <p>お手持ちの環境に IT Automationをすぐにインストールするためのインストールマニュアルです。</p>
-        <p>RedHat系Linuxディストリビューションに対応しており、インターネットに接続できる必要があります。</p>
-        <p>インストール完了後、下記の IT Automationクイックスタートを始めれば、すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
-        <p><a href="asset/Learn_ja/ITA-online-install_ja.pdf" class="download" download="IT Automation オンラインインストールマニュアル"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
-      </div>
-      <!-- offlineInstall -->
-      <div id="offlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>オフライン</strong>インストール</h3>
-        <div class="slide">
-          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRD5j8OCUFmz-qgICIfIQMfQiCHMOZwOHDjxuIouL18FoOtF3ykAU3B2OFxVcx-EQ/embed?start=false&loop=false&delayms=3000">
-            <img src="asset/img/view_slide.jpg" alt="View slide">
-            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-          </div>
-        </div>
-        <p>お手持ちの環境によっては、外部との通信を制限されている場合がございます。</p>
-        <p>このような環境下の場合でも IT Automationをご利用いただけるよう、オフラインインストール手順をご紹介いたします。</p>
-        <p><a href="asset/Learn_ja/ITA-offline-install_ja.pdf" class="download" download="IT Automation オフラインインストールマニュアル"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
-      </div>
-      <!-- manualInstall -->
-      <div id="manualInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>マニュアル</strong>インストール</h3>
-        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
-        <p>IT Automationでは、オンラインまたはオフラインのインストール手順を進めると、同一サーバ上に IT Automationの全機能がオールインワンで配置されます。</p>
-        <p>しかしながら IT Automationは、Web機能/AP機能を有しており、それぞれの機能を冗長配置することでHA構成を組むことが可能です。</p>
-        <p>マニュアルインストールでは、HA構成の手順をご紹介予定です。</p>
-      </div>
-      
-    </div>
-
-  </div>
-</section>
 
 <section id="understanding">
   <div class="sectionInner">
@@ -244,10 +188,11 @@ Learn</h1>
   </div>
 </section>
 
-<section id="overallView">
+
+<section id="functions">
   <div class="sectionInner">
   
-    <h2><em>Exastro IT Automation</em>のシステム構成（全体図）</h2>
+    <h2><em>Exastro IT Automation</em> の提供機能（全体図）</h2>
     
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/system_overall.png" alt="Overview"></span></span></p>
 
@@ -280,7 +225,7 @@ Learn</h1>
       自動化ソフトウェアの動作はMovement（単位ワーク）に閉じ込めることができ、Symphony（ワークフロー）として連結させることが可能です。</p>
     </div>
     
-    <h3 class="toggleHeading">メニュー／ホストグループ機能</h3>
+    <h3 class="toggleHeading">パラメータ／ホストグループ機能</h3>
     
     <div class="toggleText">
       <p>システム構成（ホストごと、またはホストグループごとのパラメータ）を一元管理／履歴管理する機能を提供します。<br>
@@ -290,6 +235,93 @@ Learn</h1>
 
   </div>
 </section>
+
+<section id="deploy">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> のデプロイ例</h2>
+
+    <div class="tabContents">
+      <!-- tab menu -->
+      <ul class="tabMenu">
+        <li><a href="#deploy_allInOne" class="touch">オールインワン構成</a></li>
+        <li><a href="#deploy_highAvailability" class="touch">ハイアベイラビリティ構成</a></li>
+      </ul>
+
+      <div id="deploy_allInOne" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>オールインワン</strong>構成</h3>
+        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_all_in_one.png" alt="オールインワン構成"></span></span></p>
+      </div>
+
+      <div id="deploy_highAvailability" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>ハイアベイラビリティ</strong>構成</h3>
+        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_high_availability.png" alt="ハイアベイラビリティ構成"></span></span></p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section id="introduction">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> を導入しよう</h2>
+    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオールインワン（Online）、オールインワン（Offline）、ハイアベイラビリティ（Manual）の3つの中から環境に合った方法で導入してください。</p>
+
+    <div class="tabContents">
+      <!-- tab menu -->
+      <ul class="tabMenu">
+        <li><a href="#onlineInstall" class="touch">オールインワン<br>
+        (Online)</a></li>
+        <li><a href="#offlineInstall" class="touch">オールインワン<br>
+        (Offline)</a></li>
+        <li><a href="#manualInstall" class="touch">ハイアベイラビリティ<br>
+        (Manual)</a></li>
+      </ul>
+      <!-- onlineInstall -->
+      <div id="onlineInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>オールインワン（Online）</strong></h3>
+        <div class="slide">
+          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vRA7IHqceBllWqatIoNGrj296wvyLJJNDEhiViQNsbcaVdKVWnGCmMaoySGe2cE3InGQvd8IR2J9btq/embed?start=false&loop=false&delayms=3000">
+            <img src="asset/img/view_slide.jpg" alt="View slide">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+        </div>
+        <p>お手持ちの環境に IT Automationをすぐにインストールするためのインストールマニュアルです。</p>
+        <p>RedHat系Linuxディストリビューションに対応しており、インターネットに接続できる必要があります。</p>
+        <p>インストール完了後、下記の IT Automationクイックスタートを始めれば、すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
+        <p><a href="asset/Learn_ja/ITA-online-install_ja.pdf" class="download" download="IT Automation オンラインインストールマニュアル"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <!-- offlineInstall -->
+      <div id="offlineInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>オールインワン（Offline）</strong></h3>
+        <div class="slide">
+          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vQ--6l8_vumAtuP1fuorSRrOMGby4AgycPqnbYV2fNQTtumUT6s-gJLGnzd66GcfUphSwxMrCUpt0ff/embed?start=false&loop=false&delayms=3000">
+            <img src="asset/img/view_slide.jpg" alt="View slide">
+            <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+        </div>
+        <p>お手持ちの環境によっては、外部との通信を制限されている場合がございます。</p>
+        <p>このような環境下の場合でも IT Automationをご利用いただけるよう、オフラインインストール手順をご紹介いたします。</p>
+        <p><a href="asset/Learn_ja/ITA-offline-install_ja.pdf" class="download" download="IT Automation オフラインインストールマニュアル"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <!-- manualInstall -->
+      <div id="manualInstall" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>ハイアベイラビリティ（Manual）</strong></h3>
+        <div class="slide"><img src="asset/img/under_construction.jpg" alt="Under Construction" style="vertical-align: middle;"></div>
+        <p>IT Automationでは、オンラインまたはオフラインのインストール手順を進めると、同一サーバ上に IT Automationの全機能がオールインワンで配置されます。</p>
+        <p>しかしながら IT Automationは、Web機能/AP機能を有しており、それぞれの機能を冗長配置することでHA構成を組むことが可能です。</p>
+        <p>マニュアルインストールでは、HA構成の手順をご紹介予定です。</p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
 
 <section id="quickStart">
   <div class="sectionInner">
@@ -443,10 +475,10 @@ Learn</h1>
 <section id="hgPs">
   <div class="sectionInner">
   
-    <h2><em>Exastro IT Automation</em> ホストグループ管理・メニュー作成</h2>
-    <p>IT Automationの基本機能「ホストグループ管理」と「メニュー作成」の利用手順をご用意しました。<br>
+    <h2><em>Exastro IT Automation</em> ホストグループ管理・パラメータシート作成</h2>
+    <p>IT Automationの基本機能「ホストグループ管理」と「パラメータシート作成」の利用手順をご用意しました。<br>
     「ホストグループ管理」は大規模システムの管理に必須の機能です。<br>
-    「メニュー作成」は効果的なIaC運用には欠かせないもので、Exastroの中核的な機能でもあります。</p>
+    「パラメータシート作成」は効果的なIaC運用には欠かせないもので、Exastroの中核的な機能でもあります。</p>
 
     <p>本書は、概要説明と機能紹介の「座学編」、簡単にハンズオンしたい方のための「実習編」の２部構成となっております。<br>
     （実習編は後日公開予定）</p>
@@ -456,12 +488,12 @@ Learn</h1>
       <div id="hgPsClassroomLecture" class="halfContent">
         <h3><em>Exastro IT Automation</em> <strong>座学</strong>編</h3>
         <div class="slide">
-          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vTEruSoerVp8F74iEjq0HFl4WeXasE21vs4ps8lCoS2-LywrToXExF5lqFpLSWedg/embed?start=false&loop=false&delayms=3000">
+          <div class="slideView" data-slide-url="https://docs.google.com/presentation/d/e/2PACX-1vREYK6sT79nzzz90CpEelqXRzspk3QwifHKNztUEnLo8yLzNa9Ze6iNhB7aAzsIrMHBOEZKZ0dQnHda/embed?start=false&loop=false&delayms=3000">
             <img src="asset/img/view_slide.jpg" alt="View slide">
             <iframe frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
           </div>
         </div>
-        <p><a href="asset/Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf" class="download" download="IT Automation ホストグループ管理・メニュー作成 座学編"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
+        <p><a href="asset/Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf" class="download" download="IT Automation ホストグループ管理・パラメータシート作成 座学編"><i class="fas fa-file-pdf"></i> スライドをダウンロード<i class="note">(PDF)</i></a></p>
       </div>
      
       <div id="hgPsPractice" class="halfContent">
