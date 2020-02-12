@@ -1,7 +1,7 @@
 {
 	"en": {
 		"Understanding": "none",
-		"Install_Online": "2PACX-1vR_WZ787Xqx6fcVQfFn7xBvT0HouKwIOYMh_sIoTa6VPe8uL9DE7xKDrJVBn07YhQ",
+		"Install_Online": "2PACX-1vRHn6b-sUNqZ_YGlqoTvdVHKuAuvcoH_ggYbg1DZWmDx2iWPfHlmxwiGoj4yfb9aTa_BB9dWqw-VsWz",
 		"Install_Offline": "none",
 		"Install_Manual": "none",
 		"Quick_start": "2PACX-1vQWKZ4cqbRRC1x8DJzaFRl16obibmScovMSGbD2vHiJ9EyNHrchFP_bK4bdL_q_SNUyyZf3LdROn9-u",
@@ -14,13 +14,13 @@
 	},
 	"ja": {
 		"Understanding": "2PACX-1vTaMmwLkzrMcQiv9UptGz7yA1VIg01XBO9HbJUomE9MNx_LVAhgVAj3pOg4ZBEaMZr97sgsxi_fZ1kE",
-		"Install_Online": "2PACX-1vRdSOzzuQL5LKa8o4H1oZe4uYbO1oxH8DBfjakdcftl0xCeVs3ZUAODGfQv_rc7PXeRJmjQzszKDJR0",
+		"Install_Online": "2PACX-1vQreMF1Wr_r4ZF3KTFJCf60FMkIJZ_oM4yyTPGOU0NofwfuoWm-kB6qDOKJo3mfIkZcrAwo3QsaWfOi",
 		"Install_Offline": "2PACX-1vTzQdEBSnb0Y4aQdPKBg_ttF8nScu_jLBFFZqpnVJDpzMeRYZLBd2sWzcLJbdQqfc1q62t6HRwUt7Tn",
 		"Install_Manual": "none",
 		"Quick_start": "2PACX-1vRzVW3oqV4XPgIin9LM-g74lj_0WT9edz8RrV9GkFEgtYOrAmo6NmjxEaGlYLjKg0F7h7f13CauQaLA",
 		"BASE_Tutorial": "2PACX-1vSEFS-vhB1-qge_Hh6TARVrIjcE0tWVoGUXuM3rkFMdKrUd210LIwoEh8yayRFE2oMefVLepMFS0MOx",
 		"BASE_Practice": "2PACX-1vR8cRC1RagXjrFa4haFeSgvGeprzCZJ6mrIVpXfFTVDslSx6ZuAaAFbgdvkLyztlGzoQx2pE3K4OCh-",
-		"HG_MENU_Tutorial": "2PACX-1vRHVMbsvFP9EDIksyA4T9TLdFfw0hEB_iS7hUljlw0KkhPSWc_I0OVPWig7ZqBHrw",
+		"HG_MENU_Tutorial": "2PACX-1vTj9OThrtUdnNA7BXlAfBqwa-SRfjr9XZ6XnqIC7pkARWnLIZ73G0FH45D21t9prZx2H7g4hO4vxeVA",
 		"HG_MENU_Practice": "none",
 		"Ansible_Tutorial": "none",
 		"Ansible_Practice": "none"
