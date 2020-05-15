@@ -1,0 +1,36 @@
+{
+	"en": {
+	},
+	"ja": {
+    { "Ansible-driver" : {
+      "1" : {
+        "Q" : "機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。",
+        "A" : "A-1 ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"
+      }, 
+      "2" : {
+        "Q" : "機器一覧のプロトコルを telnet に設定したホストに対して pioneer の作業実行をしたが、作業対象ホストへの接続でエラーとなる。",
+        "A" : "対話ファイルに記述しているパスワードおよびパスワードプロンプトの記述が正しいか確認してください。"
+      },
+      "3" : {
+        "Q" : "機器一覧の認証方式を公開鍵認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
+        "A" : "Ansible サーバおよび AnsibleTower サーバの.ssh/known_hosts にターゲットホスト側の公開鍵が登録されているかを確認してください。上記サーバからターゲットホストに対して ssh コマンドで該当ホスト名または IP アドレスでログインすることで公開鍵が登録されます。"
+      },
+      "4" : {
+        "Q" : "機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
+        "A" : "ターゲットホスト側の ssh の設定で password 認証を許可しているか確認してください。"
+      },
+      "5" : {
+        "Q" : "Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。",
+        "A" : "/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でターゲットホスト側の公開鍵が登録されているかを確認して下さい。"
+      },
+      "6" : {
+        "Q" : "プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。",
+        "A" : "RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控えて頂くことを推奨しています。"
+      },
+      "7" : {
+        "Q" : "Ansible から Windows サーバへの接続ができない。",
+        "A" : "Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile - IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic="true"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted="true"}'"
+      }
+    }
+  }
+}
