@@ -29,7 +29,7 @@
       },
       "7" : {
         "Q" : "Ansible から Windows サーバへの接続ができない。",
-        "A" : "Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile - IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic="true"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted="true"}'"
+        "A" : "Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile - IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'"
       }
     }
   }
