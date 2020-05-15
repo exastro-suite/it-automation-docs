@@ -2,7 +2,7 @@
 	"en": {
 	},
 	"ja": {
-    { "Ansible-driver" : {
+    "Ansible-driver" : {
       "1" : {
         "Q" : "機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。",
         "A" : "A-1 ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"
