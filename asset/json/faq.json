@@ -36,10 +36,17 @@
     }
   },
 	"ja": {
+    "よくあるご質問" : {
+      "data" : {
+        "icon" : "fa-question-circle",
+        "id" : "frequently"
+      }
+    },
     "全般" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-sticky-note",
+        "id" : "general"
       },
       "1" : {
         "Q" : "全般 Q",
@@ -49,7 +56,8 @@
     "管理コンソール" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-user-cog",
+        "id" : "management"
       },
       "1" : {
         "Q" : "管理コンソール Q",
@@ -59,7 +67,8 @@
     "基本コンソール" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-user",
+        "id" : "basic"
       },
       "1" : {
         "Q" : "基本コンソール Q",
@@ -69,7 +78,8 @@
     "エクスポート/インポート" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-exchange-alt",
+        "id" : "export-import"
       },
       "1" : {
         "Q" : "エクスポート/インポート Q",
@@ -79,7 +89,8 @@
     "資材管理" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-sitemap",
+        "id" : "file-control"
       },
       "1" : {
         "Q" : "資材管理 Q",
@@ -89,7 +100,8 @@
     "メニュ－作成" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-list",
+        "id" : "create-menu"
       },
       "1" : {
         "Q" : "メニュ－作成 Q",
@@ -99,7 +111,8 @@
     "ホストグループ管理" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-server",
+        "id" : "host-group"
       },
       "1" : {
         "Q" : "ホストグループ管理 Q",
@@ -109,7 +122,8 @@
     "Ansible-driver" : {
       "data" : {
         "frequently" : "1,2,3",
-        "icon" : "fa-cog"
+        "icon" : "fa-cog",
+        "id" : "ansible"
       },
       "1" : {
         "Q" : "機器一覧のユーザーにrootユーザー以外を設定したホストに対してlegacyの作業実行をしたが、Ansibleのコマンドでエラーが発生する。",
@@ -143,7 +157,8 @@
   "Cobbler-driver" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-cog",
+        "id" : "cobbler"
       },
       "1" : {
         "Q" : "Cobbler-driver Q",
@@ -153,11 +168,23 @@
   "OpenStack" : {
       "data" : {
         "frequently" : "",
-        "icon" : "fa-cog"
+        "icon" : "fa-cog",
+        "id" : "openstack"
       },
       "1" : {
         "Q" : "OpenStack Q",
         "A" : "OpenStack A"
+      }
+    },
+  "Rest API" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-desktop",
+        "id" : "rest"
+      },
+      "1" : {
+        "Q" : "Rest API Q",
+        "A" : "Rest API A"
       }
     }
   }
