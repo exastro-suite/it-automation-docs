@@ -1,6 +1,10 @@
 {
 	"en": {
     "Ansible-driver" : {
+      "data" : {
+        "frequently" : "1,2,3,4,5,6,7",
+        "icon" : "fa-cog"
+      },
       "1" : {
         "Q" : "When executing legacy operation on a host with the user set in device list menu other than root user, error occurs when executing Ansible command.",
         "A" : "When executing Ansible command with ITA, the sudo parameter is set to yes on default. Please give sudo privilege to the user on the operation target host side.\nPlease add sudo parameter to Playbook if sudo privilege can't be given to the user."
@@ -32,7 +36,81 @@
     }
   },
 	"ja": {
+    "全般" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "全般 Q",
+        "A" : "全般 A"
+      }
+    },
+    "管理コンソール" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "管理コンソール Q",
+        "A" : "管理コンソール A"
+      }
+    },
+    "基本コンソール" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "基本コンソール Q",
+        "A" : "基本コンソール A"
+      }
+    },
+    "エクスポート/インポート" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "エクスポート/インポート Q",
+        "A" : "エクスポート/インポート A"
+      }
+    },
+    "資材管理" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "資材管理 Q",
+        "A" : "資材管理 A"
+      }
+    },
+    "メニュ－作成" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "メニュ－作成 Q",
+        "A" : "メニュ－作成 A"
+      }
+    },
+    "ホストグループ管理" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "ホストグループ管理 Q",
+        "A" : "ホストグループ管理 A"
+      }
+    },
     "Ansible-driver" : {
+      "data" : {
+        "frequently" : "1,2,3",
+        "icon" : "fa-cog"
+      },
       "1" : {
         "Q" : "機器一覧のユーザーにrootユーザー以外を設定したホストに対してlegacyの作業実行をしたが、Ansibleのコマンドでエラーが発生する。",
         "A" : "ITAでAnsibleのコマンドを実行する場合にsudoパラメータのデフォルトをyesに設定しています。\n作業対象ホスト側で該当ユーザーに対するsudo権限を設定してください。\nsudo権限を与えられない場合はsudoパラメータの設定をPlaybookに追記してください。"
@@ -61,6 +139,26 @@
         "Q" : "AnsibleからWindowsサーバへの接続ができない。",
         "A" : "WindowsサーバでPowershellを管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile - IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'"
       }
-    }
+    },
+  "Cobbler-driver" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "Cobbler-driver Q",
+        "A" : "Cobbler-driver A"
+      }
+    },
+  "OpenStack" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-cog"
+      },
+      "1" : {
+        "Q" : "OpenStack Q",
+        "A" : "OpenStack A"
+      }
+    },
   }
 }
