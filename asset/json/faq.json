@@ -44,7 +44,7 @@
     },
     "全般" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-sticky-note",
         "id" : "general"
       },
@@ -55,7 +55,7 @@
     },
     "管理コンソール" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-user-cog",
         "id" : "management"
       },
@@ -66,7 +66,7 @@
     },
     "基本コンソール" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-user",
         "id" : "basic"
       },
@@ -77,7 +77,7 @@
     },
     "エクスポート/インポート" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-exchange-alt",
         "id" : "export-import"
       },
@@ -88,7 +88,7 @@
     },
     "資材管理" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-sitemap",
         "id" : "file-control"
       },
@@ -99,7 +99,7 @@
     },
     "メニュ－作成" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-list",
         "id" : "create-menu"
       },
@@ -110,7 +110,7 @@
     },
     "ホストグループ管理" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-server",
         "id" : "host-group"
       },
@@ -156,7 +156,7 @@
     },
   "Cobbler-driver" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-cog",
         "id" : "cobbler"
       },
@@ -167,7 +167,7 @@
     },
   "OpenStack" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-cog",
         "id" : "openstack"
       },
@@ -178,7 +178,7 @@
     },
   "Rest API" : {
       "data" : {
-        "frequently" : "",
+        "frequently" : "1",
         "icon" : "fa-desktop",
         "id" : "rest"
       },
