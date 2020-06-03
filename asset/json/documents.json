@@ -1,4 +1,50 @@
 {
+	"en": {
+		"Understanding": {
+      "type": "none",
+      "url": ""
+    },
+		"Install_Online": {
+      "type": "pdf",
+      "url": "Learn/ITA-online-install_en.pdf"
+    },
+		"Install_Offline": {
+      "type": "none",
+      "url": ""
+    },
+		"Install_Manual": {
+      "type": "none",
+      "url": ""
+    },
+		"Quick_start": {
+      "type": "pdf",
+      "url": "Learn/ITA-quickstart_en.pdf"
+    },
+		"BASE_Tutorial": {
+      "type": "none",
+      "url": ""
+    },
+		"BASE_Practice": {
+      "type": "none",
+      "url": ""
+    },
+		"HG_MENU_Tutorial": {
+      "type": "none",
+      "url": ""
+    },
+		"HG_MENU_Practice": {
+      "type": "none",
+      "url": ""
+    },
+		"Ansible_Tutorial": {
+      "type": "none",
+      "url": ""
+    },
+		"Ansible_Practice": {
+      "type": "none",
+      "url": ""
+    }
+	},
 	"ja": {
 		"Understanding": {
       "type": "slide",
@@ -46,6 +92,8 @@
     }
 	},
 	"config": {
+    "pdf_viewer_url" : "https://exastro-suite.github.io/docs/asset/library/pdfjs/web/viewer.html?file=",
+    "pdf_viewer_parameters" : "#page=1",
 		"pdf_url": "https://exastro-suite.github.io/it-automation-docs/asset/",
 		"slide_url": "https://docs.google.com/presentation/d/e/",
 		"slide_parameters": "/embed?start=false&loop=false&delayms=3000"
