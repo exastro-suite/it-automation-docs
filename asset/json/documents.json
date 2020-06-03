@@ -1,0 +1,33 @@
+{
+	"en": {
+		"Understanding": { "type": "none", "url": "" },
+		"Install_Online": { "type": "none", "url": "" },
+		"Install_Offline": { "type": "none", "url": "" },
+		"Install_Manual": { "type": "none", "url": "" },
+		"Quick_start": { "type": "none", "url": "" },
+		"BASE_Tutorial": { "type": "none", "url": "" },
+		"BASE_Practice": { "type": "none", "url": "" },
+		"HG_MENU_Tutorial": { "type": "none", "url": "" },
+		"HG_MENU_Practice": { "type": "none", "url": "" },
+		"Ansible_Tutorial": { "type": "none", "url": "" },
+		"Ansible_Practice": { "type": "none", "url": "" },
+	},
+	"ja": {
+		"Understanding": { "type": "slide", "url": "2PACX-1vSHM2SvkullxtXTDnNLGTbNWgOEKB0i7E28LVMXu0ZdaLhQItlnJJS6HJPSojcnJkCM23rhJ8648mdd" },
+		"Install_Online": { "type": "pdf", "url": "Learn_ja/ITA-online-install_ja.pdf" },
+		"Install_Offline": { "type": "pdf", "url": "Learn_ja/ITA-offline-install_ja.pdf" },
+		"Install_Manual": { "type": "pdf", "url": "Learn_ja/IT Automation HA構成インストールマニュアル.pdf" },
+		"Quick_start": { "type": "pdf", "url": "Learn_ja/ITA-quickstart_ja.pdf" },
+		"BASE_Tutorial": { "type": "pdf", "url": "Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf" },
+		"BASE_Practice": { "type": "pdf", "url": "Learn_ja/ITA-base_practice_ja.pdf" },
+		"HG_MENU_Tutorial": { "type": "pdf", "url": "Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf" },
+		"HG_MENU_Practice": { "type": "none", "url": "" },
+		"Ansible_Tutorial": { "type": "none", "url": "" },
+		"Ansible_Practice": { "type": "none", "url": "" }
+	},
+	"config": {
+    "pdf_url": "https://exastro-suite.github.io/it-automation-docs/asset/",
+		"slide_url": "https://docs.google.com/presentation/d/e/",
+		"slide_parameters": "/embed?start=false&loop=false&delayms=3000"
+	}
+}
