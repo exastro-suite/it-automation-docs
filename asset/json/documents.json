@@ -13,8 +13,8 @@
       "url": ""
     },
 		"Install_Manual": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-HA-configuration.pdf"
     },
 		"Quick_start": {
       "type": "pdf",
