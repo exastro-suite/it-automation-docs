@@ -83,7 +83,8 @@ animation: monitorAnimation 0.1s linear infinite;
 #article.case #articleTitle .background { background-image: url("../img/header_case.jpg"); }
 #article.documents #articleTitle .background { background-image: url("../img/header_documents.jpg"); }
 #article.downloads #articleTitle .background { background-image: url("../img/header_downloads.jpg"); }
-#article.faq #articleTitle .background { background-image: url("../img/faq.jpg"); }
+#article.faq #articleTitle .background { background-image: url("../img/header_faq.jpg"); }
+#article.webinar #articleTitle .background { background-image: url("../img/header_webinar.jpg"); }
 
 @media screen and ( max-width: 640px ){
 
