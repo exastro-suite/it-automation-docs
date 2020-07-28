@@ -1,40 +1,4 @@
 {
-	"en": {
-    "Ansible-driver" : {
-      "data" : {
-        "frequently" : "1,2,3,4,5,6,7",
-        "icon" : "fa-cog"
-      },
-      "1" : {
-        "Q" : "When executing legacy operation on a host with the user set in device list menu other than root user, error occurs when executing Ansible command.",
-        "A" : "When executing Ansible command with ITA, the sudo parameter is set to yes on default. Please give sudo privilege to the user on the operation target host side.\nPlease add sudo parameter to Playbook if sudo privilege can't be given to the user."
-      }, 
-      "2" : {
-        "Q" : "When executing pioneer operation to the host whose protocol is set to telnet in device list menu, error occurs when connecting to operation target host.",
-        "A" : "Please check if the password and password prompt described in the dialog file are correct."
-      },
-      "3" : {
-        "Q" : "When executing orchestrator operation on host whose authentication method in device list is set to public key authentication, error occur when connecting to target host.",
-        "A" : "Please check if the public key on the target host side is registered in .ssh/known_hosts of Ansible server and AnsibleTower server. The public key is registered when loggin in the target host with target host name or IP address from the servers mentioned above using ssh command."
-      },
-      "4" : {
-        "Q" : "When executing orchestrator operation to host whose authentication method in device list is set to password authentication, error occur when connecting to target host.",
-        "A" : "Please check if password authentication in the ssh setting is allowed on the target host side."
-      },
-      "5" : {
-        "Q" : "When executing each orchestrator operation with host specification type specified in the Movement list menu, error occur when connecting to the target host.",
-        "A" : "Please check the registration of /etc/hosts, etc. to see if the address of the target host can be resolved or not. When connecting via ssh, please check if the public key on the target host side is registered in the known_hosts of Ansible server and AnsibleTower server with the target host name."
-      },
-      "6" : {
-        "Q" : "Creating file in /tmp using Playbook, but file is not created in /tmp.",
-        "A" : "PrivateTmp function has been added from RHEL7. The PrivateTmp option in Apache installed by ITA is enabled. The execution of Playbook from ITA is via Apache so /tmp is binded by other directory. ITA recommends that users refrain from accessing files in /tmp from Playbook."
-      },
-      "7" : {
-        "Q" : "Can't connect Windows server from Ansible.",
-        "A" : "Please start Powershell in Windows server as administrator and execute the following command.\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private \n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}"
-      }
-    }
-  },
 	"ja": {
     "よくあるご質問" : {
       "data" : {
@@ -44,148 +8,63 @@
     },
     "全般" : {
       "data" : {
-        "frequently" : "1",
+        "frequently" : "",
         "icon" : "fa-sticky-note",
         "id" : "general"
       },
-      "1" : {
-        "Q" : "全般 Q",
-        "A" : "全般 A{img{asset/img/test.jpg}}ああああああああ<a href=\"#\">TEST</a>"
-      }
+1:{"Q":"禁止拡張子となっている、phpファイル/シェルファイル/exeファイルなどをアップロードして管理したい","A":"ITAにアップロードできる拡張子は、デフォルトでは「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」が禁止されています。\n「管理コンソール」＞「システム設定」　から設定を変更することが可能です。\nただし、セキュリティホールになる可能性があることをご了承の上、設定変更をお願い致します。"},
+2:{"Q":"ITAの保守サービスはある？","A":"ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介』\nhttps://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331\n"}
     },
     "管理コンソール" : {
       "data" : {
-        "frequently" : "1",
+        "frequently" : "",
         "icon" : "fa-user-cog",
         "id" : "management"
       },
-      "1" : {
-        "Q" : "管理コンソール Q",
-        "A" : "管理コンソール A"
-      }
-    },
-    "基本コンソール" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-user",
-        "id" : "basic"
-      },
-      "1" : {
-        "Q" : "基本コンソール Q",
-        "A" : "基本コンソール A"
-      }
-    },
-    "エクスポート/インポート" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-exchange-alt",
-        "id" : "export-import"
-      },
-      "1" : {
-        "Q" : "エクスポート/インポート Q",
-        "A" : "エクスポート/インポート A"
-      }
-    },
-    "資材管理" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-sitemap",
-        "id" : "file-control"
-      },
-      "1" : {
-        "Q" : "資材管理 Q",
-        "A" : "資材管理 A"
-      }
+1:{"Q":"RBACの設定の単位は？","A":"メニュー単位になります。\n同じメニュー内で権限を分けたい場合は、メニューの分割を行ってください。\n"}
     },
     "メニュ－作成" : {
       "data" : {
-        "frequently" : "1",
+        "frequently" : "",
         "icon" : "fa-list",
         "id" : "create-menu"
       },
-      "1" : {
-        "Q" : "メニュ－作成 Q",
-        "A" : "メニュ－作成 A"
-      }
+1:{"Q":"メニュー作成時に以下のメッセージが出力されるが、何を修正すればいい？\n\n縦メニュー作成情報の項目数と繰り返し数が不正です。\n","A":"メニュー作成 -> メニュー項目作成情報で登録している情報と\nメニュー作成 -> メニュー(縦)作成情報のメニュー名:開始項目名、項目数、繰り返し数で定義している情報を比較し、定義が誤っていないか確認してください。"}
     },
     "ホストグループ管理" : {
       "data" : {
-        "frequently" : "1",
+        "frequently" : "",
         "icon" : "fa-server",
         "id" : "host-group"
       },
-      "1" : {
-        "Q" : "ホストグループ管理 Q",
-        "A" : "ホストグループ管理 A"
-      }
+1:{"Q":"ホストグループって何？","A":"ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。\nホストグループ管理機能を使用すると、グルーピングしたホストに対してまとめて作業指示を出すことが可能になり、多数のホストを管理する大規模システムでの作業が容易になります。\nまた、ホストグループ間で親子関係を定義することで、親ホストグループに設定したパラメータを子ホストグループに継承することができます。\n\n詳しくは、コミュニティサイトのLeanの「Exastro IT Automation ホストグループ管理・メニュー作成」をご参照下さい。\nhttps://exastro-suite.github.io/it-automation-docs/learn_ja.html\n"}
     },
+    "Conductor" : {
+      "data" : {
+        "frequently" : "",
+        "icon" : "fa-server",
+        "id" : "conductor"
+      },
+1:{"Q":"SymphonyとConductorの違いは何？","A":"Symphonyは複数のMovementを組み合わせてワークフローを作成し、順に実行させる機能です。\nConductorはSymphonyの後継版として、Symphonyに加えて以下が可能です。\n　・条件分岐：実行結果によって、以降の処理を分岐させることができます。\n　・並列実行：複数のMovementを同時実行できます。同時実行数は性能によって変わります。\n　・Conductorの呼び出し：別のConductorの呼び出しが可能です。\n　・処理の待ち合わせ：並列しているMovement等がすべて終了したら次の処理に進む、という制御が可能です。\n"},
+
+    }
     "Ansible-driver" : {
       "data" : {
         "frequently" : "1,2,3",
         "icon" : "fa-cog",
         "id" : "ansible"
       },
-      "1" : {
-        "Q" : "機器一覧のユーザーにrootユーザー以外を設定したホストに対してlegacyの作業実行をしたが、Ansibleのコマンドでエラーが発生する。",
-        "A" : "ITAでAnsibleのコマンドを実行する場合にsudoパラメータのデフォルトをyesに設定しています。\n作業対象ホスト側で該当ユーザーに対するsudo権限を設定してください。\nsudo権限を与えられない場合はsudoパラメータの設定をPlaybookに追記してください。"
-      }, 
-      "2" : {
-        "Q" : "機器一覧のプロトコルをtelnetに設定したホストに対してpioneerの作業実行をしたが、作業対象ホストへの接続でエラーとなる。",
-        "A" : "対話ファイルに記述しているパスワードおよびパスワードプロンプトの記述が正しいか確認してください。"
-      },
-      "3" : {
-        "Q" : "機器一覧の認証方式を公開鍵認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
-        "A" : "AnsibleサーバおよびAnsibleTowerサーバの.ssh/known_hostsにターゲットホスト側の公開鍵が登録されているかを確認してください。上記サーバからターゲットホストに対してsshコマンドで該当ホスト名またはIPアドレスでログインすることで公開鍵が登録されます。"
-      },
-      "4" : {
-        "Q" : "機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
-        "A" : "ターゲットホスト側のsshの設定でpassword認証を許可しているか確認してください。"
-      },
-      "5" : {
-        "Q" : "Movement一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。",
-        "A" : "/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh接続の場合、AnsibleサーバおよびAnsibleTowerサーバのknown_hostsに該当ホスト名でターゲットホスト側の公開鍵が登録されているかを確認して下さい。"
-      },
-      "6" : {
-        "Q" : "プレイブックで/tmpにファイルを作成しているが、/tmpにファイルが作成されていない。",
-        "A" : "RHEL7よりPrivateTmp 機能が追加されています。ITAでインストールしたApacheはPrivateTmp機能を有効にしています。ITAからのプレイブックの実行はApacheを経由していますので、/tmpが別ディレクトリにバインドされています。ITAではプレイブックからの/tmpへのファイルアクセスは控えて頂くことを推奨しています。"
-      },
-      "7" : {
-        "Q" : "AnsibleからWindowsサーバへの接続ができない。",
-        "A" : "WindowsサーバでPowershellを管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:¥User¥User> Enable-PSRemoting -Force\n↓\nC:¥User¥User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile - IPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:¥User¥User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:¥User¥User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'"
-      }
-    },
-  "Cobbler-driver" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-cog",
-        "id" : "cobbler"
-      },
-      "1" : {
-        "Q" : "Cobbler-driver Q",
-        "A" : "Cobbler-driver A"
-      }
-    },
-  "OpenStack" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-cog",
-        "id" : "openstack"
-      },
-      "1" : {
-        "Q" : "OpenStack Q",
-        "A" : "OpenStack A"
-      }
-    },
-  "Rest API" : {
-      "data" : {
-        "frequently" : "1",
-        "icon" : "fa-desktop",
-        "id" : "rest"
-      },
-      "1" : {
-        "Q" : "Rest API Q",
-        "A" : "Rest API A"
-      }
-    }
+1:{"Q":"Windows ServerにPioneerでSSHログインして設定する方法","A":"対話ファイルを以下のように記述してください。\n・BOM無しにする。\n・改行コードはCRLFとする。\n・Windows側で実行するコマンドは\"で囲んで、末尾に\rを追加する。\n　(改行コード対応のため)\n\n例)windowsサーバで新規にディレクトリを作成する。\nconf:\n  timeout: 10\nexec_list:\n  - expect: 'password:'\n    exec: XXXXXXXX\n  - expect: 'Administrator>'\n    exec: \"mkdir SSLtest_0525\r\"\n  - expect: 'Administrator>'\n    exec: \"exit\r\"\n"},
+2:{"Q":"ファイル管理とテンプレート管理って何が違うの？","A":"ファイル管理では、Playbook内で定義している各モジュールで使用するファイルの登録を行います。\nファイル素材は、copyモジュールやfileモジュールなどで使用する静的なファイルです。\n\nテンプレート管理では、Playbookで定義しているtemplateモジュールなどで使用するファイルを登録します。\nテンプレート管理のファイルは、Jinja2というテンプレート言語で記述したもので、条件分岐や変数など、ファイルを動的に作成することができます。\n"},
+3:{"Q":"どうしてテンプレート管理は変数を、自動ではなく手動で設定しなくてはいけないの？","A":"テンプレート管理で扱う、templateモジュールやios_configモジュールは、Jinja2という形式を使用しています。\nJinja2形式の変数は自動で刈り取ることができないため、手動での登録が必要となります。"},
+4:{"Q":"Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーなる?","A":"【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。\n"},
+5:{"Q":"代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。","A":"代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。\n"},
+6:{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"},
+7:{"Q":"機器一覧のプロトコルを telnet に設定したホストに対して pioneer の作業実行をしましたが、作業対象ホ\nストへの接続でエラーになる。","A":"よくあるエラー原因としては、対話ファイルに記述しているパスワードおよびパスワードプロンプトの記述が正しくない場合がありますので、ご確認ください。\n\n例として、expect モジュールと exec モジュールで以下のようにtelnet接続時のパスワードを記述したとします。\n　△△-△expect:△’Password’\n　△△△△exec:△itapassword\n　※△:半角スペース\n\n[考えられるエラー]\n ・expactで期待するパスワードプロンプトがPasswordではなく、passwordだった。\n ・パスワードがitapasswordではなかった。\n"},
+8:{"Q":"機器一覧の認証方式を公開鍵認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。","A":"Ansible サーバおよび AnsibleTower サーバの.ssh/known_hosts にターゲットホスト側の公開鍵が\n登録されているかを確認してください。上記サーバからターゲットホストに対して ssh コマンドで該当\nホスト名または IP アドレスでログインすることで公開鍵が登録されます。"},
+9:{"Q":"機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。","A":"ターゲットホスト側の ssh の設定で password 認証を許可しているか確認してください。"},
+10:{"Q":"Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。","A":"/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でタ\nーゲットホスト側の公開鍵が登録されているかを確認して下さい。"},
+11:{"Q":"プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。","A":"RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"},
+12:{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\User\User> Enable-PSRemoting -Force\n↓\nC:\User\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\User\User> winrm set winrm/config/service/auth '@{Basic="true"}'\n↓\nC:\User\User> winrm set winrm/config/service '@{AllowUnencrypted="true"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"}
   }
 }
