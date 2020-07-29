@@ -37,8 +37,8 @@
       "url": ""
     },
 		"Ansible_Tutorial": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-Ansible-Driver_lecture.pdf"
     },
 		"Ansible_Practice": {
       "type": "none",
