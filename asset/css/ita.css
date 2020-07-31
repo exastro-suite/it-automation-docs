@@ -2,80 +2,19 @@
 /* CSS Document */
 
 #website.index #articleTitle .background::before {
-content: '';
-position: absolute;
-top: 0; left: 0;
-display: block;
-width: 100%; height: 100%;
-background: center center no-repeat;
 background-image: url("../img/header_ita_home_bar.png");
-background-size: cover;
 }
-#website.index #articleTitle .background .monitor {
-display: block;
-position: absolute;
-left: 52.447%; top: 0;
-width: 41.666%; height: 100%;
+#website.index #articleTitle .backgroundMonitor .monitor ul::after {
+background-image: url("../img/header_ita_home_monitor.png");
 }
-#website.index #articleTitle .background .monitor div {
-position: relative;
-width: 100%; height: 100%;
-}
-#website.index #articleTitle .background .monitor ul {
-position: absolute;
-left: 0; top: calc( 50% + 20px );
-width: 100%;
-margin: 0;
-padding-bottom: 75%;
-transform: translateY(-50%);
-}
-#website.index #articleTitle .background .monitor ul::after {
-content: '';
-display: block;
-overflow: hidden;
-position: absolute;
-top: 0; left: 0;
-z-index: 10;
-width: 100%; height: 100%;
-background: url("../img/header_ita_home_monitor.png") center center no-repeat;
-background-size: cover;
-}
-#website.index #articleTitle .background .monitor li {
-position: absolute;
-display: block;
-top: 4.5%; left: 3.1875%;
-width: 93.625%; height: 71.5%;
-margin: 0;
-animation: 9s linear infinite;
-background: center center no-repeat;
-background-size: contain;
-box-shadow: 0 0 64px rgba( 0,0,0,0.3 ) inset; 
-}
-#website.index #articleTitle .background .monitor li:nth-child(1) { background-image: url("../img/home_image01.jpg"); animation-name: slideImage1; z-index: 5; }
-#website.index #articleTitle .background .monitor li:nth-child(2) { background-image: url("../img/home_image02.jpg"); animation-name: slideImage2; z-index: 4; }
-#website.index #articleTitle .background .monitor li:nth-child(3) { background-image: url("../img/header_home_image.jpg"); z-index: 3; }
-#website.en.index #articleTitle .background .monitor li:nth-child(1) { background-image: url("../img/en_home_image01.jpg"); }
-#website.en.index #articleTitle .background .monitor li:nth-child(2) { background-image: url("../img/en_home_image02.jpg"); }
-#website.en.index #articleTitle .background .monitor li:nth-child(3) { background-image: url("../img/en_header_home_image.jpg"); }
+#website.index #articleTitle .backgroundMonitor .monitor li:nth-child(1) { background-image: url("../img/home_image01.jpg"); animation-name: slideImage1; z-index: 5; }
+#website.index #articleTitle .backgroundMonitor .monitor li:nth-child(2) { background-image: url("../img/home_image02.jpg"); animation-name: slideImage2; z-index: 4; }
+#website.index #articleTitle .backgroundMonitor .monitor li:nth-child(3) { background-image: url("../img/header_home_image.jpg"); z-index: 3; }
+#website.en.index #articleTitle .backgroundMonitor .monitor li:nth-child(1) { background-image: url("../img/en_home_image01.jpg"); }
+#website.en.index #articleTitle .backgroundMonitor .monitor li:nth-child(2) { background-image: url("../img/en_home_image02.jpg"); }
+#website.en.index #articleTitle .backgroundMonitor .monitor li:nth-child(3) { background-image: url("../img/en_header_home_image.jpg"); }
 @keyframes slideImage1 { 25% { opacity: 1; } 33.33333% { opacity: 0; } 91.66666% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes slideImage2 { 58.33333% { opacity: 1; } 66.66666% { opacity: 0; } 100% { opacity: 0; } }
-
-#website.index #articleTitle .background .monitor ul::before {
-content: '';
-position: absolute;
-display: block;
-top: 4.5%; left: 3.1875%;
-z-index: 20;
-width: 93.625%; height: 71.5%;
-background: linear-gradient( #000 50%, #333 50%);
-background-size: 4px 4px;
-opacity: 0.1;
-animation: monitorAnimation 0.1s linear infinite;
-}
-@keyframes monitorAnimation {
-0% { background-position: 0 0; }
-100% { background-position: 0 -4px; }
-}
 
 #website.index #articleTitle .background { background-image: url("../img/header_home.jpg"); }
 #article.overview #articleTitle .background { background-image: url("../img/header_overvier.jpg"); }
@@ -92,9 +31,5 @@ animation: monitorAnimation 0.1s linear infinite;
   #website.en.index #articleTitle .background {
     background-image: url("../img/header_home_sp.jpg");
   }
-  #website.index #articleTitle .background::before,
-  #website.index #articleTitle .background .monitor {
-    display: none;
-  }
-
+  
 }
