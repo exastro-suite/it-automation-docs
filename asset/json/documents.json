@@ -96,11 +96,11 @@
     },
 		"cloudSystem_overview": {
       "type": "pdf",
-      "url": "SettngSamples_ja/cloud-system-template-overview_ja.pdf"
+      "url": "SettingSamples_ja/cloud-system-template-overview_ja.pdf"
     },
 		"cloudSystem_install": {
       "type": "pdf",
-      "url": "SettngSamples_ja/cloud-system-template-install_ja.pdf"
+      "url": "SettingSamples_ja/cloud-system-template-install_ja.pdf"
     }
 	},
 	"config": {
