@@ -93,6 +93,14 @@
 		"Guide_Book_ScOp": {
       "type": "pdf",
       "url": "Learn_ja/Exastroで実現するシステム構築・運用の効率化ガイドブック.pdf"
+    },
+		"cloudSystem_overview": {
+      "type": "pdf",
+      "url": "SettngSamples_ja/cloud-system-template-overview_ja.pdf"
+    },
+		"cloudSystem_install": {
+      "type": "pdf",
+      "url": "SettngSamples_ja/cloud-system-template-install_ja.pdf"
     }
 	},
 	"config": {
