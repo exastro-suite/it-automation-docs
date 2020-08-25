@@ -62,6 +62,10 @@
       "type": "pdf",
       "url": "Learn_ja/IT Automation HA構成インストールマニュアル.pdf"
     },
+		"VersionUp_Manual": {
+      "type": "pdf",
+      "url": "Learn_ja/ITA-version-up_ja.pdf"
+    },
 		"Quick_start": {
       "type": "pdf",
       "url": "Learn_ja/ITA-quickstart_ja.pdf"
