@@ -252,10 +252,12 @@ Learn</h1>
 
     <div class="tabContents">
       <!-- tab menu -->
-      <ul class="tabMenu">
-        <li><a href="#deploy_allInOne" class="touch">オールインワン構成</a></li>
-        <li><a href="#deploy_highAvailability" class="touch">ハイアベイラビリティ構成</a></li>
-      </ul>
+      <div class="tabMenu">
+        <ul class="tabMenuList">
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_allInOne">オールインワン構成</a></li>
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_highAvailability">ハイアベイラビリティ構成</a></li>
+        </ul>
+      </div>
 
       <div id="deploy_allInOne" class="tabContent">
         <h3><em>Exastro IT Automation</em> <strong>オールインワン</strong>構成</h3>
@@ -276,55 +278,62 @@ Learn</h1>
   <div class="sectionInner">
   
     <h2><em>Exastro IT Automation</em> を導入しよう</h2>
-    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオールインワン（Online）、オールインワン（Offline）、ハイアベイラビリティ（Manual）の3つの中から環境に合った方法で導入してください。</p>
+    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオールインワン（Online・Docker、Offline）、ハイアベイラビリティ（Manual）の4つの中から環境に合った方法で導入してください。</p>
 
     <div class="tabContents">
       <!-- tab menu -->
-      <ul class="tabMenu">
-        <li><a href="#onlineInstall" class="touch">オールインワン<br>
-        (Online)</a></li>
-        <li><a href="#offlineInstall" class="touch">オールインワン<br>
-        (Offline)</a></li>
-        <li><a href="#manualInstall" class="touch">ハイアベイラビリティ<br>
-        (Manual)</a></li>
-        <li><a href="#versionUp" class="touch">バージョンアップ</a></li>
-      </ul>
-      <!-- onlineInstall -->
-      <div id="onlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>オールインワン（Online）</strong></h3>
-        <div class="viewDocument" data-document="Install_Online"></div>
-        <p>お手持ちの環境に IT Automationをすぐにインストールするためのインストールマニュアルです。</p>
-        <p>RedHat系Linuxディストリビューションに対応しており、インターネットに接続できる必要があります。</p>
-        <p>インストール完了後、下記の IT Automationクイックスタートを始めれば、すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
-        <p><a href="asset/Learn_ja/ITA-online-install_ja.pdf" class="download" download="IT Automation オンラインインストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+      <div class="tabMenu">
+        <ul class="tabMenuList">
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne">オールインワン</a></li>
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_highAvailability">ハイアベイラビリティ</a></li>
+        </ul>
       </div>
-      <!-- offlineInstall -->
-      <div id="offlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>オールインワン（Offline）</strong></h3>
-        <div class="viewDocument" data-document="Install_Offline"></div>
-        <p>お手持ちの環境によっては、外部との通信を制限されている場合がございます。</p>
-        <p>このような環境下の場合でも IT Automationをご利用いただけるよう、オフラインインストール手順をご紹介いたします。</p>
-        <p><a href="asset/Learn_ja/ITA-offline-install_ja.pdf" class="download" download="IT Automation オフラインインストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+      <!-- All in one -->
+      <div id="install_allInOne" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>オールインワン</strong>構成</h3>
+        <div class="tabContents subTabContents">
+          <div class="tabMenu">
+            <ul class="tabMenuList">
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_online">Online</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_offline">Offline</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_versionup">Version up</a></li>
+            </ul>
+          </div>
+          <div id="install_allInOne_online" class="tabContent">
+            <h4>オンラインインストール</h4>
+            <div class="viewDocument" data-document="Install_Online"></div>
+            <p>お手持ちの環境に IT Automationをすぐにインストールするためのインストールマニュアルです。</p>
+            <p>RedHat系Linuxディストリビューションに対応しており、インターネットに接続できる必要があります。</p>
+            <p>インストール完了後、下記の IT Automationクイックスタートを始めれば、すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
+            <p><a href="asset/Learn_ja/ITA-online-install_ja.pdf" class="download" download="IT Automation オンラインインストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+          </div>
+          <div id="install_allInOne_offline" class="tabContent">
+            <h4>オフラインインストール</h4>
+            <div class="viewDocument" data-document="Install_Offline"></div>
+            <p>お手持ちの環境によっては、外部との通信を制限されている場合がございます。</p>
+            <p>このような環境下の場合でも IT Automationをご利用いただけるよう、オフラインインストール手順をご紹介いたします。</p>
+            <p><a href="asset/Learn_ja/ITA-offline-install_ja.pdf" class="download" download="IT Automation オフラインインストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+          </div>
+          <div id="install_allInOne_versionup" class="tabContent">
+            <h4>バージョンアップ</h4>
+            <div class="viewDocument" data-document="VersionUp_Manual"></div>
+            <p>ITA Ver1.5.0からバージョンアップ機能をリリースしました。<br>
+            ITA Ver1.4.0以降のオールインワン構成のITAをバージョンアップすることができます。</p>
+            <p><a href="asset/Learn_ja/ITA-version-up_ja.pdf" class="download" download="IT Automation バージョンアップマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+          </div>
+        </div>
       </div>
-      <!-- manualInstall -->
-      <div id="manualInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>ハイアベイラビリティ（Manual）</strong></h3>
+      <!-- High availability -->
+      <div id="install_highAvailability" class="tabContent">
+        <h3><em>Exastro IT Automation</em> <strong>ハイアベイラビリティ</strong>構成</h3>
+        <h4>マニュアルインストール</h4>
         <div class="viewDocument" data-document="Install_Manual"></div>
         <p>IT Automationでは、オンラインまたはオフラインのインストール手順を進めると、同一サーバ上に IT Automationの全機能がオールインワンで配置されます。</p>
         <p>しかしながらエンタープライズでご利用の際にはしばしば高可用なデプロイが求められます。IT Automationは、Web/AP機能、Backyard機能を分散配置することでHA構成を組むことが可能です。</p>
         <p>マニュアルインストールでは、HA構成の手順をご紹介いたします。</p>
         <p><a href="asset/Learn_ja/IT Automation HA構成インストールマニュアル.zip" class="download" download="IT Automation HA構成インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(ZIP)</i></a></p>
       </div>
-      <!-- Version Up -->
-      <div id="versionUp" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>バージョンアップ</strong></h3>
-        <div class="viewDocument" data-document="VersionUp_Manual"></div>
-        <p>ITA Ver1.5.0からバージョンアップ機能をリリースしました。<br>
-        ITA Ver1.4.0以降のオールインワン構成のITAをバージョンアップすることができます。</p>
-        <p><a href="asset/Learn_ja/ITA-version-up_ja.pdf" class="download" download="IT Automation バージョンアップマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
-      </div>
     </div>
-
   </div>
 </section>
 
