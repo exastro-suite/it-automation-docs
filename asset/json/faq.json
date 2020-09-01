@@ -23,7 +23,7 @@
         "icon" : "fa-random",
         "id" : "conductor"
       },
-"1":{"Q":"SymphonyとConductorの違いは何？","A":"Symphonyは複数のMovementを組み合わせてワークフローを作成し、順に実行させる機能です。\nConductorはSymphonyの後継版として、Symphonyに加えて以下が可能です。\n　・条件分岐：実行結果によって、以降の処理を分岐させることができます。\n　・並列実行：複数のMovementを同時実行できます。同時実行数は性能によって変わります。\n　・Conductorの呼び出し：別のConductorの呼び出しが可能です。\n　・処理の待ち合わせ：並列しているMovement等がすべて終了したら次の処理に進む、という制御が可能です。"}
+"1":{"Q":"SymphonyとConductorの違いは何？","A":"Symphonyは複数のMovementを組み合わせてジョブフローを作成し、順に実行させる機能です。\nConductorはSymphonyの後継版として、Symphonyに加えて以下が可能です。\n　・条件分岐：実行結果によって、以降の処理を分岐させることができます。\n　・並列実行：複数のMovementを同時実行できます。同時実行数は性能によって変わります。\n　・Conductorの呼び出し：別のConductorの呼び出しが可能です。\n　・処理の待ち合わせ：並列しているMovement等がすべて終了したら次の処理に進む、という制御が可能です。"}
     },
     "メニュ－作成" : {
       "data" : {

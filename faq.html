@@ -12,7 +12,7 @@
 </script>
 <!-- InstanceParam name="pageLanguage" type="text" value="en" -->
 <!-- InstanceParam name="pageType" type="text" value="article" -->
-<!-- InstanceParam name="pageTitle" type="text" value="learn" -->
+<!-- InstanceParam name="pageTitle" type="text" value="faq" -->
 
 
 <meta charset="utf-8">
@@ -22,7 +22,7 @@
 <meta name="theme-color" content="#002B62">
 <meta http-equiv="content-language" content="en">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Learn | Exastro IT Automation</title>
+<title>FAQ | Exastro IT Automation</title>
 <!-- InstanceEndEditable -->
 <!-- Stylesheet and JavaScript -->
 <link rel="stylesheet" type="text/css" href="../docs/asset/css/common.css">
@@ -37,8 +37,8 @@
 <link rel="stylesheet" type="text/css" href="asset/css/ita.css">
 <script src="../docs/asset/js/article.js"></script>
 
-<link rel="alternate" hreflang="en" href="https://exastro-suite.github.io/it-automation-docs/learn.html">
-<link rel="alternate" hreflang="ja" href="https://exastro-suite.github.io/it-automation-docs/learn_ja.html">
+<link rel="alternate" hreflang="en" href="https://exastro-suite.github.io/it-automation-docs/faq.html">
+<link rel="alternate" hreflang="ja" href="https://exastro-suite.github.io/it-automation-docs/faq_ja.html">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="shortcut icon" href="favicon.ico">
@@ -60,18 +60,11 @@
 
 
 <!-- InstanceBeginEditable name="head" -->
-<script src="../docs/asset/js/view_documents.js"></script>
-<script>
-$(function(){
-  var url = 'https://exastro-suite.github.io/it-automation-docs/asset/json/documents.json';
-  viewDocuments( url );
-});
-</script>
 <!-- InstanceEndEditable -->
 
 </head>
 
-<body id="article" class="ita learn en">
+<body id="article" class="ita faq en">
 
 <div id="container">
 
@@ -132,7 +125,7 @@ $(function(){
 </ul>
 
 <ul id="languageMenu">
-<li><!-- InstanceBeginEditable name="EditHeaderLanguageMenuArea" --><a href="./learn_ja.html" class="ja">Japanese</a>
+<li><!-- InstanceBeginEditable name="EditHeaderLanguageMenuArea" --><a href="faq.html" class="ja">Japanese</a>
 <!-- InstanceEndEditable --></li>
 <li><span>English</span></li>
 </ul>
@@ -154,8 +147,7 @@ $(function(){
 <div class="sectionInner">
 <!-- InstanceBeginEditable name="EditContentHeaderArea" -->
 <h1><small>Exastro IT Automation</small><br>
-Learn</h1>
-<p>Let's start IT Automation</p>
+FAQ</h1>
 <!-- InstanceEndEditable -->
 </div>
 </section>
@@ -163,263 +155,193 @@ Learn</h1>
 
 <div id="articleBody">
 <!-- InstanceBeginEditable name="EditContentBodyArea" -->
-<nav id="contentsMenu">
-  <ul>
-    <li><a href="#functions" class="touch anker">Functions <i class="fas fa-angle-down"></i></a></li>
-		<li><a href="#deploy" class="touch anker">Deploy <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#introduction" class="touch anker">Installation <i class="fas fa-angle-down"></i></a></li>
-		<li><a href="#quickStart" class="touch anker">Quick start <i class="fas fa-angle-down"></i></a></li>
-    <li class="toggleMenu"><span class="touch">Function introduction <i class="fas fa-bars"></i></span>
-      <ul>
-        <li><a href="#ansible" class="touch anker">Coordination between Ansible <i class="fas fa-angle-down"></i></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<section>
+<div class="sectionInner">
+<h2><em>Exastro IT Automation</em> よくあるご質問（FAQ）</h2>
 
-<section id="functions">
-  <div class="sectionInner">
-  
-    <h2><em>Exastro IT Automation</em> Provided functions(Overall view)</h2>
-    
-    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/en_system_overall.png" alt="Overview"></span></span></p>
+<div id="faqList"></div>
 
-    <h3 class="toggleHeading">Management Console function</h3>
-    
-    <div class="toggleText">
-      <p>User management (register, update, delete) and permission management (register, update, delete) by using ITA can be operated on the management console.<br>
-      Import/Export of data managed by ITA is also operated on the management console.</p>
-    </div>
-    
-    <h3 class="toggleHeading">File control management/File control check-in/check-out function</h3>
+<style>
+#articleBody .sectionInner #faqList ul {
+margin: 0; padding: 0;
+list-style: none;
+}
 
-    <div class="toggleText">
-      <p>Manage Infrastructure as Code (IaC) in order to use automation software(OSS).<br>
-      Backend is connected to Git and frontend provides management of file check-in/check-out status.</p>
-    </div>
-    
-    <h3 class="toggleHeading">Basic console function</h3>
-    
-    <div class="toggleText">
-      <p>Basic console provides essential functions when working with ITA</p>
-      <ul>
-        <li>Register/Manage device information(device list).</li>
-        <li>Create/Manage/Execute Symphony(workflow).</li>
-      </ul>
-    </div>
-    
-    <h3 class="toggleHeading">Drivers corresponding to each automation software</h3>
-    
-    <div class="toggleText">
-      <p>ITA suppports multiple automation software.<br>
-      Provide every automation software an interface that controls IaC(Playbook, etc.).<br>
-      Automation software operations can be confined to Movements (work unit) and linked into Symphony (workflow).</p>
-    </div>
-    
-    <h3 class="toggleHeading">Parameter(Host/Host Group)</h3>
-    
-    <div class="toggleText">
-      <p>Central management / history management of system configuration (parameter of each host or host group).<br>
-      Define parameter of manage target freely.<br>
-      Associate parameter values with IaC(Playbook, etc.) parameters.</p>
-    </div>
+.q {
+display: flex;
+margin-bottom: 8px;
+cursor: pointer;
+}
+.q .mark {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 64px;
+background-color: #002B62;
+border: 1px solid #002B62;
+border-radius: 4px 0 0 4px;
+text-align: center;
+font-weight: bold;
+font-size: 16px;
+color: #FFF;
+}
+.q .mark .num {
+padding-left: .3em;
+font-weight: normal;
+font-size: 14px;
+}
+.a {
+display: none;
+margin: 8px 0 32px; padding: 12px 16px;
+background-color: #F2F2F2;
+border: 1px solid #CCC;
+border-radius: 4px;
+}
+.a .mark {
+float: left;
+display: block;
+width: 48px;
+padding: 0 16px 0 0;
+border-right: 1px solid #CCC;
+text-align: right;
+font-weight: bold;
+color: #002B62;
+}
 
-  </div>
-</section>
+.text {
+line-height: 1.75;
+letter-spacing: .05em;
+font-size: 12px;
+}
+.q .text {
+position: relative;
+z-index: 1;
+width: calc( 100% - 64px );
+padding: 8px 32px 8px 16px;
+background-color: #FFF;
+border: 1px solid #002B62;
+border-left: none;
+border-radius: 0 4px 4px 0;
+}
+.q:hover .text {
+background-color: #F0F2F6;
+}
+.q .text::after {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: "\f078";
+display: block;
+position: absolute;
+right: 0; top: 50%;
+z-index: 2;
+transform: translateY(-50%);
+width: 32px;
+text-align: center;
+transition-duration: .2s;
+}
+.q.toggleHeading:hover .text::after  {
+transform: translateY(-35%);
+}
+.q.toggleHeading.open .text::after {
+transform:  translateY(-50%) rotateX(-180deg);
+}
+.q.toggleHeading.open:hover .text::after {
+transform:  translateY(-65%) rotateX(-180deg);
+}
 
-<section id="deploy">
-  <div class="sectionInner">
-
-    <h2><em>Exastro IT Automation</em> Deployment example</h2>
-
-    <div class="tabContents">
-      <!-- tab menu -->
-      <ul class="tabMenu">
-        <li><a href="#deploy_allInOne" class="touch">All-in-One Configuration</a></li>
-        <li><a href="#deploy_highAvailability" class="touch">High availability Configuration</a></li>
-      </ul>
-
-      <div id="deploy_allInOne" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>All-in-One</strong> Configuration</h3>
-        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_all_in_one_en.png" alt="All-in-One Configuration"></span></span></p>
-      </div>
-
-      <div id="deploy_highAvailability" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>High availability</strong> Configuration</h3>
-        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_high_availability_en.png" alt="High availability Configuration"></span></span></p>
-      </div>
-      
-    </div>
-
-  </div>
-</section>
-
-<section id="introduction">
-  <div class="sectionInner">
-
-    <h2><em>Exastro IT Automation</em> Installation</h2>
-
-    <p>Exastro IT Automation has 3 types of installation: All-in-On(Online), All-in-One(Offline) and High availability(Manual).<br>
-    See below for information on how to get started.</p>
-
-    <div class="tabContents">
-    
-      <ul class="tabMenu">
-        <li><a href="#onlineInstall" class="touch">All-in-One<br>
-        (Online)</a></li>
-        <li><a href="#offlineInstall" class="touch">All-in-One<br>
-        (Offline)</a></li>
-        <li><a href="#manualInstall" class="touch">High availability<br>
-        (Manual)</a></li>
-      </ul>
-
-      <div id="onlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>All-in-One(Online)</strong></h3>
-        <div class="viewDocument" data-document="Install_Online"></div>
-        <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
-        <p>IT Automation can be installed on any operating systems that are compatible with Red Hat Enterprise Linux, and an Internet connection is required.</p>
-        <p>After installation is complete, by using the Quick Start guide below you can immediately experience IT Automation's powerful interface!</p>
-        <p><a href="asset/Learn/ITA-online-install_en.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
-      </div>
-
-      <div id="offlineInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>All-in-One(Offline)</strong></h3>
-        <div class="viewDocument" data-document="Install_Offline"></div>
-				<p>In some environments, you may not be able to communicate with the outside.</p>
-        <p>Even in such a case in order to use Exastro IT Automation, we will introduce the offline installation procedure.</p>
-      </div>
-
-      <div id="manualInstall" class="tabContent">
-        <h3><em>Exastro IT Automation</em> <strong>High availability(Manual)</strong></h3>
-        <div class="viewDocument" data-document="Install_Manual"></div>
-				<p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
-        <p>However, high availability deployment is often required for enterprises.</p>
-        <p>IT Automation can be constructed in an high availability(HA) configuration by allocating Web/AP functions and Backyard functions in distributed servers.</p>
-        <p>In manual installation, we plan to introduce the procedure of HA configuration.</p>
-        <p><a href="asset/Learn/ITA-HA-configuration.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="quickStart">
-  <div class="sectionInner">
-
-    <h2>Getting Started with <em>Exastro IT Automation</em></h2>
-    
-    <h3><em>Exastro IT Automation</em> Quick start</h3>
-    <div class="viewDocument" data-document="Quick_start">
-      <div class="slideCode">
-        <dl>
-          <dt>Reference 4 Sample Collection of Playbook</dt>
-          <dd class="note">*The character code is "UTF-8", the line feed code is "LF", and the extension is "yml" format. Keep the indents in mind.</dd>
-          <dd>
+.a .text {
+display: block;
+margin-left: 64px;
+}
 
 
-
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Make Work Directory demonstration
-  file:
-    path: <span class="any">/tmp/demodirectory</span>
-    state: <span class="any">directory</span>
-    mode: <span class="any">0755</span>
-
-</pre>
+</style>
 
 
+<script>
 
-          </dd>
-          <dd>
+function faqLoading( jsonURL ) {
+
+		var language = '',
+        $body = $('body'),
+        $faqList = $('#faqList');
+
+		// 言語をbodyのclassから判定
+		if ( $body.is('.en') ) {
+			language = 'en';
+		} else if ( $body.is('.ja') ) {
+			language = 'ja';
+		} else {
+			language = undefined;
+		}
+		
+		if ( language !== undefined ) {
+		
+			// JSONを読み込む
+			$.ajax({
+
+				url: jsonURL,
+				type: 'GET',
+				dataType: 'text'
+
+			}).done( function( data ){
+
+				var JSONparse = JSON.parse( data );
+
+				var faq = JSONparse[ language ],
+            faqHTML = '';
+        
+        for ( var cat in faq ) {
+          faqHTML += ''
+            + '<h3 class="toggleHeading">' + cat + '</h3>'
+            + '<div class="toggleText">'
+              + '<ul>';
+          for ( var no in faq[cat] ) {
+            var qTex = faq[cat][no]["Q"].replace(/\n/g,'<br>'),
+                aTex = faq[cat][no]["A"].replace(/\n/g,'<br>');
+            faqHTML += ''
+              + '<li>'
+                + '<dl>'
+                  + '<dt class="q toggleHeading"><span class="mark">Q<span class="num">' + no + '</span></span><span class="text">' + qTex + '</span></dt>'
+                  + '<dd class="a toggleText"><span class="mark">A</span><span class="text">' + aTex + '</span></dd>'
+                + '</dl>'
+              + '</li>';
+          }
+          faqHTML += ''
+              + '</ul>'
+            + '</div>';
+        }
+        $faqList.html( faqHTML );
+        $('.toggleHeading').on('click', function(){
+          $( this ).toggleClass('open');
+          $( this ).next('.toggleText').slideToggle( 100 );
+        });
+
+			}).fail( function(){
+
+				// リストの読み込みに失敗したらConsoleにエラー出力
+				window.console.error('Failed to load "' + jsonURL + '".');
+
+			});
+		
+		} else {
+
+			// 言語の判定に失敗したらConsoleにエラー出力
+			window.console.error('Failed to get language.');
+			
+		}
+
+}
+
+$(function(){
+  var url = 'https://exastro-suite.github.io/it-automation-docs/asset/json/faq.json';
+  faqLoading( url );
+});
+
+</script>
 
 
-
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Sample User add
-  user:
-    name: <span class="any">ITA</span>
-    createhome: <span class="any">no</span>
-    uid: <span class="any">4401</span>
-    group: <span class="any">users</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-      
-      
-      
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Collect Files
-  fetch:
-    src=<span class="any">/etc/hosts</span>
-    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
-    flat=yes
-
-</pre>
-
-
-
-          </dd>
-        </dl>
-      </div>
-      <div class="slideMenu">
-        <ul>
-          <li class="viewSlide touch"><span>View PDF</span></li>
-          <li class="sampleCode touch"><span>Sample code</span></li>
-        </ul>
-      </div>
-    </div>
-    
-    <p>This a quick start document to allow you to quickly familiarize yourself with the user interface of Exastro IT Automation. IT Automation controls multiple northbound automation softwares, such as Ansible.<br>
-    In this quick start document, Ansible is selected as the automation software because of its broad scope.<br>
-    In order to provide a smooth introduction, the functions listed below have been omitted from this quick start document, however, they are important features of IT Automation and their use is recommended to get the most out of the software.</p>
-    <ul>
-      <li>Manage parameters</li>
-      <li>Link parameters to variables in IaCs</li>
-    </ul>
-    <p><a href="asset/Learn/ITA-quickstart_en.pdf" class="download" download="IT Automation Quick start"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
-    <!--<p><span class="download"><i class="fas fa-hourglass-half"></i> During slide creation</span></p>-->
-  </div>
-</section>
-
-<section id="ansible">
-  <div class="sectionInner">
-  
-    <h2>Coordination between Ansible with <em>Exastro IT Automation</em></h2>
-    
-    <p>The hands-on of the Ansible association function will be released in near future.</p>
-
-    <div class="floatContents">
-      
-      <div id="ansibleClassroomLecture" class="halfContent">
-        <h3><em>Exastro IT Automation</em>: <strong>Tutorial</strong></h3>
-        <div class="viewDocument only" data-document="Ansible_Tutorial"></div>
-      </div>
-     
-      <div id="ansiblePractice" class="halfContent">
-        <h3><em>Exastro IT Automation</em>: <strong>Practice</strong></h3>
-        <div class="viewDocument only" data-document="Ansible_Practice"></div>
-      </div>
-      
-    </div>
-    
-    <h3>Expected effects in cooperation with AnsibleTower</h3>
-    
-    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/ansible_tower_coop_en.png" alt="AnsibleTower cooperation image"></span></span></p>
-    
-    <p>IT Automation gathers / manages configuration data and generates directory / configuration files that are necessary for Ansible to execute.<br>
-    AnsibleTower secures inter-cluster communication and controls different version of AnsibleEngine.<br>
-    AnsibleEngine is the Engine which runs Ansible playbook.<br>
-    Combining all the features, the automatic construction system consist of IT Automation + AnsibleTower + AnsibleEngine can put efficiency increasing and labor saving into practice.</p>
-
-  </div>
+</div>
 </section>
 <!-- InstanceEndEditable -->
 </div>
