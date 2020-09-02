@@ -223,7 +223,7 @@ Learn</h1>
     <div class="toggleText">
       <p>基本コンソールでは、ITA を利用して作業する時に共通的に必要となる機能を提供します。<br>
       ・ 機器情報（デバイスリスト）の登録、管理<br>
-      ・ Symphony（ワークフロー）の作成、管理、実行</p>
+      ・ Symphony（ジョブフロー）の作成、管理、実行</p>
     </div>
     
     <h3 class="toggleHeading">各自動化ソフトウエアに対応したドライバー群</h3>
@@ -231,7 +231,7 @@ Learn</h1>
     <div class="toggleText">
       <p>ITAは複数の自動化ソフトウェアに対応しています。<br>
       自動化ソフトウェアごとにIaC（Playbook等）を制御するインタフェースを提供します。<br>
-      自動化ソフトウェアの動作はMovement（単位ワーク）に閉じ込めることができ、Symphony（ワークフロー）として連結させることが可能です。</p>
+      自動化ソフトウェアの動作はMovement（単位ワーク）に閉じ込めることができ、Symphony（ジョブフロー）として連結させることが可能です。</p>
     </div>
     
     <h3 class="toggleHeading">メニュー／ホストグループ機能</h3>
@@ -297,6 +297,7 @@ Learn</h1>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_online">Online</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_offline">Offline</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_versionup">Version up</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_docker">Docker</a></li>
             </ul>
           </div>
           <div id="install_allInOne_online" class="tabContent">
@@ -320,6 +321,56 @@ Learn</h1>
             <p>ITA Ver1.5.0からバージョンアップ機能をリリースしました。<br>
             ITA Ver1.4.0以降のオールインワン構成のITAをバージョンアップすることができます。</p>
             <p><a href="asset/Learn_ja/ITA-version-up_ja.pdf" class="download" download="IT Automation バージョンアップマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
+          </div>
+          <div id="install_allInOne_docker" class="tabContent">
+            <h4>Docker インストール</h4>
+            <div class="rightImage image33"><img src="../docs/asset/img/download_docker.png" alt="Docker"></div>
+            <p>お手持ちのDocker環境に IT Automationをすぐに起動できます。<br>
+            インターネットに接続できる必要があります。<br>
+            コンテナ起動後、下記の IT Automationクイックスタートを始めれば、<br>
+            すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
+            
+            <div class="stepContents">
+              <ol class="stepContensList">
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 1</span> :Dockerコンテナの起動</dt>
+                    <dd class="stepContentBody">
+                      <pre style="white-space: normal;"># docker run --privileged --add-host=exastro-it-automation:127.0.0.1 -d -p 8080:80 -p 10443:443 --name exastro01 exastro/it-automation:x.x.x-ja</pre>
+                      <p>※ポート番号(8080,10443)とバージョン(x.x.x)は適宜変更してください。</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 2</span> :Exastro IT Automationコンソールにアクセス</dt>
+                    <dd class="stepContentBody">
+                      <p>http://<span class="dummyVariable">[Docker-Host-IP]</span>:8080 or https://<span class="dummyVariable">[Docker-Host-IP]</span>:10443</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 3</span> :ログイン</dt>
+                    <dd class="stepContentBody">
+                      <p>ログイン画面が表示されたら、指定のログインID、初期パスワードを入力して、[ログイン]ボタンをクリックしてください。</p>
+                      <p>・ログインID ： administrator<br>
+                      ・初期パスワード ： password</p>
+                      <p>※インストール後に初めてログインした場合は、「パスワード変更画面」に遷移します。<br>
+                      ※パスワード変更画面から、初期パスワードを変更してください。</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle">注意事項</dt>
+                    <dd class="stepContentBody">
+                      <p>イメージの詳細は<a href="https://hub.docker.com/r/exastro/it-automation" target="_blank">Docker-Hub</a>のREADMEを参照ください。</p>
+                    </dd>
+                  </dl>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
@@ -412,7 +463,7 @@ Learn</h1>
       </div>
     </div>
     <p>IT Automationのインタフェースをスムーズに体感頂くために、クイックスタートをご用意しました。 </p>
-    <p>IT Automationではいくつかの自動化ソフトウェアと連携が可能ですが、それらの中で適用範囲が広いANSIBLEとの連携を体感頂けます。 </p>
+    <p>IT Automationではいくつかの自動化ソフトウェアと連携が可能ですが、それらの中で適用範囲が広いAnsibleとの連携を体感頂けます。 </p>
     <p>また IT Automationは「パラメータ管理」および「変数紐付け」といった最重要な機能を提供していますが、クイックスタートではスムーズに体感頂くために、敢えてこれらの機能の活用を割愛しています。</p>
     <p><a href="asset/Learn_ja/ITA-quickstart_ja.pdf" class="download" download="IT Automation クイックスタート"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
 
