@@ -100,11 +100,11 @@
     },
 		"cloudSystem_overview": {
       "type": "pdf",
-      "url": "SettingSamples_ja/cloud-system-template-overview_ja.pdf"
+      "url": "SettingSamples_ja/cloud-system-template-1st-aws-overview_ja.pdf"
     },
 		"cloudSystem_install": {
       "type": "pdf",
-      "url": "SettingSamples_ja/cloud-system-template-install_ja.pdf"
+      "url": "SettingSamples_ja/cloud-system-template-1st-aws-install_ja.pdf"
     }
 	},
 	"config": {
