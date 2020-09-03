@@ -91,8 +91,8 @@
       "url": "Learn_ja/ITA-Ansible-Driver_ja.pdf"
     },
 		"Ansible_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/ITA-Ansible-Driver_ja_practice.pdf"
     },
 		"Guide_Book_ScOp": {
       "type": "pdf",
