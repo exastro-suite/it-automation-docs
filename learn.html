@@ -267,43 +267,98 @@ Learn</h1>
     <div class="tabContents">
       <div class="tabMenu">
         <ul class="tabMenuList">
-          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#onlineInstall">All-in-One<br>
-          (Online)</a></li>
-          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#offlineInstall">All-in-One<br>
-          (Offline)</a></li>
-          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#manualInstall">High availability<br>
-          (Manual)</a></li>
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne">All-in-One</a></li>
+          <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_highAvailability">High availability</a></li>
         </ul>
       </div>
-
-      <div id="onlineInstall" class="tabContent">
-        <h3><strong>All-in-One(Online)</strong></h3>
-        <div class="viewDocument" data-document="Install_Online"></div>
-        <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
-        <p>IT Automation can be installed on any operating systems that are compatible with Red Hat Enterprise Linux, and an Internet connection is required.</p>
-        <p>After installation is complete, by using the Quick Start guide below you can immediately experience IT Automation's powerful interface!</p>
-        <p><a href="asset/Learn/ITA-online-install_en.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      <!-- All in one -->
+      <div id="install_allInOne" class="tabContent">
+        <h3><strong>All-in-One</strong> Configuration</h3>
+        <div class="tabContents subTabContents">
+          <div class="tabMenu">
+            <ul class="tabMenuList">
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_online">Online</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_offline">Offline</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_docker">Docker</a></li>
+            </ul>
+          </div>
+          <div id="install_allInOne_online" class="tabContent">
+            <h4>Install <strong>Online</strong></h4>
+            <div class="viewDocument" data-document="Install_Online"></div>
+            <p>This installation manual enables you to easily install Exastro IT Automation in your environment.</p>
+            <p>IT Automation can be installed on any operating systems that are compatible with Red Hat Enterprise Linux, and an Internet connection is required.</p>
+            <p>After installation is complete, by using the Quick Start guide below you can immediately experience IT Automation's powerful interface!</p>
+            <p><a href="asset/Learn/ITA-online-install_en.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+          </div>
+          <div id="install_allInOne_offline" class="tabContent">
+            <h4>Install <strong>Offline</strong></h4>
+            <div class="viewDocument" data-document="Install_Offline"></div>
+            <p>In some environments, you may not be able to communicate with the outside.</p>
+            <p>Even in such a case in order to use Exastro IT Automation, we will introduce the offline installation procedure.</p>
+          </div>
+          <div id="install_allInOne_docker" class="tabContent">
+            <h4>Install <strong>Docker</strong></h4>
+            <div class="rightImage image33"><img src="../docs/asset/img/download_docker.png" alt="Docker"></div>
+            <p>Users can start IT Automation with their Docker environment immediately.<br>
+            Connecting to Internet is required.<br>
+            After starting the container, users can experience the amazing interface of IT Automation by following the quickstart manual in below.</p>
+            
+            <div class="stepContents">
+              <ol class="stepContensList">
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 1</span> :Start Docker container</dt>
+                    <dd class="stepContentBody">
+                      <pre style="white-space: normal;"># docker run --privileged --add-host=exastro-it-automation:127.0.0.1 -d -p 8080:80 -p 10443:443 --name exastro01 exastro/it-automation:x.x.x-ja</pre>
+                      <p>*Please change port number (8080,10443) and version (x.x.x) according your environment.</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 2</span> :Access Exastro IT Automation console</dt>
+                    <dd class="stepContentBody">
+                      <p>http://<span class="dummyVariable">[Docker-Host-IP]</span>:8080 or https://<span class="dummyVariable">[Docker-Host-IP]</span>:10443</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 3</span> :Login</dt>
+                    <dd class="stepContentBody">
+                      <p>When the IT Automation login screen appears, please enter the given login ID and initial password then click the [Login] button.</p>
+                      <p>・Login ID ： administrator<br>
+                      ・Initial password ： password</p>
+                      <p>*If you are logging in for the first time after installation, you will be redirected to "Change password screen".<br>
+                      *Please change the initial password in "Change password screen".</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li class="stepContentItem">
+                  <dl class="stepContent">
+                    <dt class="stepContentTitle">Notes</dt>
+                    <dd class="stepContentBody">
+                      <p>Please refer to the README in <a href="https://hub.docker.com/r/exastro/it-automation" target="_blank">Docker-Hub</a> for the details of the image.</p>
+                    </dd>
+                  </dl>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="offlineInstall" class="tabContent">
-        <h3><strong>All-in-One(Offline)</strong></h3>
-        <div class="viewDocument" data-document="Install_Offline"></div>
-				<p>In some environments, you may not be able to communicate with the outside.</p>
-        <p>Even in such a case in order to use Exastro IT Automation, we will introduce the offline installation procedure.</p>
-      </div>
-
-      <div id="manualInstall" class="tabContent">
-        <h3><strong>High availability(Manual)</strong></h3>
+      <!-- High availability -->
+      <div id="install_highAvailability" class="tabContent">
+        <h3><strong>High availability</strong> Configuration</h3>
+        <h4>Install <strong>Manual</strong> Installation</h4>
         <div class="viewDocument" data-document="Install_Manual"></div>
-				<p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
+        <p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
         <p>However, high availability deployment is often required for enterprises.</p>
         <p>IT Automation can be constructed in an high availability(HA) configuration by allocating Web/AP functions and Backyard functions in distributed servers.</p>
         <p>In manual installation, we plan to introduce the procedure of HA configuration.</p>
         <p><a href="asset/Learn/ITA-HA-configuration.pdf" class="download" download="IT Automation online installation manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
       </div>
-
     </div>
-
   </div>
 </section>
 
