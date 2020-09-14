@@ -16,6 +16,10 @@
       "type": "pdf",
       "url": "Learn/ITA-HA-configuration.pdf"
     },
+		"VersionUp_Manual": {
+      "type": "pdf",
+      "url": "Learn/ITA-version-up.pdf"
+    },
 		"Quick_start": {
       "type": "pdf",
       "url": "Learn/ITA-quickstart_en.pdf"
