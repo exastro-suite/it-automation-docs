@@ -82,6 +82,14 @@
       "type": "pdf",
       "url": "Learn_ja/ITA-base_practice_ja.pdf"
     },
+		"Conductor_Tutorial": {
+      "type": "pdf",
+      "url": "Learn_ja/ITA-Conductor_ja.pdf"
+    },
+		"Conductor_Practice": {
+      "type": "none",
+      "url": ""
+    },
 		"HG_MENU_Tutorial": {
       "type": "pdf",
       "url": "Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf"
