@@ -9,8 +9,8 @@
       "url": "Learn/ITA-online-install_en.pdf"
     },
 		"Install_Offline": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-offline-install.pdf"
     },
 		"Install_Manual": {
       "type": "pdf",
