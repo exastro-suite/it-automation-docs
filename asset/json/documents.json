@@ -95,8 +95,8 @@
       "url": "Learn_ja/ITA-hg-ps_classroom_lecture_ja.pdf"
     },
 		"HG_MENU_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/ITA-hg-ps_practice_ja.pdf"
     },
 		"Ansible_Tutorial": {
       "type": "pdf",
