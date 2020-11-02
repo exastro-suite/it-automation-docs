@@ -59,6 +59,56 @@
 "10":{"Q":"Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。","A":"/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でタ\nーゲットホスト側の公開鍵が登録されているかを確認して下さい。"},
 "11":{"Q":"プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。","A":"RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"},
 "12":{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"}
-    }
-  }
 }
+
+
+
+},"en":{
+
+
+
+"General":{
+"data":{"frequently":"","icon":"fa-sticky-note","id":"general"},
+"1":{"Q":"I want to upload and manage restricted files, such as PHP files, Share files and EXE files","A":"Files with the following extensions: 「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」are restricted by default. It is possible to change those settings from the \"Management Console\">\"System settings\" menu. However, please keep in mind that there is a chance security holes will be created by doing this."},
+"2":{"Q":"Does ITA have any Maintenance service?","A":"Since ITA is an Open Source Software, there is no Maintenance service in the developer community. NEC is developing a/the Maintenance support service. (Japanese only) 『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"}
+},
+"Management Console":{
+"data":{"frequently":"","icon":"fa-user-cog","id":"management"},
+"1":{"Q":"What units are used in RBAC settings?","A":"Menu units are used. If you wish to divide authority within the same menu, please divide the menu."}
+},
+"Conductor":{
+"data":{"frequently":"","icon":"fa-random","id":"conductor"},
+"1":{"Q":"What is the difference between Symphony and Conductor?","A":"Symphony is a function that allows users to combine multiple movements into job-flows and execute them in order. \nConductor is the supersedement of Symphony and can in addition do the following:  \n・Parallel execution: Execute multiple Movements at the same time. The amount of parallel executable Movements depends on the performance.\n・Calling conductor: It is possible to call in a different Conductor.\n・Appoint repair: It is possible to set all movements and such to be repaired after they`re finished."}
+},
+"Menu creation":{
+"data":{"frequently":"","icon":"fa-list","id":"create-menu"},
+"1":{"Q":"The message below shows up when I`m trying to create a menu. What should I do?  \n\"The vertical menu information item number and repeted numbers are incorrect.\"","A":"Compare\nCreate Menu> Registered information in Menu item creation information\nand\nCreate Menu> Menu(vertical)`s creation information`s \"Menu Name\" \" Item Number\" and Information defined by the amount of repetitions\nand check if there are no errors or mistakes with the definition. "}
+},
+"Host group management":{
+"data":{"frequently":"","icon":"fa-server","id":"host-group"},
+"1":{"Q":"What is host group?","A":"A host group is a Host group that gathers logical units (functions and roles).\nBy using the host group management function, it is possible to give work instructions to grouped hosts, making it easier to manage works in a large system environment with multiple hosts. \nAdditionaly, by defining a parent-child relationship in host groups, it is possible to set succeeding parameters from the parent to the child host groups. \n\nFor more information, check the Community site`s Learn page`s \"Exastro IT Automation Host group management・Menu creation\""}
+},
+"Ansible-driver":{
+"data":{"frequently":"","icon":"fa-cog","id":"ansible"},
+"1":{"Q":"How do I log in and set SSH in Windows server in Pioneer?","A":"Make the interaction file as below.\n・Without BOM\n・Make the code CRLF\n・Enclose the command being executed in windows with quotation marks and add \"\\r\" at the end.\n\nExample: Create a new directory in the Windows Server\nconf:\ntimeout: 10\nexec_list:\n- expect: 'password:'\nexec: XXXXXXXX\n- expect: 'Administrator>'\nexec: \"mkdir SSLtest_0525\\r\"\n- expect: 'Administrator>'\nexec: \"exit\\r\""},
+"2":{"Q":"What is the difference between File management and template management?","A":"File management is used to register files used in each module defined in a playbook. \nThe file materials are static files that uses copy and file modules.\n\nTemplate management is used to register files used in Template modules and such defined in Playbooks.\nFiles in Template management are written in a template language called Jinja2 and can dynamically create files, variables and conditional branches."},
+"3":{"Q":"Why do I have to set the variables manually in Template management?","A":"(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."},
+"4":{"Q":"If the variables inside a playbook (VAR_XXX) are executed without any specific values set to them, at what timing will an error occur?","A":"(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."},
+"5":{"Q":"The specific values in Parameter sheets wont show correctly in the substitute value management menu when using the substitute value automatic registration.","A":"Check the definition information in the substitute value automatic register settings.\nAbiding the automatic registering settings,\nthe function that automatically register parameter sheets values into substitute values will not update if the last changer is any other function. "},
+"6":{"Q":"I executed Legacy work to all the hosts set to users in Device list(expect for Root Users),\nbut an error occurs in the Ansible Command","A":"In the case of executing a ansible commando in ITA, set the default sudo parameters to \"yes\".\nSet Sudo authority to all the corresponding work target host users.\nIf you are unable to add Sudo Authority, add a sudo parameter setting in the playbook."},
+"7":{"Q":"I executed work to the host set to telnet in Device list protocol, but an error occurs when connecting to the work target host.","A":"A common cause for errors is that the password in the file or in the password prompt is incorrect, so please make sure it is correct.\n\nAs an example,  Let`s write the expect module and the exec module to use the passwords below when connecting to telnet.\n△△-△expect:△’Password’\n△△△△exec:△itapassword\n※△=space\n\n(possible errors)\n・The password that should be put in Expect should be password, and not Password\n・The password was not itapassword"},
+"8":{"Q":"I tried executing Orchestra work to a host with public key set as authentication method in the device list, but an error occurs when connecting to the target host.","A":"Please check if a public key is registered to the target host side in Ansible/AnsibleTower server`s .ss/known_hosts.\n\nLogging in with a corresponding host name or ip address in the ssh command from the server written above will register a public key."},
+"9":{"Q":"I tried executing Orchestra work to a host with password authentication as authentication method in the device list, but an error occurs when connecting to the target host.","A":"Please check if password authorization is allowed in the SHH settings for the target host."},
+"10":{"Q":"I tried to specify a host format to and execute each orchestra working the movement list, but an error occurs when connecting to the target host.","A":"Make sure that the adress resolution for the corresponding host names registered in /etc/hosts is completed.\nIf connected with SSH,\nCheck if the publlic key for Target host side in\nthe host names corresponding to known_host in the Ansible/AnsibleTower server\nis registered."},
+"11":{"Q":"the /tmp file shown in the playbook isnt created.","A":"The PrivateTmp fucntion is added from RHEL7. The Apache installed in ITA activates the PrivateTMP function. All playbook executions from ITA goes through Apache, so/tmp is bound to a different directory. It is therefore recommended that access to /tmp files from playbooks in ITA is refrained."},
+"12":{"Q":"I cant connect to the Windows server from Ansible","A":"Open up Powershell as an administrator in the windows server and execute the command below\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nIf you`re yousing Ansible-Legacy/Role, make sure the WinRM connection between device list and Movement list is enabled."}
+}
+
+
+
+}
+}
+
+
+
+
