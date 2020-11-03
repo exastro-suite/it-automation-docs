@@ -60,6 +60,12 @@
 
 
 <!-- InstanceBeginEditable name="head" -->
+<script>
+$(function(){
+  var url = 'https://exastro-suite.github.io/it-automation-docs/asset/json/faq.json';
+  faqLoading( url );
+});
+</script>
 <!-- InstanceEndEditable -->
 
 </head>
@@ -156,191 +162,24 @@ FAQ</h1>
 <div id="articleBody">
 <!-- InstanceBeginEditable name="EditContentBodyArea" -->
 <section>
-<div class="sectionInner">
-<h2><em>Exastro IT Automation</em> よくあるご質問（FAQ）</h2>
-
-<div id="faqList"></div>
-
-<style>
-#articleBody .sectionInner #faqList ul {
-margin: 0; padding: 0;
-list-style: none;
-}
-
-.q {
-display: flex;
-margin-bottom: 8px;
-cursor: pointer;
-}
-.q .mark {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 64px;
-background-color: #002B62;
-border: 1px solid #002B62;
-border-radius: 4px 0 0 4px;
-text-align: center;
-font-weight: bold;
-font-size: 16px;
-color: #FFF;
-}
-.q .mark .num {
-padding-left: .3em;
-font-weight: normal;
-font-size: 14px;
-}
-.a {
-display: none;
-margin: 8px 0 32px; padding: 12px 16px;
-background-color: #F2F2F2;
-border: 1px solid #CCC;
-border-radius: 4px;
-}
-.a .mark {
-float: left;
-display: block;
-width: 48px;
-padding: 0 16px 0 0;
-border-right: 1px solid #CCC;
-text-align: right;
-font-weight: bold;
-color: #002B62;
-}
-
-.text {
-line-height: 1.75;
-letter-spacing: .05em;
-font-size: 12px;
-}
-.q .text {
-position: relative;
-z-index: 1;
-width: calc( 100% - 64px );
-padding: 8px 32px 8px 16px;
-background-color: #FFF;
-border: 1px solid #002B62;
-border-left: none;
-border-radius: 0 4px 4px 0;
-}
-.q:hover .text {
-background-color: #F0F2F6;
-}
-.q .text::after {
-font-family: "Font Awesome 5 Free";
-font-weight: 900;
-content: "\f078";
-display: block;
-position: absolute;
-right: 0; top: 50%;
-z-index: 2;
-transform: translateY(-50%);
-width: 32px;
-text-align: center;
-transition-duration: .2s;
-}
-.q.toggleHeading:hover .text::after  {
-transform: translateY(-35%);
-}
-.q.toggleHeading.open .text::after {
-transform:  translateY(-50%) rotateX(-180deg);
-}
-.q.toggleHeading.open:hover .text::after {
-transform:  translateY(-65%) rotateX(-180deg);
-}
-
-.a .text {
-display: block;
-margin-left: 64px;
-}
-
-
-</style>
-
-
-<script>
-
-function faqLoading( jsonURL ) {
-
-		var language = '',
-        $body = $('body'),
-        $faqList = $('#faqList');
-
-		// 言語をbodyのclassから判定
-		if ( $body.is('.en') ) {
-			language = 'en';
-		} else if ( $body.is('.ja') ) {
-			language = 'ja';
-		} else {
-			language = undefined;
-		}
-		
-		if ( language !== undefined ) {
-		
-			// JSONを読み込む
-			$.ajax({
-
-				url: jsonURL,
-				type: 'GET',
-				dataType: 'text'
-
-			}).done( function( data ){
-
-				var JSONparse = JSON.parse( data );
-
-				var faq = JSONparse[ language ],
-            faqHTML = '';
-        
-        for ( var cat in faq ) {
-          faqHTML += ''
-            + '<h3 class="toggleHeading">' + cat + '</h3>'
-            + '<div class="toggleText">'
-              + '<ul>';
-          for ( var no in faq[cat] ) {
-            var qTex = faq[cat][no]["Q"].replace(/\n/g,'<br>'),
-                aTex = faq[cat][no]["A"].replace(/\n/g,'<br>');
-            faqHTML += ''
-              + '<li>'
-                + '<dl>'
-                  + '<dt class="q toggleHeading"><span class="mark">Q<span class="num">' + no + '</span></span><span class="text">' + qTex + '</span></dt>'
-                  + '<dd class="a toggleText"><span class="mark">A</span><span class="text">' + aTex + '</span></dd>'
-                + '</dl>'
-              + '</li>';
-          }
-          faqHTML += ''
-              + '</ul>'
-            + '</div>';
-        }
-        $faqList.html( faqHTML );
-        $('.toggleHeading').on('click', function(){
-          $( this ).toggleClass('open');
-          $( this ).next('.toggleText').slideToggle( 100 );
-        });
-
-			}).fail( function(){
-
-				// リストの読み込みに失敗したらConsoleにエラー出力
-				window.console.error('Failed to load "' + jsonURL + '".');
-
-			});
-		
-		} else {
-
-			// 言語の判定に失敗したらConsoleにエラー出力
-			window.console.error('Failed to get language.');
-			
-		}
-
-}
-
-$(function(){
-  var url = 'https://exastro-suite.github.io/it-automation-docs/asset/json/faq.json';
-  faqLoading( url );
-});
-
-</script>
-
-
+  <div class="sectionInner">
+    <h2>Frequently asked questions about <em>Exastro IT Automation</em> (FAQ)</h2>
+    <div id="faqContent">
+      <nav id="faqNavi">
+        <div class="faqNaviTitle">Search</div>
+        <div class="search-box"><input type="text" id="search-input"><button id="search-button" class="touch"><i class="fas fa-search"></i> Search</button></div>
+        <div class="faqNaviTitle">Category</div>
+        <ul>
+        </ul>
+      </nav>
+      <div id="faqList">
+        <div class="loading"></div>
+        <div id="search-result" class="faqItem">
+          <h3>Search result</h3>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
 </div>
 </section>
 <!-- InstanceEndEditable -->
