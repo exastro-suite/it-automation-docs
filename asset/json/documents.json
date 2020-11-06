@@ -87,8 +87,8 @@
       "url": "Learn_ja/ITA-export-import_classroom_lecture.pdf"
     },
 		"ExportImport_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/ITA-export-import_ja_practice.pdf"
     },
 		"Conductor_Tutorial": {
       "type": "pdf",
