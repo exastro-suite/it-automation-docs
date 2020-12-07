@@ -7,7 +7,9 @@
         "id" : "general"
       },
 "1":{"Q":"禁止拡張子となっている、phpファイル/シェルファイル/exeファイルなどをアップロードして管理したい","A":"ITAにアップロードできる拡張子は、デフォルトでは「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」が禁止されています。\n「管理コンソール」＞「システム設定」　から設定を変更することが可能です。\nただし、セキュリティホールになる可能性があることをご了承の上、設定変更をお願い致します。"},
-"2":{"Q":"ITAの保守サービスはある？","A":"ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"}
+"2":{"Q":"ITAの保守サービスはある？","A":"ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"},
+"3":{"Q":"既存プロジェクトで使っている帳票(Excel形式)を、Exastro IT AutomationのCMDB(パラメータシート)にインポートすることはできるのか？","A":"ITAでアップロード/ダウンロードするExcelのフォーマットは決まっているため、残念ながら既存プロジェクトで使っているExcelをそのままアップロード/ダウンロードすることはできません。\nITAの提供するフォーマットに書き換えて頂く必要があります。\n\n代替手段として、ITAに具備されているマシンインタフェース(Rest API）機能を利用して、既存プロジェクトで使っているExcelをVBAでコーディングし、情報を同期する方法もあります。\nREST-APIについて、詳しくは{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_利用手順マニュアル_RestAPI.pdf}こちら}をご参照ください。"},
+"4":{"Q":"CPUとメモリを増設したのに、性能が上がりません。","A":"マシンスペックに合わせて、設定値もチューニングして頂く必要があります。\nチューニングの参考値について、{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E5%90%84%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%E8%A8%AD%E5%AE%9A%E5%80%A4.pdf}こちらの資料}をご参照ください。"}
     },
     "管理コンソール" : {
       "data" : {
@@ -58,7 +60,9 @@
 "9":{"Q":"機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。","A":"ターゲットホスト側の ssh の設定で password 認証を許可しているか確認してください。"},
 "10":{"Q":"Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。","A":"/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でタ\nーゲットホスト側の公開鍵が登録されているかを確認して下さい。"},
 "11":{"Q":"プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。","A":"RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"},
-"12":{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"}
+"12":{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"},
+"13":{"Q":"代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。","A":"代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。"},
+"14":{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"}
 }
 
 
