@@ -25,28 +25,44 @@
       "url": "Learn/ITA-quickstart_en.pdf"
     },
 		"BASE_Tutorial": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-base_classroom_lecture_EN.pdf"
     },
 		"BASE_Practice": {
-      "type": "none",
+      "type": "pdf",
       "url": ""
     },
+		"ExportImport_Tutorial": {
+      "type": "pdf",
+      "url": "Learn/ITA-export-import_classroom_lecture_en.pdf"
+    },
+		"ExportImport_Practice": {
+      "type": "pdf",
+      "url": "Learn/ITA-export-import_EN_practice.pdf"
+    },
+		"Conductor_Tutorial": {
+      "type": "pdf",
+      "url": "Learn/ITA-Conductor.pdf"
+    },
+		"Conductor_Practice": {
+      "type": "pdf",
+      "url": "Learn/ITA-Conductor_practice_en.pdf"
+    },
 		"HG_MENU_Tutorial": {
-      "type": "none",
+      "type": "pdf",
       "url": ""
     },
 		"HG_MENU_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-hg-ps_practice_en.pdf"
     },
 		"Ansible_Tutorial": {
       "type": "pdf",
       "url": "Learn/ITA-Ansible-Driver_lecture.pdf"
     },
 		"Ansible_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn/ITA-Ansible-Driver_en.pdf"
     }
 	},
 	"ja": {

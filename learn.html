@@ -172,6 +172,9 @@ Learn</h1>
 		<li><a href="#quickStart" class="touch anker">Quick start <i class="fas fa-angle-down"></i></a></li>
     <li class="toggleMenu"><span class="touch">Function introduction <i class="fas fa-bars"></i></span>
       <ul>
+        <li><a href="#exportImport" class="touch anker">Export/Import <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#conductor" class="touch anker">Conductor <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#hgPs" class="touch anker">Host group management and Menu creation <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#ansible" class="touch anker">Coordination between Ansible <i class="fas fa-angle-down"></i></a></li>
       </ul>
     </li>
@@ -454,6 +457,154 @@ Learn</h1>
     </ul>
     <p><a href="asset/Learn/ITA-quickstart_en.pdf" class="download" download="IT Automation Quick start"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
     <!--<p><span class="download"><i class="fas fa-hourglass-half"></i> During slide creation</span></p>-->
+  </div>
+</section>
+
+<section id="base">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> BASE</h2>
+    <p>These are the user instruction manuals for the basic functions of IT Automation. <br>
+    We`ve prepared two different documents.<br>
+    "Tutorial"  document that points out the most important features.<br>
+    "Practice" who wants some hands on experience. <br>
+    All the functions and their merits will be explained in an easy to understand way, and we will use figures and pictures to illustrate more abstract content. <br>
+    Hence, reading this will help you understand how to use IT Automation`s common features more efficiently.</p>
+
+    <div class="floatContents">
+      <!-- classroomLecture -->
+      <div id="classroomLecture" class="halfContent">
+        <h3><strong>Tutorial</strong></h3>
+        <div class="viewDocument only" data-document="BASE_Tutorial">
+          <div class="slideMenu">
+            <ul>
+              <li class="viewSlide touch"><span>View PDF</span></li>
+            </ul>
+          </div>
+        </div>
+        <p><a href="asset/Learn/ITA-base_classroom_lecture_EN.pdf" class="download" download="IT Automation BASE Tutorial"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+      <!-- practice -->
+      <div id="practice" class="halfContent">
+        <h3><strong>Practice</strong></h3>
+        
+        <div class="viewDocument only" data-document="BASE_Practice">
+          <div class="slideCode">
+          <dl>
+          <dt>3.2事前準備 IaCの作成</dt>
+          <dd class="note">※文字コードは"UTF-8"、改行コードは"LF"、拡張子は"yml"形式。また、インデントにご注意下さい。</dd>
+          <dd>
+
+<pre class="playbook clipboard-copy">
+- name: Make Work Directory demonstration
+  file:
+    path: <span class="any">"/tmp/{{ VAR_DIRECTORY }}"</span>
+    state: <span class="any">directory</span>
+    mode: <span class="any">0755</span>
+
+</pre>
+
+          </dd>
+          </dl>
+          </div>
+          <div class="slideMenu">
+            <ul>
+              <li class="viewSlide touch"><span>View PDF</span></li>
+              <li class="sampleCode touch"><span>Sample code</span></li>
+            </ul>
+          </div>
+        </div>
+        <p><a href="asset/Learn/ITA-base_practice_EN.pdf" class="download" download="IT Automation BASE Practice"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="exportImport">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> Export/Import</h2>
+    <p>These are the user instruction manuals for IT Automation Export/Import. <br>
+    The Export/Import function allows users to move menus and their respective registered data from one ITA server to another.<br>
+    We`ve prepared two different documents.<br>
+    "Tutorial", which contains an overview and an explanation of all the features, and "Practice" for those who wish to get some hands on experience.</p>
+
+    <div class="floatContents">
+      
+      <div id="exportImportLecture" class="halfContent">
+        <h3><strong>Tutorial</strong></h3>
+        <div class="viewDocument only" data-document="ExportImport_Tutorial"></div>
+        <p><a href="asset/Learn/ITA-export-import_classroom_lecture_en.pdf" class="download" download="IT Automation Export/Import Tutorial"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+     
+      <div id="exportImportPractice" class="halfContent">
+        <h3><strong>Practice</strong></h3>
+        <div class="viewDocument only" data-document="ExportImport_Practice"></div>
+        <p><a href="asset/Learn/ITA-export-import_EN_practice.pdf" class="download" download="IT Automation Export/Import Practice"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section id="conductor">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> Conductor</h2>
+    <p>These are the user manuals for the "Conductor" function in IT Automation.<br>
+    The "Conductor" function is able to set more flexible job flows and can correspond to more situations than the "Symphony" function.<br>
+    <br>
+    We`ve prepared two different documents.<br>
+    "Tutorial", which contains an overview and an explanation of all the features, and "Practice" for those who wish to get some hands on experience.</p>
+
+    <div class="floatContents">
+      
+      <div id="conductorLecture" class="halfContent">
+        <h3><strong>Tutorial</strong></h3>
+        <div class="viewDocument only" data-document="Conductor_Tutorial"></div>
+        <p><a href="asset/Learn/ITA-Conductor.pdf" class="download" download="IT Automation Conductor Tutorial"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+     
+      <div id="conductorPractice" class="halfContent">
+        <h3><strong>Practice</strong></h3>
+        <div class="viewDocument only" data-document="Conductor_Practice"></div>
+        <p><a href="asset/Learn/ITA-Conductor_practice_en.pdf" class="download" download="IT Automation Conductor Practice"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section id="hgPs">
+  <div class="sectionInner">
+  
+    <h2><em>Exastro IT Automation</em> Host group management and Menu creation</h2>
+    <p>These are user instruction manuals for the "Host group Management" and "Menu creation" functions for IT Automation.<br>
+    "Host group management" is a function necessary for managing large-scale systems.<br>
+    "Menu creation" is crucial for operating IaC effectively, making it one of the core functions of Exastro.<br>
+    <br>
+    We`ve prepared two different documents.<br>
+    "Tutorial", which contains an overview and an explanation of all the features, and "Practice" for those who wish to get some hands on experience.</p>
+
+    <div class="floatContents">
+      
+      <div id="hgPsClassroomLecture" class="halfContent">
+        <h3><strong>Tutorial</strong></h3>
+        <div class="viewDocument only" data-document="HG_MENU_Tutorial"></div>
+        <p><a href="asset/Learn/ITA-hg-ps_classroom_lecture_ja.pdf" class="download" download="IT Automation Host group management and Menu creation Tutorial"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+     
+      <div id="hgPsPractice" class="halfContent">
+        <h3><strong>Practice</strong></h3>
+        <div class="viewDocument only" data-document="HG_MENU_Practice"></div>
+        <p><a href="asset/Learn/ITA-hg-ps_practice_en.pdf" class="download" download="IT Automation Host group management and Menu creation Practice"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+      </div>
+      
+    </div>
+
   </div>
 </section>
 
