@@ -9,7 +9,8 @@
 "1":{"Q":"禁止拡張子となっている、phpファイル/シェルファイル/exeファイルなどをアップロードして管理したい","A":"ITAにアップロードできる拡張子は、デフォルトでは「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」が禁止されています。\n「管理コンソール」＞「システム設定」　から設定を変更することが可能です。\nただし、セキュリティホールになる可能性があることをご了承の上、設定変更をお願い致します。"},
 "2":{"Q":"ITAの保守サービスはある？","A":"ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"},
 "3":{"Q":"既存プロジェクトで使っている帳票(Excel形式)を、Exastro IT AutomationのCMDB(パラメータシート)にインポートすることはできるのか？","A":"ITAでアップロード/ダウンロードするExcelのフォーマットは決まっているため、残念ながら既存プロジェクトで使っているExcelをそのままアップロード/ダウンロードすることはできません。\nITAの提供するフォーマットに書き換えて頂く必要があります。\n\n代替手段として、ITAに具備されているマシンインタフェース(Rest API）機能を利用して、既存プロジェクトで使っているExcelをVBAでコーディングし、情報を同期する方法もあります。\nREST-APIについて、詳しくは{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_RestAPI.pdf}こちら}をご参照ください。"},
-"4":{"Q":"CPUとメモリを増設したのに、性能が上がりません。","A":"マシンスペックに合わせて、設定値もチューニングして頂く必要があります。\nチューニングの参考値について、{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E5%90%84%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%E8%A8%AD%E5%AE%9A%E5%80%A4.pdf}こちらの資料}をご参照ください。"}
+"4":{"Q":"CPUとメモリを増設したのに、性能が上がりません。","A":"マシンスペックに合わせて、設定値もチューニングして頂く必要があります。\nチューニングの参考値について、{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E5%90%84%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%E8%A8%AD%E5%AE%9A%E5%80%A4.pdf}こちらの資料}をご参照ください。"},
+"5":{"Q":"Ansibleなどシステムから取得した情報を、ExastroのCMDBに取り込むには？","A":"収集機能を使用して、情報をCMDBに取り込むことができます。\n収集機能とは、ITAで実施したAnsibleの作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能です。\nパラメータシートを作成し、ソースファイルとパラメータシートとの紐付等を事前に設定した上で実行いただけます。\n\n収集機能の詳細は{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E5%8F%8E%E9%9B%86%E6%A9%9F%E8%83%BD.pdf}こちら}を参照ください。"}
     },
     "管理コンソール" : {
       "data" : {
@@ -33,7 +34,8 @@
         "icon" : "fa-list",
         "id" : "create-menu"
       },
-"1":{"Q":"メニュー作成時に以下のメッセージが出力されるが、何を修正すればいい？\n\n縦メニュー作成情報の項目数と繰り返し数が不正です。\n","A":"メニュー作成 -> メニュー項目作成情報で登録している情報と\nメニュー作成 -> メニュー(縦)作成情報のメニュー名:開始項目名、項目数、繰り返し数で定義している情報を比較し、定義が誤っていないか確認してください。"}
+"1":{"Q":"メニュー作成時に以下のメッセージが出力されるが、何を修正すればいい？\n\n縦メニュー作成情報の項目数と繰り返し数が不正です。\n","A":"メニュー作成 -> メニュー項目作成情報で登録している情報と\nメニュー作成 -> メニュー(縦)作成情報のメニュー名:開始項目名、項目数、繰り返し数で定義している情報を比較し、定義が誤っていないか確認してください。"},
+"2":{"Q":"パラメータシートとデータシートの違いは何？","A":"パラメータシート・データシートともに、メニュー作成機能にて、項目数や形式・サイズ・入力制限などを自由に設計することが可能です。\n\nパラメータシートはIaCの変数値を管理することができます。\nパラメータシートのレコードは、「オペレーション」または「オペレーションとホスト」単位で作成されます。\nパラメータシートで作成した項目は、各ドライバの「代入値自動登録設定」メニューにて、IaC変数との紐付けをを設定しておくことで、入力された値を IaC変数に自動で代入することが可能です。 \n\nデータシートは、ITA上で情報を管理する場合に利用できます。\nまた、他のパラメータシートやデータシートのプルダウンで選択する項目の参照元として利用することで、文言の揺れなどを防ぐことが可能です。\n\n{img{asset/faq/create_menu_001.jpg}}"}
     },
     "ホストグループ管理" : {
       "data" : {
@@ -62,7 +64,10 @@
 "11":{"Q":"プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。","A":"RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"},
 "12":{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"},
 "13":{"Q":"代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。","A":"代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。"},
-"14":{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"}
+"14":{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"},
+"15":{"Q":"Ansible-LegacyRoleモードのRoleファイル(zip)を作る手順を教えてほしい。","A":"AnsibleのRoleファイルをLegacyRoleで利用するための手順は、LearnページのExastro IT Automation Ansibleとの連携『{a{https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja_practice.pdf}Ansible Driver実習編』の第二章Ansible Role編}に詳細がございます。"},
+"16":{"Q":"Ansible-Driverの3つのモードの違いとは？","A":"Ansible-Driverはこちらの3つの観点から場合に合わせてご利用いただけます。\n・「IaCの再利用」Playbookの再利用に長けたAnsible-Legacyモード\n・「ノウハウの活用」AnsibleRoleを使用可能なAnsible-LegacyRoleモード\n・「適用範囲」独自の対話ファイルにより様々な状況に対応できるAnsible-Pioneerモード\n\n詳細はウェブページより「Exastro IT Automation Ansibleとの連携 座学編」（https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja.pdf）をご確認ください。"},
+"17":{"Q":"Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーになる?","A":"【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。"}
 }
 
 
