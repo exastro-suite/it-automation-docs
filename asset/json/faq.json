@@ -1,126 +1,306 @@
 {
-	"ja": {
-    "全般" : {
-      "data" : {
-        "frequently" : "",
-        "icon" : "fa-sticky-note",
-        "id" : "general"
-      },
-"1":{"Q":"禁止拡張子となっている、phpファイル/シェルファイル/exeファイルなどをアップロードして管理したい","A":"ITAにアップロードできる拡張子は、デフォルトでは「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」が禁止されています。\n「管理コンソール」＞「システム設定」　から設定を変更することが可能です。\nただし、セキュリティホールになる可能性があることをご了承の上、設定変更をお願い致します。"},
-"2":{"Q":"ITAの保守サービスはある？","A":"ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"},
-"3":{"Q":"既存プロジェクトで使っている帳票(Excel形式)を、Exastro IT AutomationのCMDB(パラメータシート)にインポートすることはできるのか？","A":"ITAでアップロード/ダウンロードするExcelのフォーマットは決まっているため、残念ながら既存プロジェクトで使っているExcelをそのままアップロード/ダウンロードすることはできません。\nITAの提供するフォーマットに書き換えて頂く必要があります。\n\n代替手段として、ITAに具備されているマシンインタフェース(Rest API）機能を利用して、既存プロジェクトで使っているExcelをVBAでコーディングし、情報を同期する方法もあります。\nREST-APIについて、詳しくは{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_RestAPI.pdf}こちら}をご参照ください。"},
-"4":{"Q":"CPUとメモリを増設したのに、性能が上がりません。","A":"マシンスペックに合わせて、設定値もチューニングして頂く必要があります。\nチューニングの参考値について、{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E5%90%84%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%E8%A8%AD%E5%AE%9A%E5%80%A4.pdf}こちらの資料}をご参照ください。"},
-"5":{"Q":"Ansibleなどシステムから取得した情報を、ExastroのCMDBに取り込むには？","A":"収集機能を使用して、情報をCMDBに取り込むことができます。\n収集機能とは、ITAで実施したAnsibleの作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能です。\nパラメータシートを作成し、ソースファイルとパラメータシートとの紐付等を事前に設定した上で実行いただけます。\n\n収集機能の詳細は{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E5%8F%8E%E9%9B%86%E6%A9%9F%E8%83%BD.pdf}こちら}を参照ください。"}
+    "ja": {
+        "全般": {
+            "1": {
+                "Q": "禁止拡張子となっている、phpファイル/シェルファイル/exeファイルなどをアップロードして管理したい",
+                "A": "ITAにアップロードできる拡張子は、デフォルトでは「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」が禁止されています。\n「管理コンソール」＞「システム設定」　から設定を変更することが可能です。\nただし、セキュリティホールになる可能性があることをご了承の上、設定変更をお願い致します。"
+            },
+            "2": {
+                "Q": "ITAの保守サービスはある？",
+                "A": "ITAはOSS（Open Source Software）のため、開発コミュニティには保守サービスはありません。\n\nNECがOSS保守サポートサービスを展開しています。\n『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"
+            },
+            "3": {
+                "Q": "既存プロジェクトで使っている帳票(Excel形式)を、Exastro IT AutomationのCMDB(パラメータシート)にインポートすることはできるのか？",
+                "A": "ITAでアップロード/ダウンロードするExcelのフォーマットは決まっているため、残念ながら既存プロジェクトで使っているExcelをそのままアップロード/ダウンロードすることはできません。\nITAの提供するフォーマットに書き換えて頂く必要があります。\n\n代替手段として、ITAに具備されているマシンインタフェース(Rest API）機能を利用して、既存プロジェクトで使っているExcelをVBAでコーディングし、情報を同期する方法もあります。\nREST-APIについて、詳しくは{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_RestAPI.pdf}こちら}をご参照ください。"
+            },
+            "4": {
+                "Q": "CPUとメモリを増設したのに、性能が上がりません。",
+                "A": "マシンスペックに合わせて、設定値もチューニングして頂く必要があります。\nチューニングの参考値について、{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%99%82%E3%81%AE%E5%90%84%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%B0%E8%A8%AD%E5%AE%9A%E5%80%A4.pdf}こちらの資料}をご参照ください。"
+            },
+            "5": {
+                "Q": "Ansibleなどシステムから取得した情報を、ExastroのCMDBに取り込むには？",
+                "A": "収集機能を使用して、情報をCMDBに取り込むことができます。\n収集機能とは、ITAで実施したAnsibleの作業実行結果（規定のフォーマットで出力されたソースファイル）を元に、パラメータシートへ値を自動で登録する機能です。\nパラメータシートを作成し、ソースファイルとパラメータシートとの紐付等を事前に設定した上で実行いただけます。\n\n収集機能の詳細は{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E5%8F%8E%E9%9B%86%E6%A9%9F%E8%83%BD.pdf}こちら}を参照ください。"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-sticky-note",
+                "id": "general"
+            }
+        },
+        "管理コンソール": {
+            "1": {
+                "Q": "RBACの設定の単位は？",
+                "A": "メニュー単位になります。\n同じメニュー内で権限を分けたい場合は、メニューの分割を行ってください。"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-user-cog",
+                "id": "management"
+            }
+        },
+        "Conductor": {
+            "1": {
+                "Q": "SymphonyとConductorの違いは何？",
+                "A": "Symphonyは複数のMovementを組み合わせてジョブフローを作成し、順に実行させる機能です。\nConductorはSymphonyの後継版として、Symphonyに加えて以下が可能です。\n　・条件分岐：実行結果によって、以降の処理を分岐させることができます。\n　・並列実行：複数のMovementを同時実行できます。同時実行数は性能によって変わります。\n　・Conductorの呼び出し：別のConductorの呼び出しが可能です。\n　・処理の待ち合わせ：並列しているMovement等がすべて終了したら次の処理に進む、という制御が可能です。"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-random",
+                "id": "conductor"
+            }
+        },
+        "メニュ－作成": {
+            "1": {
+                "Q": "メニュー作成時に以下のメッセージが出力されるが、何を修正すればいい？\n\n縦メニュー作成情報の項目数と繰り返し数が不正です。\n",
+                "A": "メニュー作成 -> メニュー項目作成情報で登録している情報と\nメニュー作成 -> メニュー(縦)作成情報のメニュー名:開始項目名、項目数、繰り返し数で定義している情報を比較し、定義が誤っていないか確認してください。"
+            },
+            "2": {
+                "Q": "パラメータシートとデータシートの違いは何？",
+                "A": "パラメータシート・データシートともに、メニュー作成機能にて、項目数や形式・サイズ・入力制限などを自由に設計することが可能です。\n\nパラメータシートはIaCの変数値を管理することができます。\nパラメータシートのレコードは、「オペレーション」または「オペレーションとホスト」単位で作成されます。\nパラメータシートで作成した項目は、各ドライバの「代入値自動登録設定」メニューにて、IaC変数との紐付けをを設定しておくことで、入力された値を IaC変数に自動で代入することが可能です。 \n\nデータシートは、ITA上で情報を管理する場合に利用できます。\nまた、他のパラメータシートやデータシートのプルダウンで選択する項目の参照元として利用することで、文言の揺れなどを防ぐことが可能です。\n\n{img{asset/faq/create_menu_001.jpg}67%}"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-list",
+                "id": "create-menu"
+            }
+        },
+        "ホストグループ管理": {
+            "1": {
+                "Q": "ホストグループって何？",
+                "A": "ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。\nホストグループ管理機能を使用すると、グルーピングしたホストに対してまとめて作業指示を出すことが可能になり、多数のホストを管理する大規模システムでの作業が容易になります。\nまた、ホストグループ間で親子関係を定義することで、親ホストグループに設定したパラメータを子ホストグループに継承することができます。\n\n詳しくは、コミュニティサイトのLeanの「{a{https://exastro-suite.github.io/it-automation-docs/learn_ja.html#hgPs}Exastro IT Automation ホストグループ管理・メニュー作成}」をご参照下さい。"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-server",
+                "id": "host-group"
+            }
+        },
+        "Ansible-driver": {
+            "1": {
+                "Q": "Windows ServerにPioneerでSSHログインして設定する方法",
+                "A": "対話ファイルを以下のように記述してください。\n・BOM無しにする。\n・改行コードはCRLFとする。\n・Windows側で実行するコマンドは\"で囲んで、末尾に\\rを追加する。\n　(改行コード対応のため)\n\n例)windowsサーバで新規にディレクトリを作成する。\nconf:\n  timeout: 10\nexec_list:\n  - expect: 'password:'\n    exec: XXXXXXXX\n  - expect: 'Administrator>'\n    exec: \"mkdir SSLtest_0525\\r\"\n  - expect: 'Administrator>'\n    exec: \"exit\\r\"\n"
+            },
+            "2": {
+                "Q": "ファイル管理とテンプレート管理って何が違うの？",
+                "A": "ファイル管理では、Playbook内で定義している各モジュールで使用するファイルの登録を行います。\nファイル素材は、copyモジュールやfileモジュールなどで使用する静的なファイルです。\n\nテンプレート管理では、Playbookで定義しているtemplateモジュールなどで使用するファイルを登録します。\nテンプレート管理のファイルは、Jinja2というテンプレート言語で記述したもので、条件分岐や変数など、ファイルを動的に作成することができます。\n"
+            },
+            "3": {
+                "Q": "どうしてテンプレート管理は変数を、自動ではなく手動で設定しなくてはいけないの？",
+                "A": "テンプレート管理で扱う、templateモジュールやios_configモジュールは、Jinja2という形式を使用しています。\nJinja2形式の変数は自動で刈り取ることができないため、手動での登録が必要となります。"
+            },
+            "4": {
+                "Q": "Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーなる?",
+                "A": "【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。\n"
+            },
+            "5": {
+                "Q": "代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。",
+                "A": "代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。\n"
+            },
+            "6": {
+                "Q": "機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。",
+                "A": "ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"
+            },
+            "7": {
+                "Q": "機器一覧のプロトコルを telnet に設定したホストに対して pioneer の作業実行をしたが、作業対象ホ\nストへの接続でエラーになる。",
+                "A": "よくあるエラー原因としては、対話ファイルに記述しているパスワードおよびパスワードプロンプトの記述が正しくない場合がありますので、ご確認ください。\n\n例として、expect モジュールと exec モジュールで以下のようにtelnet接続時のパスワードを記述したとします。\n　△△-△expect:△’Password’\n　△△△△exec:△itapassword\n　※△:半角スペース\n\n[考えられるエラー]\n ・expactで期待するパスワードプロンプトがPasswordではなく、passwordだった。\n ・パスワードがitapasswordではなかった。\n"
+            },
+            "8": {
+                "Q": "機器一覧の認証方式を公開鍵認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
+                "A": "Ansible サーバおよび AnsibleTower サーバの.ssh/known_hosts にターゲットホスト側の公開鍵が\n登録されているかを確認してください。上記サーバからターゲットホストに対して ssh コマンドで該当\nホスト名または IP アドレスでログインすることで公開鍵が登録されます。"
+            },
+            "9": {
+                "Q": "機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。",
+                "A": "ターゲットホスト側の ssh の設定で password 認証を許可しているか確認してください。"
+            },
+            "10": {
+                "Q": "Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。",
+                "A": "/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でタ\nーゲットホスト側の公開鍵が登録されているかを確認して下さい。"
+            },
+            "11": {
+                "Q": "プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。",
+                "A": "RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"
+            },
+            "12": {
+                "Q": "Ansible から Windows サーバへの接続ができない。",
+                "A": "Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"
+            },
+            "13": {
+                "Q": "代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。",
+                "A": "代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。"
+            },
+            "14": {
+                "Q": "機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。",
+                "A": "ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"
+            },
+            "15": {
+                "Q": "Ansible-LegacyRoleモードのRoleファイル(zip)を作る手順を教えてほしい。",
+                "A": "AnsibleのRoleファイルをLegacyRoleで利用するための手順は、LearnページのExastro IT Automation Ansibleとの連携{a{https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja_practice.pdf}「Exastro IT Automation Ansible Driver【実習編】」の第二章Ansible-LegacyRole編}に詳細がございます。"
+            },
+            "16": {
+                "Q": "Ansible-Driverの3つのモードの違いとは？",
+                "A": "Ansible-Driverはこちらの3つの観点から場合に合わせてご利用いただけます。\n・「IaCの再利用」Playbookの再利用に長けたAnsible-Legacyモード\n・「ノウハウの活用」AnsibleRoleを使用可能なAnsible-LegacyRoleモード\n・「適用範囲」独自の対話ファイルにより様々な状況に対応できるAnsible-Pioneerモード\n\n詳細はウェブページより{a{https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja.pdf}「Exastro IT Automation Ansible Driver【座学編】」}をご確認ください。"
+            },
+            "17": {
+                "Q": "Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーになる?",
+                "A": "【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-cog",
+                "id": "ansible"
+            }
+        }
     },
-    "管理コンソール" : {
-      "data" : {
-        "frequently" : "",
-        "icon" : "fa-user-cog",
-        "id" : "management"
-      },
-"1":{"Q":"RBACの設定の単位は？","A":"メニュー単位になります。\n同じメニュー内で権限を分けたい場合は、メニューの分割を行ってください。\n"}
-    },
-    "Conductor" : {
-      "data" : {
-        "frequently" : "",
-        "icon" : "fa-random",
-        "id" : "conductor"
-      },
-"1":{"Q":"SymphonyとConductorの違いは何？","A":"Symphonyは複数のMovementを組み合わせてジョブフローを作成し、順に実行させる機能です。\nConductorはSymphonyの後継版として、Symphonyに加えて以下が可能です。\n　・条件分岐：実行結果によって、以降の処理を分岐させることができます。\n　・並列実行：複数のMovementを同時実行できます。同時実行数は性能によって変わります。\n　・Conductorの呼び出し：別のConductorの呼び出しが可能です。\n　・処理の待ち合わせ：並列しているMovement等がすべて終了したら次の処理に進む、という制御が可能です。"}
-    },
-    "メニュ－作成" : {
-      "data" : {
-        "frequently" : "",
-        "icon" : "fa-list",
-        "id" : "create-menu"
-      },
-"1":{"Q":"メニュー作成時に以下のメッセージが出力されるが、何を修正すればいい？\n\n縦メニュー作成情報の項目数と繰り返し数が不正です。\n","A":"メニュー作成 -> メニュー項目作成情報で登録している情報と\nメニュー作成 -> メニュー(縦)作成情報のメニュー名:開始項目名、項目数、繰り返し数で定義している情報を比較し、定義が誤っていないか確認してください。"},
-"2":{"Q":"パラメータシートとデータシートの違いは何？","A":"パラメータシート・データシートともに、メニュー作成機能にて、項目数や形式・サイズ・入力制限などを自由に設計することが可能です。\n\nパラメータシートはIaCの変数値を管理することができます。\nパラメータシートのレコードは、「オペレーション」または「オペレーションとホスト」単位で作成されます。\nパラメータシートで作成した項目は、各ドライバの「代入値自動登録設定」メニューにて、IaC変数との紐付けをを設定しておくことで、入力された値を IaC変数に自動で代入することが可能です。 \n\nデータシートは、ITA上で情報を管理する場合に利用できます。\nまた、他のパラメータシートやデータシートのプルダウンで選択する項目の参照元として利用することで、文言の揺れなどを防ぐことが可能です。\n\n{img{asset/faq/create_menu_001.jpg}67%}"}
-    },
-    "ホストグループ管理" : {
-      "data" : {
-        "frequently" : "",
-        "icon" : "fa-server",
-        "id" : "host-group"
-      },
-"1":{"Q":"ホストグループって何？","A":"ホストグループとは、ホスト群を論理的な単位（機能・役割）でまとめたグループのことを指します。\nホストグループ管理機能を使用すると、グルーピングしたホストに対してまとめて作業指示を出すことが可能になり、多数のホストを管理する大規模システムでの作業が容易になります。\nまた、ホストグループ間で親子関係を定義することで、親ホストグループに設定したパラメータを子ホストグループに継承することができます。\n\n詳しくは、コミュニティサイトのLeanの「{a{https://exastro-suite.github.io/it-automation-docs/learn_ja.html#hgPs}Exastro IT Automation ホストグループ管理・メニュー作成}」をご参照下さい。"}
-    },
-    "Ansible-driver" : {
-      "data" : {
-        "frequently" : "1,2,3",
-        "icon" : "fa-cog",
-        "id" : "ansible"
-      },
-"1":{"Q":"Windows ServerにPioneerでSSHログインして設定する方法","A":"対話ファイルを以下のように記述してください。\n・BOM無しにする。\n・改行コードはCRLFとする。\n・Windows側で実行するコマンドは\"で囲んで、末尾に\\rを追加する。\n　(改行コード対応のため)\n\n例)windowsサーバで新規にディレクトリを作成する。\nconf:\n  timeout: 10\nexec_list:\n  - expect: 'password:'\n    exec: XXXXXXXX\n  - expect: 'Administrator>'\n    exec: \"mkdir SSLtest_0525\\r\"\n  - expect: 'Administrator>'\n    exec: \"exit\\r\"\n"},
-"2":{"Q":"ファイル管理とテンプレート管理って何が違うの？","A":"ファイル管理では、Playbook内で定義している各モジュールで使用するファイルの登録を行います。\nファイル素材は、copyモジュールやfileモジュールなどで使用する静的なファイルです。\n\nテンプレート管理では、Playbookで定義しているtemplateモジュールなどで使用するファイルを登録します。\nテンプレート管理のファイルは、Jinja2というテンプレート言語で記述したもので、条件分岐や変数など、ファイルを動的に作成することができます。\n"},
-"3":{"Q":"どうしてテンプレート管理は変数を、自動ではなく手動で設定しなくてはいけないの？","A":"テンプレート管理で扱う、templateモジュールやios_configモジュールは、Jinja2という形式を使用しています。\nJinja2形式の変数は自動で刈り取ることができないため、手動での登録が必要となります。"},
-"4":{"Q":"Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーなる?","A":"【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。\n"},
-"5":{"Q":"代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。","A":"代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。\n"},
-"6":{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"},
-"7":{"Q":"機器一覧のプロトコルを telnet に設定したホストに対して pioneer の作業実行をしたが、作業対象ホ\nストへの接続でエラーになる。","A":"よくあるエラー原因としては、対話ファイルに記述しているパスワードおよびパスワードプロンプトの記述が正しくない場合がありますので、ご確認ください。\n\n例として、expect モジュールと exec モジュールで以下のようにtelnet接続時のパスワードを記述したとします。\n　△△-△expect:△’Password’\n　△△△△exec:△itapassword\n　※△:半角スペース\n\n[考えられるエラー]\n ・expactで期待するパスワードプロンプトがPasswordではなく、passwordだった。\n ・パスワードがitapasswordではなかった。\n"},
-"8":{"Q":"機器一覧の認証方式を公開鍵認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。","A":"Ansible サーバおよび AnsibleTower サーバの.ssh/known_hosts にターゲットホスト側の公開鍵が\n登録されているかを確認してください。上記サーバからターゲットホストに対して ssh コマンドで該当\nホスト名または IP アドレスでログインすることで公開鍵が登録されます。"},
-"9":{"Q":"機器一覧の認証方式をパスワード認証に設定したホストに対してオーケストレーターの作業実行をしたが、ターゲットホストへの接続でエラーとなる。","A":"ターゲットホスト側の ssh の設定で password 認証を許可しているか確認してください。"},
-"10":{"Q":"Movement 一覧でホスト指定形式を指定して各オーケストレーターの作業実行をしたがターゲットホストへの接続でエラーとなる。","A":"/etc/hosts の登録など該当ホスト名のアドレス解決が出来ているか確認してください。\nssh 接続の場合、Ansible サーバおよび AnsibleTower サーバの known_hosts に該当ホスト名でタ\nーゲットホスト側の公開鍵が登録されているかを確認して下さい。"},
-"11":{"Q":"プレイブックで/tmp にファイルを作成しているが、/tmp にファイルが作成されていない。","A":"RHEL7 より PrivateTmp 機能が追加されています。ITA でインストールした Apache は PrivateTmp\n機能を有効にしています。ITA からのプレイブックの実行は Apache を経由していますので、/tmp が\n別ディレクトリにバインドされています。ITA ではプレイブックからの/tmp へのファイルアクセスは控え\nて頂くことを推奨しています。"},
-"12":{"Q":"Ansible から Windows サーバへの接続ができない。","A":"Windows サーバで Powershell を管理者権限で起動し、下記の各コマンドを実施して下さい。\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nまた、Ansible-Legacy/Roleを利用する場合は、 機器一覧とMovement一覧のWinRM接続を「●」にして下さい。"},
-"13":{"Q":"代入値自動登録設定を利用して、パラメータシートの具体値が正常に代入値管理へ反映されない。","A":"代入値自動登録設定の定義情報を確認してください。\n自動登録設定に従って、パラメータシートの値を自動で代入値管理に登録する機能は、\n最終更新者がその機能以外の場合、更新しないようになっています。\nこれはユーザーが代入値管理を直接編集した場合、それを自動で上書きするのを防ぐためです。"},
-"14":{"Q":"機器一覧のユーザーに root ユーザー以外を設定したホストに対して legacy の作業実行をしたが、Ansible のコマンドでエラーが発生する。","A":"ITA で Ansible のコマンドを実行する場合に sudo パラメータのデフォルトを yes に設定しています。\n作業対象ホスト側で該当ユーザーに対する sudo 権限を設定してください。\nsudo 権限を与えられない場合は sudo パラメータの設定を Playbook に追記してください。"},
-"15":{"Q":"Ansible-LegacyRoleモードのRoleファイル(zip)を作る手順を教えてほしい。","A":"AnsibleのRoleファイルをLegacyRoleで利用するための手順は、LearnページのExastro IT Automation Ansibleとの連携{a{https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja_practice.pdf}「Exastro IT Automation Ansible Driver【実習編】」の第二章Ansible-LegacyRole編}に詳細がございます。"},
-"16":{"Q":"Ansible-Driverの3つのモードの違いとは？","A":"Ansible-Driverはこちらの3つの観点から場合に合わせてご利用いただけます。\n・「IaCの再利用」Playbookの再利用に長けたAnsible-Legacyモード\n・「ノウハウの活用」AnsibleRoleを使用可能なAnsible-LegacyRoleモード\n・「適用範囲」独自の対話ファイルにより様々な状況に対応できるAnsible-Pioneerモード\n\n詳細はウェブページより{a{https://exastro-suite.github.io/it-automation-docs/asset/Learn_ja/ITA-Ansible-Driver_ja.pdf}「Exastro IT Automation Ansible Driver【座学編】」}をご確認ください。"},
-"17":{"Q":"Playbook内の変数（VAR_XXX）の具体値の定義をせずに作業実行をした場合、どのタイミングでエラーになる?","A":"【Ansible-Legacy、Ansible-Pioneerの場合】\nAnsibleを実行する前に、ITAにて想定外エラーとなります。\n\n【Ansible-LegacyRoleの場合】\nAnsibleは実行されます。\ndefault/main.ymlなどに具体値の定義がされていれば、その値で実行されますが、定義がない場合はその変数を使用するタイミングでエラーとなります。"}
-
-
-},"en":{
-
-
-
-"General":{
-"data":{"frequently":"","icon":"fa-sticky-note","id":"general"},
-"1":{"Q":"I want to upload and manage restricted files, such as PHP files, Share files and EXE files","A":"Files with the following extensions: 「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」are restricted by default. It is possible to change those settings from the \"Management Console\">\"System settings\" menu. However, please keep in mind that there is a chance security holes will be created by doing this."},
-"2":{"Q":"Does ITA have any Maintenance service?","A":"Since ITA is an Open Source Software, there is no Maintenance service in the developer community. NEC is developing a/the Maintenance support service. (Japanese only) 『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"},
-"3":{"Q":"Is it possible to import the form (Excel format) used in the existing project into Exastro IT Automation's CMDB (Parameter sheet)?","A":"Unfortunately, you can't upload/download Excel file as it is in your existing project because the format of Excel to upload/download in ITA is fixed.\nIt is necessary to rewrite it to the format provided by ITA.\n\nAlternatively, you can use the machine interface (Rest API) function provided by ITA to code Excel used in existing project with VBA and synchronize information.\nFor details about REST-API please refer {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_User_Instruction_Manual_RestAPI.pdf}here}."},
-"4":{"Q":"I added CPU and memory, but the performance does not improve.","A":"It is necessary to tune the cofiguration values according to the machine specifications.\nPlease refer to {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_[Reference]Configuration_settings_during_installation.pdf}this document} for tuning reference value."},
-"5":{"Q":"How can I import information retrieved from Ansible or other systems into CMDB in Exastro?","A":"It is possible to use the \"Collect\" function to import information to CMDB.\nThe \"Collect\" function automatically registers values to the parameter sheet based on the results of previously executed Ansible operations in ITA (source files output in a specific format).\nYou can create parameter sheets and connect it to the source file in advance.\n\nFor more information regarding the Collect function, please click {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E5%8F%8E%E9%9B%86%E6%A9%9F%E8%83%BD.pdf}here(Japanese only)}."}
-},
-"Management Console":{
-"data":{"frequently":"","icon":"fa-user-cog","id":"management"},
-"1":{"Q":"What units are used in RBAC settings?","A":"Menu units are used. If you wish to divide authority within the same menu, please divide the menu."}
-},
-"Conductor":{
-"data":{"frequently":"","icon":"fa-random","id":"conductor"},
-"1":{"Q":"What is the difference between Symphony and Conductor?","A":"Symphony is a function that allows users to combine multiple movements into job-flows and execute them in order. \nConductor is the supersedement of Symphony and can in addition do the following:  \n・Parallel execution: Execute multiple Movements at the same time. The amount of parallel executable Movements depends on the performance.\n・Calling conductor: It is possible to call in a different Conductor.\n・Appoint repair: It is possible to set all movements and such to be repaired after they`re finished."}
-},
-"Menu creation":{
-"data":{"frequently":"","icon":"fa-list","id":"create-menu"},
-"1":{"Q":"The message below shows up when I`m trying to create a menu. What should I do?  \n\"The vertical menu information item number and repeted numbers are incorrect.\"","A":"Compare\nCreate Menu> Registered information in Menu item creation information\nand\nCreate Menu> Menu(vertical)`s creation information`s \"Menu Name\" \" Item Number\" and Information defined by the amount of repetitions\nand check if there are no errors or mistakes with the definition. "},
-"2":{"Q":"What is the difference between Parameter sheets and Data sheets?","A":"Both Parameter sheets and data sheets can be freely designed with the \"Menu creation\" to include items such as \"Number of items\", \"Format\",\"Size\", \"Input restrictions\", etc.\n\nParameter sheets manages variable values of IaC.\nRecords in parameter sheets are created in \"Operation\" or \"Operation and Host\" units. \nThe items created in parameter sheets can automatically assign the entered values to IaC variables by linking them to IaC variables in the all the driver's \"Substitution value auto-registration setting\" menu.\n\nData sheets are used when you are managing data inside ITA.\nIt can also be used as a reference source for items that are selectable in pull-down menus in other parameter and datasheets. This prevents inconsistencies in wording and names.\n\n{img{asset/faq/create_menu_001_en.jpg}67%}"}
-},
-"Host group management":{
-"data":{"frequently":"","icon":"fa-server","id":"host-group"},
-"1":{"Q":"What is host group?","A":"A host group is a Host group that gathers logical units (functions and roles).\nBy using the host group management function, it is possible to give work instructions to grouped hosts, making it easier to manage works in a large system environment with multiple hosts. \nAdditionaly, by defining a parent-child relationship in host groups, it is possible to set succeeding parameters from the parent to the child host groups. \n\nFor more information, check the Community site`s Learn page`s \"Exastro IT Automation Host group management・Menu creation\""}
-},
-"Ansible-driver":{
-"data":{"frequently":"","icon":"fa-cog","id":"ansible"},
-"1":{"Q":"How do I log in and set SSH in Windows server in Pioneer?","A":"Make the interaction file as below.\n・Without BOM\n・Make the code CRLF\n・Enclose the command being executed in windows with quotation marks and add \"\\r\" at the end.\n\nExample: Create a new directory in the Windows Server\nconf:\ntimeout: 10\nexec_list:\n- expect: 'password:'\nexec: XXXXXXXX\n- expect: 'Administrator>'\nexec: \"mkdir SSLtest_0525\\r\"\n- expect: 'Administrator>'\nexec: \"exit\\r\""},
-"2":{"Q":"What is the difference between File management and template management?","A":"File management is used to register files used in each module defined in a playbook. \nThe file materials are static files that uses copy and file modules.\n\nTemplate management is used to register files used in Template modules and such defined in Playbooks.\nFiles in Template management are written in a template language called Jinja2 and can dynamically create files, variables and conditional branches."},
-"3":{"Q":"Why do I have to set the variables manually in Template management?","A":"(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."},
-"4":{"Q":"If the variables inside a playbook (VAR_XXX) are executed without any specific values set to them, at what timing will an error occur?","A":"(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."},
-"5":{"Q":"The specific values in Parameter sheets wont show correctly in the substitute value management menu when using the substitute value automatic registration.","A":"Check the definition information in the substitute value automatic register settings.\nAbiding the automatic registering settings,\nthe function that automatically register parameter sheets values into substitute values will not update if the last changer is any other function. "},
-"6":{"Q":"I executed Legacy work to all the hosts set to users in Device list(expect for Root Users),\nbut an error occurs in the Ansible Command","A":"In the case of executing a ansible commando in ITA, set the default sudo parameters to \"yes\".\nSet Sudo authority to all the corresponding work target host users.\nIf you are unable to add Sudo Authority, add a sudo parameter setting in the playbook."},
-"7":{"Q":"I executed work to the host set to telnet in Device list protocol, but an error occurs when connecting to the work target host.","A":"A common cause for errors is that the password in the file or in the password prompt is incorrect, so please make sure it is correct.\n\nAs an example,  Let`s write the expect module and the exec module to use the passwords below when connecting to telnet.\n△△-△expect:△’Password’\n△△△△exec:△itapassword\n※△=space\n\n(possible errors)\n・The password that should be put in Expect should be password, and not Password\n・The password was not itapassword"},
-"8":{"Q":"I tried executing Orchestra work to a host with public key set as authentication method in the device list, but an error occurs when connecting to the target host.","A":"Please check if a public key is registered to the target host side in Ansible/AnsibleTower server`s .ss/known_hosts.\n\nLogging in with a corresponding host name or ip address in the ssh command from the server written above will register a public key."},
-"9":{"Q":"I tried executing Orchestra work to a host with password authentication as authentication method in the device list, but an error occurs when connecting to the target host.","A":"Please check if password authorization is allowed in the SHH settings for the target host."},
-"10":{"Q":"I tried to specify a host format to and execute each orchestra working the movement list, but an error occurs when connecting to the target host.","A":"Make sure that the adress resolution for the corresponding host names registered in /etc/hosts is completed.\nIf connected with SSH,\nCheck if the publlic key for Target host side in\nthe host names corresponding to known_host in the Ansible/AnsibleTower server\nis registered."},
-"11":{"Q":"the /tmp file shown in the playbook isnt created.","A":"The PrivateTmp fucntion is added from RHEL7. The Apache installed in ITA activates the PrivateTMP function. All playbook executions from ITA goes through Apache, so/tmp is bound to a different directory. It is therefore recommended that access to /tmp files from playbooks in ITA is refrained."},
-"12":{"Q":"I cant connect to the Windows server from Ansible","A":"Open up Powershell as an administrator in the windows server and execute the command below\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nIf you`re yousing Ansible-Legacy/Role, make sure the WinRM connection between device list and Movement list is enabled."},
-"13":{"Q":"The specific value of the parameter sheet is not normally reflected in the substitution value management by using the substitution value automatic registration setting.","A":"Check the definition information of the substitution value automatic registration configuration.\nAccording to the auto-registration configuration, the function to automatically register parameter sheet values in the value management is not updated if the last updater is not that function.\nThis is to prevent users from automatically overwriting the substitution value management if they edit it directly."},
-"14":{"Q":"I executed legacy work on a host that has a non-root user configured for the user in the device list, but an error occurs in the Ansible command.","A":"The default sudo parameter is set to yes when running an Ansible command in ITA.\nSet the sudo authority for the corresponding user on the target host side.\nIf you do not have sudo authority, add the sudo parameter settings to your Playbook."},
-"15":{"Q":"How do I make Role files(zip) for Ansible-Legacy Role mode?","A":"We explain the process of using Ansible Role files in Legacy role in the Learn page's {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_en_practice.pdf}\"Exastro IT Automation Ansible Driver Practice\" document (Chapter 2, Ansible-LegacyRole)}. \nPlease see it for more information."},
-"16":{"Q":"What is the difference between the 3 Ansible-Driver modes?","A":"The 3 Ansible-Driver modes have different use-cases and should be used accordingly. \n・Ansible Legacy Mode is good at reusing Playbooks.\n・Ansible-Legacy Role allows the user to use Ansible-Role.\n・Ansible Pioneer mode can handle various situations with the use of its original dialogue files.\n\nFor more information, please see the  {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_lecture.pdf}\"Exastro IT Automation Ansible Driver Lecture\"} Document."},
-"17":{"Q":"If I execute a task without defining a concrete value in a variable (VAR_XXX) in the Playbook, at what point will I get an error?","A":"[For Ansible-Legacy and Ansible Pioneer]\nAn unexpected error will occur in ITA right before Ansible is executed.\n\n[For Ansible-Legacy Role]\nAnsible will get executed. \nIf there is a concrete value defined in default/main.yml, Ansible will run with that value. \nHowever, if nothing is defined, an error will occur when that variable is used."}
+    "en": {
+        "General": {
+            "1": {
+                "Q": "I want to upload and manage restricted files, such as PHP files, Share files and EXE files",
+                "A": "Files with the following extensions: 「.exe」「.com」「.php」「.cgi」「.sh」「.sql」「.vbs」「.js」「.pl」「.ini」「.htaccess」are restricted by default. It is possible to change those settings from the \"Management Console\">\"System settings\" menu. However, please keep in mind that there is a chance security holes will be created by doing this."
+            },
+            "2": {
+                "Q": "Does ITA have any Maintenance service?",
+                "A": "Since ITA is an Open Source Software, there is no Maintenance service in the developer community. NEC is developing a/the Maintenance support service. (Japanese only) 『{a{https://www.support.nec.co.jp/View.aspx?NoClear=on&id=3030100331}NECサポートポータル Exastro IT Automation 導入支援サポート・保守サポートご紹介}』"
+            },
+            "3": {
+                "Q": "Is it possible to import the form (Excel format) used in the existing project into Exastro IT Automation's CMDB (Parameter sheet)?",
+                "A": "Unfortunately, you can't upload/download Excel file as it is in your existing project because the format of Excel to upload/download in ITA is fixed.\nIt is necessary to rewrite it to the format provided by ITA.\n\nAlternatively, you can use the machine interface (Rest API) function provided by ITA to code Excel used in existing project with VBA and synchronize information.\nFor details about REST-API please refer {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_User_Instruction_Manual_RestAPI.pdf}here}."
+            },
+            "4": {
+                "Q": "I added CPU and memory, but the performance does not improve.",
+                "A": "It is necessary to tune the cofiguration values according to the machine specifications.\nPlease refer to {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_[Reference]Configuration_settings_during_installation.pdf}this document} for tuning reference value."
+            },
+            "5": {
+                "Q": "How can I import information retrieved from Ansible or other systems into CMDB in Exastro?",
+                "A": "It is possible to use the \"Collect\" function to import information to CMDB.\nThe \"Collect\" function automatically registers values to the parameter sheet based on the results of previously executed Ansible operations in ITA (source files output in a specific format).\nYou can create parameter sheets and connect it to the source file in advance.\n\nFor more information regarding the Collect function, please click {a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E5%8F%8E%E9%9B%86%E6%A9%9F%E8%83%BD.pdf}here(Japanese only)}."
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-sticky-note",
+                "id": "general"
+            }
+        },
+        "Management Console": {
+            "1": {
+                "Q": "What units are used in RBAC settings?",
+                "A": "Menu units are used. If you wish to divide authority within the same menu, please divide the menu."
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-user-cog",
+                "id": "management"
+            }
+        },
+        "Conductor": {
+            "1": {
+                "Q": "What is the difference between Symphony and Conductor?",
+                "A": "Symphony is a function that allows users to combine multiple movements into job-flows and execute them in order. \nConductor is the supersedement of Symphony and can in addition do the following:  \n・Parallel execution: Execute multiple Movements at the same time. The amount of parallel executable Movements depends on the performance.\n・Calling conductor: It is possible to call in a different Conductor.\n・Appoint repair: It is possible to set all movements and such to be repaired after they`re finished."
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-random",
+                "id": "conductor"
+            }
+        },
+        "Menu creation": {
+            "1": {
+                "Q": "The message below shows up when I`m trying to create a menu. What should I do?  \n\"The vertical menu information item number and repeted numbers are incorrect.\"",
+                "A": "Compare\nCreate Menu> Registered information in Menu item creation information\nand\nCreate Menu> Menu(vertical)`s creation information`s \"Menu Name\" \" Item Number\" and Information defined by the amount of repetitions\nand check if there are no errors or mistakes with the definition. "
+            },
+            "2": {
+                "Q": "What is the difference between Parameter sheets and Data sheets?",
+                "A": "Both Parameter sheets and data sheets can be freely designed with the \"Menu creation\" to include items such as \"Number of items\", \"Format\",\"Size\", \"Input restrictions\", etc.\n\nParameter sheets manages variable values of IaC.\nRecords in parameter sheets are created in \"Operation\" or \"Operation and Host\" units. \nThe items created in parameter sheets can automatically assign the entered values to IaC variables by linking them to IaC variables in the all the driver's \"Substitution value auto-registration setting\" menu.\n\nData sheets are used when you are managing data inside ITA.\nIt can also be used as a reference source for items that are selectable in pull-down menus in other parameter and datasheets. This prevents inconsistencies in wording and names.\n\n{img{asset/faq/create_menu_001_en.jpg}67%}"
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-list",
+                "id": "create-menu"
+            }
+        },
+        "Host group management": {
+            "1": {
+                "Q": "What is host group?",
+                "A": "A host group is a Host group that gathers logical units (functions and roles).\nBy using the host group management function, it is possible to give work instructions to grouped hosts, making it easier to manage works in a large system environment with multiple hosts. \nAdditionaly, by defining a parent-child relationship in host groups, it is possible to set succeeding parameters from the parent to the child host groups. \n\nFor more information, check the Community site`s Learn page`s \"Exastro IT Automation Host group management・Menu creation\""
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-server",
+                "id": "host-group"
+            }
+        },
+        "Ansible-driver": {
+            "1": {
+                "Q": "How do I log in and set SSH in Windows server in Pioneer?",
+                "A": "Make the interaction file as below.\n・Without BOM\n・Make the code CRLF\n・Enclose the command being executed in windows with quotation marks and add \"\\r\" at the end.\n\nExample: Create a new directory in the Windows Server\nconf:\ntimeout: 10\nexec_list:\n- expect: 'password:'\nexec: XXXXXXXX\n- expect: 'Administrator>'\nexec: \"mkdir SSLtest_0525\\r\"\n- expect: 'Administrator>'\nexec: \"exit\\r\""
+            },
+            "2": {
+                "Q": "What is the difference between File management and template management?",
+                "A": "File management is used to register files used in each module defined in a playbook. \nThe file materials are static files that uses copy and file modules.\n\nTemplate management is used to register files used in Template modules and such defined in Playbooks.\nFiles in Template management are written in a template language called Jinja2 and can dynamically create files, variables and conditional branches."
+            },
+            "3": {
+                "Q": "Why do I have to set the variables manually in Template management?",
+                "A": "(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."
+            },
+            "4": {
+                "Q": "If the variables inside a playbook (VAR_XXX) are executed without any specific values set to them, at what timing will an error occur?",
+                "A": "(In the case of Ansible-Legacy and Ansible Pioneer)\nIf done in Ansible, an unexpected error will occur in ITA.\n\n(In the case of Ansible-LegacyRole)\nAnsible will be executed.\nIf the specific values in Default/Main.yml( or other files) are defined, those values will be executed. If not defined, an error will occur when those variables are being used."
+            },
+            "5": {
+                "Q": "The specific values in Parameter sheets wont show correctly in the substitute value management menu when using the substitute value automatic registration.",
+                "A": "Check the definition information in the substitute value automatic register settings.\nAbiding the automatic registering settings,\nthe function that automatically register parameter sheets values into substitute values will not update if the last changer is any other function. "
+            },
+            "6": {
+                "Q": "I executed Legacy work to all the hosts set to users in Device list(expect for Root Users),\nbut an error occurs in the Ansible Command",
+                "A": "In the case of executing a ansible commando in ITA, set the default sudo parameters to \"yes\".\nSet Sudo authority to all the corresponding work target host users.\nIf you are unable to add Sudo Authority, add a sudo parameter setting in the playbook."
+            },
+            "7": {
+                "Q": "I executed work to the host set to telnet in Device list protocol, but an error occurs when connecting to the work target host.",
+                "A": "A common cause for errors is that the password in the file or in the password prompt is incorrect, so please make sure it is correct.\n\nAs an example,  Let`s write the expect module and the exec module to use the passwords below when connecting to telnet.\n△△-△expect:△’Password’\n△△△△exec:△itapassword\n※△=space\n\n(possible errors)\n・The password that should be put in Expect should be password, and not Password\n・The password was not itapassword"
+            },
+            "8": {
+                "Q": "I tried executing Orchestra work to a host with public key set as authentication method in the device list, but an error occurs when connecting to the target host.",
+                "A": "Please check if a public key is registered to the target host side in Ansible/AnsibleTower server`s .ss/known_hosts.\n\nLogging in with a corresponding host name or ip address in the ssh command from the server written above will register a public key."
+            },
+            "9": {
+                "Q": "I tried executing Orchestra work to a host with password authentication as authentication method in the device list, but an error occurs when connecting to the target host.",
+                "A": "Please check if password authorization is allowed in the SHH settings for the target host."
+            },
+            "10": {
+                "Q": "I tried to specify a host format to and execute each orchestra working the movement list, but an error occurs when connecting to the target host.",
+                "A": "Make sure that the adress resolution for the corresponding host names registered in /etc/hosts is completed.\nIf connected with SSH,\nCheck if the publlic key for Target host side in\nthe host names corresponding to known_host in the Ansible/AnsibleTower server\nis registered."
+            },
+            "11": {
+                "Q": "the /tmp file shown in the playbook isnt created.",
+                "A": "The PrivateTmp fucntion is added from RHEL7. The Apache installed in ITA activates the PrivateTMP function. All playbook executions from ITA goes through Apache, so/tmp is bound to a different directory. It is therefore recommended that access to /tmp files from playbooks in ITA is refrained."
+            },
+            "12": {
+                "Q": "I cant connect to the Windows server from Ansible",
+                "A": "Open up Powershell as an administrator in the windows server and execute the command below\nC:\\User\\User> Enable-PSRemoting -Force\n↓\nC:\\User\\User> Set-NetConnectionProfile -InterfaceAlias (Get-NetConnectionProfile -\nIPv4Connectivity Internet).InterfaceAlias -NetworkCategory Private\n↓\nC:\\User\\User> winrm set winrm/config/service/auth '@{Basic=\"true\"}'\n↓\nC:\\User\\User> winrm set winrm/config/service '@{AllowUnencrypted=\"true\"}'\n\nIf you`re yousing Ansible-Legacy/Role, make sure the WinRM connection between device list and Movement list is enabled."
+            },
+            "13": {
+                "Q": "The specific value of the parameter sheet is not normally reflected in the substitution value management by using the substitution value automatic registration setting.",
+                "A": "Check the definition information of the substitution value automatic registration configuration.\nAccording to the auto-registration configuration, the function to automatically register parameter sheet values in the value management is not updated if the last updater is not that function.\nThis is to prevent users from automatically overwriting the substitution value management if they edit it directly."
+            },
+            "14": {
+                "Q": "I executed legacy work on a host that has a non-root user configured for the user in the device list, but an error occurs in the Ansible command.",
+                "A": "The default sudo parameter is set to yes when running an Ansible command in ITA.\nSet the sudo authority for the corresponding user on the target host side.\nIf you do not have sudo authority, add the sudo parameter settings to your Playbook."
+            },
+            "15": {
+                "Q": "How do I make Role files(zip) for Ansible-Legacy Role mode?",
+                "A": "We explain the process of using Ansible Role files in Legacy role in the Learn page's {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_en_practice.pdf}\"Exastro IT Automation Ansible Driver Practice\" document (Chapter 2, Ansible-LegacyRole)}. \nPlease see it for more information."
+            },
+            "16": {
+                "Q": "What is the difference between the 3 Ansible-Driver modes?",
+                "A": "The 3 Ansible-Driver modes have different use-cases and should be used accordingly. \n・Ansible Legacy Mode is good at reusing Playbooks.\n・Ansible-Legacy Role allows the user to use Ansible-Role.\n・Ansible Pioneer mode can handle various situations with the use of its original dialogue files.\n\nFor more information, please see the  {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_lecture.pdf}\"Exastro IT Automation Ansible Driver Lecture\"} Document."
+            },
+            "17": {
+                "Q": "If I execute a task without defining a concrete value in a variable (VAR_XXX) in the Playbook, at what point will I get an error?",
+                "A": "[For Ansible-Legacy and Ansible Pioneer]\nAn unexpected error will occur in ITA right before Ansible is executed.\n\n[For Ansible-Legacy Role]\nAnsible will get executed. \nIf there is a concrete value defined in default/main.yml, Ansible will run with that value. \nHowever, if nothing is defined, an error will occur when that variable is used."
+            },
+            "data": {
+                "frequently": "",
+                "icon": "fa-cog",
+                "id": "ansible"
+            }
+        }
+    }
 }
-}
-}
-}
-
-
