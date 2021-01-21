@@ -118,14 +118,9 @@
 "15":{"Q":"How do I make Role files(zip) for Ansible-Legacy Role mode?","A":"We explain the process of using Ansible Role files in Legacy role in the Learn page's {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_en_practice.pdf}\"Exastro IT Automation Ansible Driver Practice\" document (Chapter 2, Ansible-LegacyRole)}. \nPlease see it for more information."},
 "16":{"Q":"What is the difference between the 3 Ansible-Driver modes?","A":"The 3 Ansible-Driver modes have different use-cases and should be used accordingly. \n・Ansible Legacy Mode is good at reusing Playbooks.\n・Ansible-Legacy Role allows the user to use Ansible-Role.\n・Ansible Pioneer mode can handle various situations with the use of its original dialogue files.\n\nFor more information, please see the  {a{https://exastro-suite.github.io/it-automation-docs/asset/Learn/ITA-Ansible-Driver_lecture.pdf}\"Exastro IT Automation Ansible Driver Lecture\"} Document."},
 "17":{"Q":"If I execute a task without defining a concrete value in a variable (VAR_XXX) in the Playbook, at what point will I get an error?","A":"[For Ansible-Legacy and Ansible Pioneer]\nAn unexpected error will occur in ITA right before Ansible is executed.\n\n[For Ansible-Legacy Role]\nAnsible will get executed. \nIf there is a concrete value defined in default/main.yml, Ansible will run with that value. \nHowever, if nothing is defined, an error will occur when that variable is used."}
-
-
 },
-
-
 }
 }
-
-
+}
 
 
