@@ -288,7 +288,7 @@ Learn</h1>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_online">Online</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_offline">Offline</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_versionup">Version up</a></li>
-              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_docker">Docker</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_docker">Container</a></li>
             </ul>
           </div>
           <div id="install_allInOne_online" class="tabContent">
@@ -314,9 +314,9 @@ Learn</h1>
             <p><a href="asset/Learn_ja/ITA-version-up_ja.pdf" class="download" download="IT Automation バージョンアップマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
           </div>
           <div id="install_allInOne_docker" class="tabContent">
-            <h4>Docker インストール</h4>
-            <div class="rightImage image33"><img src="../docs/asset/img/download_docker.png" alt="Docker"></div>
-            <p>お手持ちのDocker環境に IT Automationをすぐに起動できます。<br>
+            <h4>コンテナ インストール</h4>
+            <div class="rightImage image33"><img src="../docs/asset/img/install_container.png" alt="Container"></div>
+            <p>お手持ちのコンテナ環境にIT Automationをすぐに起動できます。<br>
             インターネットに接続できる必要があります。<br>
             コンテナ起動後、下記の IT Automationクイックスタートを始めれば、<br>
             すぐに IT Automationの魅力的なインターフェースを体験いただくことが可能です。</p>
@@ -325,9 +325,12 @@ Learn</h1>
               <ol class="stepContensList">
                 <li class="stepContentItem">
                   <dl class="stepContent">
-                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 1</span> :Dockerコンテナの起動</dt>
+                    <dt class="stepContentTitle"><span class="stepContentNumber">Step - 1</span> :コンテナの起動</dt>
                     <dd class="stepContentBody">
+                      <p class="stepContentBodyHeading" style="color:#2496ed;">Docker</p>
                       <pre style="white-space: normal;"># docker run --privileged --add-host=exastro-it-automation:127.0.0.1 -d -p 8080:80 -p 10443:443 --name exastro01 exastro/it-automation:x.x.x-ja</pre>
+                      <p class="stepContentBodyHeading" style="color:#88309f;">Podman</p>
+                      <pre style="white-space: normal;"># podman run --privileged --add-host=exastro-it-automation:127.0.0.1 -d -p 8080:80 -p 10443:443 --name exastro01 docker.io/exastro/it-automation:x.x.x-ja</pre>
                       <p>※ポート番号(8080,10443)とバージョン(x.x.x)は適宜変更してください。</p>
                     </dd>
                   </dl>
@@ -336,7 +339,7 @@ Learn</h1>
                   <dl class="stepContent">
                     <dt class="stepContentTitle"><span class="stepContentNumber">Step - 2</span> :Exastro IT Automationコンソールにアクセス</dt>
                     <dd class="stepContentBody">
-                      <p>http://<span class="dummyVariable">[Docker-Host-IP]</span>:8080 or https://<span class="dummyVariable">[Docker-Host-IP]</span>:10443</p>
+                      <p>http://<span class="dummyVariable">[Container-Host-IP]</span>:8080 or https://<span class="dummyVariable">[Container-Host-IP]</span>:10443</p>
                     </dd>
                   </dl>
                 </li>
