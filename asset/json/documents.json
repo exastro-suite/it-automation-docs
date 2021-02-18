@@ -29,8 +29,8 @@
       "url": "Learn/ITA-base_classroom_lecture_EN.pdf"
     },
 		"BASE_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "/Learn/ITA-base_practice_EN.pdf"
     },
 		"ExportImport_Tutorial": {
       "type": "pdf",
