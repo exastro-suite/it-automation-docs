@@ -78,6 +78,10 @@
       "type": "pdf",
       "url": "Learn_ja/ITA-offline-install_ja.pdf"
     },
+		"Install_allInOne_ha": {
+      "type": "none",
+      "url": ""
+    },
 		"Install_Manual": {
       "type": "pdf",
       "url": "Learn_ja/IT Automation HA構成インストールマニュアル.pdf"
