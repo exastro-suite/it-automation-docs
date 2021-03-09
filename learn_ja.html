@@ -1,4 +1,4 @@
-<strong></strong><strong></strong><!doctype html>
+<!doctype html>
 <html><!-- InstanceBegin template="/Templates/ita.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -257,7 +257,22 @@ Learn</h1>
 
       <div id="deploy_highAvailability" class="tabContent">
         <h3><strong>ハイアベイラビリティ</strong>構成</h3>
-        <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_high_availability.png" alt="ハイアベイラビリティ構成"></span></span></p>
+        <div class="tabContents subTabContents">
+          <div class="tabMenu">
+            <ul class="tabMenuList">
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_allInOne_ha">オールインワン型HA同期構成</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_distributed_ha">サーバ分散型HA構成</a></li>
+            </ul>
+          </div>
+          <div id="deploy_allInOne_ha" class="tabContent">
+            <h4>オールインワン型HA同期構成</h4>
+            <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_allInOne_ha.png" alt="オールインワン型HA同期構成"></span></span></p>
+          </div>
+          <div id="deploy_distributed_ha" class="tabContent">
+            <h4>サーバ分散型HA構成</h4>
+            <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_high_availability.png" alt="サーバ分散型HA構成"></span></span></p>
+          </div>
+        </div>
       </div>
       
     </div>
@@ -269,7 +284,7 @@ Learn</h1>
   <div class="sectionInner">
   
     <h2><em>Exastro IT Automation</em> を導入しよう</h2>
-    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオールインワン（Online,Offline,Version up,Docker）、ハイアベイラビリティ（Manual）の中から環境に合った方法で導入してください。</p>
+    <p>IT Automationのインストール方法から基本的な画面の説明を行います。下記からオールインワン（Online,Offline,Version up,Docker）、ハイアベイラビリティ（オールインワン型HA同期構成,サーバ分散型HA構成）の中から環境に合った方法で導入してください。</p>
 
     <div class="tabContents">
       <!-- tab menu -->
@@ -371,12 +386,30 @@ Learn</h1>
       <!-- High availability -->
       <div id="install_highAvailability" class="tabContent">
         <h3><strong>ハイアベイラビリティ</strong>構成</h3>
-        <h4>マニュアルインストール</h4>
-        <div class="viewDocument" data-document="Install_Manual"></div>
-        <p>IT Automationでは、オンラインまたはオフラインのインストール手順を進めると、同一サーバ上に IT Automationの全機能がオールインワンで配置されます。</p>
-        <p>しかしながらエンタープライズでご利用の際にはしばしば高可用なデプロイが求められます。IT Automationは、Web/AP機能、Backyard機能を分散配置することでHA構成を組むことが可能です。</p>
-        <p>マニュアルインストールでは、HA構成の手順をご紹介いたします。</p>
-        <p><a href="asset/Learn_ja/IT Automation HA構成インストールマニュアル.zip" class="download" download="IT Automation HA構成インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(ZIP)</i></a></p>
+        <div class="tabContents subTabContents">
+          <div class="tabMenu">
+            <ul class="tabMenuList">
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_ha">オールインワン型HA同期構成</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_distributed_ha">サーバ分散型HA構成</a></li>
+            </ul>
+          </div>
+          <div id="install_allInOne_ha" class="tabContent">
+            <h4>オールインワン型HA同期構成</h4>
+            <div class="viewDocument" data-document="Install_allInOne_ha"></div>
+            <p>IT Automationでは、オンラインまたはオフラインのインストール手順を進めると、同一サーバ上に IT Automationの全機能がオールインワンで配置されます。</p>
+            <p>IT Automationオールインワンインストール済サーバ2台とOSS製品群を組み合わせて、HAクラスタを構成することで、単一サーバでは実現できない可用性・信頼性の高いIT Automationサーバを構築することができます。</p>
+            <p>本マニュアルでは、共有ストレージが不要で、サーバ間のデータ連携を可能とする、オールインワン型HA同期構成のインストール手順をご紹介いたします。</p>
+            <p><a href="asset/Learn_ja/IT%20Automation%20%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%A4%E3%83%B3%E3%83%AF%E3%83%B3%E5%9E%8BHA%E5%90%8C%E6%9C%9F%E6%A7%8B%E6%88%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.zip" class="download" download="IT Automation オールインワン型HA同期構成インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(ZIP)</i></a></p>
+          </div>
+          <div id="install_distributed_ha" class="tabContent">
+            <h4>サーバ分散型HA構成</h4>
+            <div class="viewDocument" data-document="Install_Manual"></div>
+            <p>エンタープライズでご利用の際にはしばしば高可用なデプロイが求められます。</p>
+            <p>IT Automationの機能ごとにサーバ(Web/AP、DBMS、Backyard、各種連携ドライバ)を分散し、共有ストレージに連携データを配置した環境をベースに、ユーザが柔軟なHA構成を組むことが可能です。</p>
+            <p>本マニュアルでは、サーバ分散型HA構成のベースとなるIT Automation機能の各サーバのマニュアルインストール手順をご紹介いたします。(ロードバランサやHAクラスタの設定内容・構築手順はユーザ側で準備する必要があります)</p>
+            <p><a href="asset/Learn_ja/IT%20Automation%20HA%E6%A7%8B%E6%88%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.zip" class="download" download="IT Automation 分散型HA構成インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(ZIP)</i></a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
