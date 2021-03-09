@@ -79,12 +79,12 @@
       "url": "Learn_ja/ITA-offline-install_ja.pdf"
     },
 		"Install_allInOne_ha": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/IT%20Automation%20%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%A4%E3%83%B3%E3%83%AF%E3%83%B3%E5%9E%8BHA%E5%90%8C%E6%9C%9F%E6%A7%8B%E6%88%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.pdf"
     },
 		"Install_Manual": {
       "type": "pdf",
-      "url": "Learn_ja/IT Automation HA構成インストールマニュアル.pdf"
+      "url": "Learn_ja/IT%20Automation%20HA%E6%A7%8B%E6%88%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.pdf"
     },
 		"VersionUp_Manual": {
       "type": "pdf",
@@ -136,7 +136,7 @@
     },
 		"Guide_Book_ScOp": {
       "type": "pdf",
-      "url": "Learn_ja/Exastroで実現するシステム構築・運用の効率化ガイドブック.pdf"
+      "url": "Learn_ja/Exastro%E3%81%A7%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E6%A7%8B%E7%AF%89%E3%83%BB%E9%81%8B%E7%94%A8%E3%81%AE%E5%8A%B9%E7%8E%87%E5%8C%96%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF.pdf"
     },
 		"cloudSystem_overview": {
       "type": "pdf",
