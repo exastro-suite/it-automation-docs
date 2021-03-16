@@ -14,7 +14,7 @@
     },
 		"Install_Manual": {
       "type": "pdf",
-      "url": "Learn/ITA-HA-configuration.pdf"
+      "url": "Learn/ITA-Server_distrubuted_HA_configuration_installation_manual.pdf"
     },
 		"VersionUp_Manual": {
       "type": "pdf",
@@ -84,7 +84,7 @@
     },
 		"Install_Manual": {
       "type": "pdf",
-      "url": "Learn_ja/IT Automation HA構成インストールマニュアル.pdf"
+      "url": "Learn_ja/ITA-サーバ分散型HA構成インストールマニュアル.pdf"
     },
 		"VersionUp_Manual": {
       "type": "pdf",
