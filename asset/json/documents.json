@@ -63,6 +63,10 @@
 		"Ansible_Practice": {
       "type": "pdf",
       "url": "Learn/ITA-Ansible-Driver_en_practice.pdf"
+    },
+		"Guide_Book_ScOp": {
+      "type": "pdf",
+      "url": "Learn/Exastro_System_Operation_and_Construction_Efficiency_Guide.pdf"
     }
 	},
 	"ja": {
