@@ -372,17 +372,38 @@ Learn</h1>
       <!-- High availability -->
       <div id="install_highAvailability" class="tabContent">
         <h3><strong>High availability</strong> Configuration</h3>
-        <h4>Install <strong>Manual</strong> Installation</h4>
-        <div class="viewDocument" data-document="Install_Manual"></div>
-        <p>Exastro IT Automation deploys all features on the same server all-in-one when installed using an online or offline installation procedure.</p>
-        <p>However, high availability deployment is often required for enterprises.</p>
-        <p>IT Automation can be constructed in an high availability(HA) configuration by allocating Web/AP functions and Backyard functions in distributed servers.</p>
-        <p>In manual installation, we plan to introduce the procedure of HA configuration.</p>
-        <p><a href="asset/Learn/ITA-Server_distrubuted_HA_configuration_installation_manual.zip" class="download" download="ITA-Server_distrubuted_HA_configuration_installation_manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(ZIP)</i></a></p>
+        <div class="tabContents subTabContents">
+          <div class="tabMenu">
+            <ul class="tabMenuList">
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_ha">All In One Configuration</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_distributed_ha">High availability Configuration</a></li>
+            </ul>
+          </div>
+          <div id="install_allInOne_ha" class="tabContent">
+            <h4>All In One Configuration</h4>
+            <div class="viewDocument" data-document="Install_allInOne_ha"></div>
+            <p>When installing IT Automation (Both through the online and offline procedure), IT Automation provides an all-in-one deployment for all of the functions on the same server.</p>
+            <p>By combining two All-in-one configuration installed ITA Servers and OSS Products, users can form an HA Cluster and build an IT Automation server with higher availability and reliability normally not be achievable with a single server.</p>
+            <p>This manual introduces the installation procedure for the all-in-one HA Synchronization configuration. It does not require any shared storage and can link data between servers.</p>
+            <p><a href="asset/Learn/ITA-All_In_One_HA_Synchronized_Configuration_Install_Manual.zip" class="download" download="ITA-All_In_One_HA_Synchronized_Configuration_Install_Manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(ZIP)</i></a></p>
+          </div>
+          <div id="install_distributed_ha" class="tabContent">
+            <h4>High availability Configuration</h4>
+            <div class="viewDocument" data-document="Install_Manual"></div>
+            <p>Enterprise deployments often require high availability.</p>
+            <p>Using environments where different servers (Web/AP, DBMS, Backyard, etc.) are deployed for each IT Automation function, and linked data is placed in shared storages as a base, users can create a more flexible HA Configuration.</p>
+            <p>This document introduces the manual installation procedure for each of the IT Automation function server, which will be the base of the server distributed HA Configuration.</p>
+            <p>(The setting contents and construction procedures for load balancers and HA Clusters will not be prepared in this document)</p>
+            <p><a href="asset/Learn/ITA-Server_distrubuted_HA_Configuration_Installation_manual.zip" class="download" download="ITA-Server_distrubuted_HA_Configuration_Installation_manual"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(ZIP)</i></a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <section id="quickStart">
   <div class="sectionInner">
