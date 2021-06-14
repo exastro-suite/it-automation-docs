@@ -426,7 +426,7 @@ Learn</h1>
     <div class="viewDocument" data-document="Quick_start">
       <div class="slideCode">
         <dl>
-          <dt>参考④ プレイブックサンプル集</dt>
+          <dt>本シナリオで使用するPlaybook</dt>
           <dd class="note">※文字コードは"UTF-8"、改行コードは"LF"、拡張子は"yml"形式。また、インデントにご注意下さい。</dd>
           <dd>
 
@@ -434,11 +434,12 @@ Learn</h1>
 
 <!-- Playbook sample -->
 <pre class="playbook clipboard-copy">
-- name: Make Work Directory demonstration
-  file:
-    path: <span class="any">/tmp/demodirectory</span>
-    state: <span class="any">directory</span>
-    mode: <span class="any">0755</span>
+- name: install the latest version of packages
+  yum:
+    name: <span class="any">"{{ item }}"</span>
+    state: <span class="any">latest</span>
+  with_items:
+    - <span class="any"> "{{ VAR_packages }}"</span>
 
 </pre>
 
@@ -446,40 +447,6 @@ Learn</h1>
 
           </dd>
           <dd>
-
-
-
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Sample User add
-  user:
-    name: <span class="any">ITA</span>
-    createhome: <span class="any">no</span>
-    uid: <span class="any">4401</span>
-    group: <span class="any">users</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-      
-      
-      
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Collect Files
-  fetch:
-    src=<span class="any">/etc/hosts</span>
-    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
-    flat=yes
-
-</pre>
-
-
-
-          </dd>
         </dl>
       </div>
       <div class="slideMenu">
@@ -491,7 +458,11 @@ Learn</h1>
     </div>
     <p>IT Automationのインタフェースをスムーズに体感頂くために、クイックスタートをご用意しました。 </p>
     <p>IT Automationではいくつかの自動化ソフトウェアと連携が可能ですが、それらの中で適用範囲が広いAnsibleとの連携を体感頂けます。 </p>
-    <p>また IT Automationは「パラメータ管理」および「変数紐付け」といった最重要な機能を提供していますが、クイックスタートではスムーズに体感頂くために、敢えてこれらの機能の活用を割愛しています。</p>
+    <p>【クイックスタートで体感できる主な機能】
+         ・パラメータ管理(メニュー作成・登録・履歴管理等)
+         ・変数紐付け(代入値自動登録)
+         ・自動化ソフトウェア(Ansible)との連携
+    </p>
     <p><a href="asset/Learn_ja/ITA-quickstart_ja.pdf" class="download" download="IT Automation クイックスタート"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
 
   </div>
