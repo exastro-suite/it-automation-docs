@@ -90,6 +90,10 @@
       "type": "pdf",
       "url": "Learn_ja/IT Automation オールインワン型HA同期構成インストールマニュアル.pdf"
     },
+		"Install_allInOne_ha_aws": {
+      "type": "pdf",
+      "url": "Learn_ja/IT Automation オールインワン型HA同期構成(AWS)インストールマニュアル.pdf"
+    },
 		"Install_Manual": {
       "type": "pdf",
       "url": "Learn_ja/ITA-サーバ分散型HA構成インストールマニュアル.pdf"
