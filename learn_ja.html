@@ -261,12 +261,17 @@ Learn</h1>
           <div class="tabMenu">
             <ul class="tabMenuList">
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_allInOne_ha">オールインワン型HA同期構成</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_allInOne_ha_aws">オールインワン型HA構成(AWS)</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#deploy_distributed_ha">サーバ分散型HA構成</a></li>
             </ul>
           </div>
           <div id="deploy_allInOne_ha" class="tabContent">
             <h4>オールインワン型HA同期構成</h4>
             <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_allInOne_ha.png" alt="オールインワン型HA同期構成"></span></span></p>
+          </div>
+          <div id="deploy_allInOne_ha_aws" class="tabContent">
+            <h4>オールインワン型HA構成(AWS)</h4>
+            <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/deploy_allInOne_ha_aws.png" alt="オールインワン型HA構成(AWS)"></span></span></p>
           </div>
           <div id="deploy_distributed_ha" class="tabContent">
             <h4>サーバ分散型HA構成</h4>
@@ -390,6 +395,7 @@ Learn</h1>
           <div class="tabMenu">
             <ul class="tabMenuList">
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_ha">オールインワン型HA同期構成</a></li>
+              <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_allInOne_ha_aws">オールインワン型HA構成(AWS)</a></li>
               <li class="tabMenuItem"><a class="tabMenuLink touch" href="#install_distributed_ha">サーバ分散型HA構成</a></li>
             </ul>
           </div>
@@ -400,6 +406,15 @@ Learn</h1>
             <p>IT Automationオールインワンインストール済サーバ2台とOSS製品群を組み合わせて、HAクラスタを構成することで、単一サーバでは実現できない可用性・信頼性の高いIT Automationサーバを構築することができます。</p>
             <p>本マニュアルでは、共有ストレージが不要で、サーバ間のデータ連携を可能とする、オールインワン型HA同期構成のインストール手順をご紹介いたします。</p>
             <p><a href="asset/Learn_ja/IT%20Automation%20%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%A4%E3%83%B3%E3%83%AF%E3%83%B3%E5%9E%8BHA%E5%90%8C%E6%9C%9F%E6%A7%8B%E6%88%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.zip" class="download" download="IT Automation オールインワン型HA同期構成インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(ZIP)</i></a></p>
+          </div>
+          <div id="install_allInOne_ha_aws" class="tabContent">
+            <h4>オールインワン型HA構成(AWS)</h4>
+            <div class="viewDocument" data-document="Install_allInOne_ha_aws"></div>
+            <p>IT Automationは、同一サーバ上に 全機能をオールインワン(※)で配置することが可能となっており、一部機能をAWSのマネージドサービス(EFS、RDS)に置き換えて構成することが可能となっております。<br>
+            ※詳細はオールインワン構成のセクションを参照ください。</p>
+            <p>一部機能をAWSのマネージドサービスに置き換えたIT Automationオールインワンインストール済サーバ2台とOSS製品群を組み合わせて、HAクラスタを構成することで、単一サーバでは実現できない可用性・信頼性の高いIT Automationサーバを構築することができます。</p>
+            <p>本マニュアルでは、共有ストレージとしてEFS、データベースとしてRDS(MariaDB)を利用した、オールインワン型HA構成のインストール手順をご紹介いたします。</p>
+            <p><a href="asset/Learn_ja/IT%20Automation%20%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%A4%E3%83%B3%E3%83%AF%E3%83%B3%E5%9E%8BHA%E6%A7%8B%E6%88%90%28AWS%29%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB.pdf" class="download" download="IT Automationオールインワン型HA構成(AWS)インストールマニュアル"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
           </div>
           <div id="install_distributed_ha" class="tabContent">
             <h4>サーバ分散型HA構成</h4>
@@ -426,7 +441,7 @@ Learn</h1>
     <div class="viewDocument" data-document="Quick_start">
       <div class="slideCode">
         <dl>
-          <dt>参考④ プレイブックサンプル集</dt>
+          <dt>本クイックスタートで使用するPlaybook</dt>
           <dd class="note">※文字コードは"UTF-8"、改行コードは"LF"、拡張子は"yml"形式。また、インデントにご注意下さい。</dd>
           <dd>
 
@@ -434,46 +449,12 @@ Learn</h1>
 
 <!-- Playbook sample -->
 <pre class="playbook clipboard-copy">
-- name: Make Work Directory demonstration
-  file:
-    path: <span class="any">/tmp/demodirectory</span>
-    state: <span class="any">directory</span>
-    mode: <span class="any">0755</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-
-
-
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Sample User add
-  user:
-    name: <span class="any">ITA</span>
-    createhome: <span class="any">no</span>
-    uid: <span class="any">4401</span>
-    group: <span class="any">users</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-      
-      
-      
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Collect Files
-  fetch:
-    src=<span class="any">/etc/hosts</span>
-    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
-    flat=yes
+- name: install the latest version of packages
+  yum:
+    name: <span class="any">"{{ item }}"</span>
+    state: <span class="any">latest</span>
+  with_items:
+    - <span class="any"> "{{ VAR_packages }}"</span>
 
 </pre>
 
@@ -489,9 +470,14 @@ Learn</h1>
         </ul>
       </div>
     </div>
-    <p>IT Automationのインタフェースをスムーズに体感頂くために、クイックスタートをご用意しました。 </p>
-    <p>IT Automationではいくつかの自動化ソフトウェアと連携が可能ですが、それらの中で適用範囲が広いAnsibleとの連携を体感頂けます。 </p>
-    <p>また IT Automationは「パラメータ管理」および「変数紐付け」といった最重要な機能を提供していますが、クイックスタートではスムーズに体感頂くために、敢えてこれらの機能の活用を割愛しています。</p>
+    <p>IT Automationのインタフェースをスムーズに体感頂くために、クイックスタートをご用意しました。</p>
+    <p>IT Automationではいくつかの自動化ソフトウェアと連携が可能ですが、それらの中で適用範囲が広いAnsibleとの連携を体感頂けます。</p>
+    <p>【クイックスタートで体感できる主な機能】</p>
+    <ul>
+        <li>パラメータ管理(メニュー作成・登録・履歴管理等)</li>
+        <li>変数紐付け(代入値自動登録)</li>
+        <li>自動化ソフトウェア(Ansible)との連携</li>
+    </ul>
     <p><a href="asset/Learn_ja/ITA-quickstart_ja.pdf" class="download" download="IT Automation クイックスタート"><i class="fas fa-file-pdf"></i> マニュアルをダウンロード<i class="note">(PDF)</i></a></p>
 
   </div>
@@ -752,6 +738,7 @@ Learn</h1>
           <ul class="footerMainMenuChildren">
             <li><a href="../oase-docs/overview_ja.html" class="overview">Overview</a></li>
             <li><a href="../oase-docs/learn_ja.html" class="learn">Learn</a></li>
+            <li><a href="../oase-docs/webinar_ja.html" class="webinar">Webinar</a></li>
             <li><a href="../oase-docs/case_ja.html" class="case">Case</a></li>
             <li><a href="../oase-docs/documents_ja.html" class="documents">Documents</a></li>
             <li><a href="../oase-docs/downloads_ja.html" class="downloads">Downloads</a></li>
@@ -785,7 +772,7 @@ Learn</h1>
   </div><!-- /#footerInner -->
 
   <div id="copyright">
-    <p><small>Copyright © NEC Corporation 2019-2020</small></p>
+    <p><small>Copyright © NEC Corporation 2019-2021</small></p>
   </div>
 
 </footer>

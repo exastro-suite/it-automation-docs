@@ -12,9 +12,13 @@
       "type": "pdf",
       "url": "Learn/ITA-offline-install.pdf"
     },
+		"Install_allInOne_ha": {
+      "type": "pdf",
+      "url": "Learn/ITA-All_In_One_HA_Synchronized_Configuration_Install_Manual.pdf"
+    },
 		"Install_Manual": {
       "type": "pdf",
-      "url": "Learn/ITA-Server_distrubuted_HA_configuration_installation_manual.pdf"
+      "url": "Learn/ITA-Server_distrubuted_HA_Configuration_Installation_Manual.pdf"
     },
 		"VersionUp_Manual": {
       "type": "pdf",
@@ -22,7 +26,7 @@
     },
 		"Quick_start": {
       "type": "pdf",
-      "url": "Learn/ITA-quickstart_en 1.2.pdf"
+      "url": "Learn/ITA-quickstart_EN.pdf"
     },
 		"BASE_Tutorial": {
       "type": "pdf",
@@ -85,6 +89,10 @@
 		"Install_allInOne_ha": {
       "type": "pdf",
       "url": "Learn_ja/IT Automation オールインワン型HA同期構成インストールマニュアル.pdf"
+    },
+		"Install_allInOne_ha_aws": {
+      "type": "pdf",
+      "url": "Learn_ja/IT Automation オールインワン型HA構成(AWS)インストールマニュアル.pdf"
     },
 		"Install_Manual": {
       "type": "pdf",
