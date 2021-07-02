@@ -414,57 +414,21 @@ Learn</h1>
     <div class="viewDocument" data-document="Quick_start">
       <div class="slideCode">
         <dl>
-          <dt>Reference 4 Sample Collection of Playbook</dt>
-          <dd class="note">*The character code is "UTF-8", the line feed code is "LF", and the extension is "yml" format. Keep the indents in mind.</dd>
+          <dt>Playbook used in the Quick start guide.</dt>
+          <dd class="note">※Make sure that the character code is "UTF-8" and the newline code is "LF".　The file extension should be in ".yml" format. Also make sure that the indents are correctly input.</dd>
           <dd>
-
-
-
+		  
+		    
 <!-- Playbook sample -->
 <pre class="playbook clipboard-copy">
-- name: Make Work Directory demonstration
-  file:
-    path: <span class="any">/tmp/demodirectory</span>
-    state: <span class="any">directory</span>
-    mode: <span class="any">0755</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-
-
-
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Sample User add
-  user:
-    name: <span class="any">ITA</span>
-    createhome: <span class="any">no</span>
-    uid: <span class="any">4401</span>
-    group: <span class="any">users</span>
-
-</pre>
-
-
-
-          </dd>
-          <dd>
-      
-      
-      
-<!-- Playbook sample -->
-<pre class="playbook clipboard-copy">
-- name: Collect Files
-  fetch:
-    src=<span class="any">/etc/hosts</span>
-    dest={{ __workflowdir__ }}/{{ inventory_hostname }}
-    flat=yes
-
-</pre>
-
+  - name: install the latest version of packages
+    yum:
+      name: <span class="any">"{{ item }}"</span>
+      state: <span class="any">latest</span>
+    with_items:
+      - <span class="any"> "{{ VAR_packages }}"</span>
+  
+  </pre>
 
 
           </dd>
@@ -486,7 +450,7 @@ Learn</h1>
       <li>Variable association(Substitution value auto/registration)</li>
       <li>Linking with Automation software (Ansible)</li>
     </ul>
-    <p><a href="asset/Learn/ITA-quickstart_en 1.2.pdf" class="download" download="IT Automation Quick start"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
+    <p><a href="asset/Learn/ITA-quickstart_EN.pdf" class="download" download="IT Automation Quick start"><i class="fas fa-file-pdf"></i> Download manual<i class="note">(PDF)</i></a></p>
     <!--<p><span class="download"><i class="fas fa-hourglass-half"></i> During slide creation</span></p>-->
   </div>
 </section>
