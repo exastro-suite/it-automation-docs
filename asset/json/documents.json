@@ -154,6 +154,14 @@
       "type": "none",
       "url": ""
     },
+		"Terraform_Tutorial": {
+      "type": "pdf",
+      "url": "Learn_ja/ITA-Terraform-Driver_ja.pdf"
+    },
+		"Terraform_Practice": {
+      "type": "none",
+      "url": ""
+    },
 		"Guide_Book_ScOp": {
       "type": "pdf",
       "url": "Learn_ja/Exastroで実現するシステム構築・運用の効率化ガイドブック.pdf"
