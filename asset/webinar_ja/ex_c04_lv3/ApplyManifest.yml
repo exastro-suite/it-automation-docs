@@ -1,0 +1,8 @@
+- name: Apply Manifest
+  k8s:
+    namespace: "{{ item.1 }}"
+    state: present
+    src: "/tmp/{{ item.0 | basename }}"
+  with_together:
+  - "{{ VAR_TPF_FILE }}"
+  - "{{ VAR_namespace }}"

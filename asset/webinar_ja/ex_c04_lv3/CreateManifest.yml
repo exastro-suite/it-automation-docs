@@ -1,0 +1,13 @@
+- name: Create Manifest File
+  template:
+    src: "{{ item.0 }}"
+    dest: "/tmp/{{ item.0 | basename }}"
+  vars:
+    replicas: "{{ item.1 }}"
+    image: "{{ item.2 }}"
+    nodeport: "{{ item.3 }}"
+  with_together:
+  - "{{ VAR_TPF_FILE }}"
+  - "{{ VAR_replicas }}"
+  - "{{ VAR_image }}"
+  - "{{ VAR_nodeport }}"
