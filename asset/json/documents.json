@@ -173,6 +173,18 @@
 		"cloudSystem_install": {
       "type": "pdf",
       "url": "SettingSamples_ja/cloud-system-template-1st-aws-install_ja.pdf"
+    },
+		"setting_samples_servicenow_install_ja": {
+      "type": "pdf",
+      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/docs/setting-samples-servicenow-install_ja.pdf"
+    },
+		"setting_samples_servicenow_overview_ja": {
+      "type": "pdf",
+      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/docs/setting-samples-servicenow-overview_ja.pdf"
+    },
+    "test": {
+      "type": "pdf",
+      "url": "https://exastro-suite.github.io/oase-docs/asset/Learn_ja/OASE-base_ITA-Driver_practice_ja.pdf"
     }
 	},
 	"config": {
