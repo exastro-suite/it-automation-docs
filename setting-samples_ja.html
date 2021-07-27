@@ -1,5 +1,5 @@
 <!doctype html>
-<html><!-- InstanceBegin template="file:///C|/ICF_AutoCapsule_disabled/git/Exastro Suite/Templates/ita.dwt" codeOutsideHTMLIsLocked="false" -->
+<html><!-- InstanceBegin template="/Templates/ita.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144561796-1"></script>
@@ -89,14 +89,7 @@ $(function(){
 <a href="#"><img src="../docs/asset/img/exastro.svg" alt="Exastro"></a>
 </div>
 <div id="suiteList">
-  <ul>
-    
-    <li class="exastro"><a href="../docs/index_ja.html">Exastro Home</a></li>
-    <li class="ita"><a href="index_ja.html">IT Automation</a></li>
-    <li class="pc"><a href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md" target="_blank" rel="noopener">Playbook Collection</a></li>
-    <li class="oase"><a href="../oase-docs/index_ja.html">Operation Autonomy Support Engine</a></li>
-    
-  </ul>
+  <script src="../docs/asset/js/menu_suite.js"></script>
 </div>
 
 <div id="mainTitle">
@@ -169,15 +162,20 @@ Setting samples</h1>
   <ul>
     <li><a href="#whatsSS" class="touch anker">Setting samplesとは <i class="fas fa-angle-down"></i></a></li>
     <li><a href="#ssList" class="touch anker">Setting samples list <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#cloudSystem" class="touch anker">Cloud Systemテンプレート <i class="fas fa-angle-down"></i></a></li>
-    <li><a href="#cmdb" class="touch anker">CMDBテンプレート <i class="fas fa-angle-down"></i></a></li>
+    <li class="toggleMenu"><span class="touch anker">テンプレート紹介 <i class="fas fa-bars"></i></span>
+      <ul>
+        <li><a href="#AWS-model" class="touch anker">AWSモデル <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#ServiceNow-model" class="touch anker">ServiceNow連携モデル <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#VMware-model" class="touch anker">VMwareモデル <i class="fas fa-angle-down"></i></a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
 <section id="whatsSS">
   <div class="sectionInner">
     <h2><em>Exastro IT Automation</em> Setting samplesとは</h2>
-    <p>Exastro IT Automationのエクスポート／インポート機能を使って、クラウドシステムとの連携やCMDBとしての活用を簡単に開始できるテンプレート（パッケージファイル）を提供します。</p>
+    <p>Exastro IT Automationの<a href="https://exastro-suite.github.io/it-automation-docs/learn_ja.html#exportImport" target="_blank">エクスポート／インポート機能</a>を使って、クラウドシステムとの連携やCMDBとしての活用を簡単に開始できるシステムテンプレート（パッケージファイル）を提供します。</p>
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_image01.png" alt="Setting samples概要イメージ図"></span></span></p>
   </div>
 </section>
@@ -188,152 +186,110 @@ Setting samples</h1>
     <table class="settingSamplesList">
       <tbody>
         <tr>
-          <th class="settingSamplesListTitle" rowspan="2">
-            <a class="settingSamplesSectionLink anker" href="#cloudSystem">
+          <th class="settingSamplesListTitle" rowspan="3">
+            <a class="settingSamplesSectionLink anker">
               <dl class="settingSamplesSection">
-                <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> Cloud Systemテンプレート</dt>
-                <dd class="settingSamplesSectionText">設計済みクラウドシステムモデルのIaCとCMDBのテンプレートです。</dd>
+                <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> テンプレート集</dt>
+                <dd class="settingSamplesSectionText">設計済みIaCとCMDBのテンプレートです。GitHubよりダウンロードができます。</dd>
               </dl>
             </a>
           </th>
-          <td class="settingSamplesListData">
-            <a class="settingSamplesItemLink anker" href="#cloudSystem1stAWS" title="詳細">
+          <td class="settingSamplesListData" colspan="2">
+            <a class="settingSamplesItemLink anker" href="#AWS-model" title="詳細">
               <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> Cloud Systemテンプレート 1st-Model<br>　 オートスケーリングWebシステム(AWS)</dt>
+                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> AWSモデル</dt>
                 <dd class="settingSamplesItemText">AWSクラウドサービス上でのWeb/APシステム提供を想定したプラットフォームを提供。</dd>
               </dl>
             </a>
           </td>
           <td class="settingSamplesListData fit">
-            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i>ダウンロード</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="settingSamplesListData" colspan="2">
+            <a class="settingSamplesItemLink anker" href="#ServiceNow-model" title="詳細">
+              <dl class="settingSamplesItem">
+                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> ServiceNow連携モデル</dt>
+                <dd class="settingSamplesItemText">IT Automationの構成管理情報をServiceNowの構成管理(CMDB)へ同期する機能を提供</dd>
+              </dl>
+            </a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/SettingSamples-ServiceNow/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
           </td>
         </tr>
         <tr>
           <td class="settingSamplesListData underConstruction" colspan="2">
             <span class="settingSamplesItemNoLink">
               <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> Cloud Systemテンプレート 2nd-Model</dt>
+                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> VMwareモデル</dt>
                 <dd class="settingSamplesItemText">Coming Soon.</dd>
               </dl>
             </span>
           </td>
         </tr>
+        
       </tbody>
     </table>
     
-    <table class="settingSamplesList">
-      <tbody>
-        <tr>
-          <th rowspan="4" class="settingSamplesListTitle">
-              <dl class="settingSamplesSection">
-                <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> CMDBテンプレート</dt>
-                <dd class="settingSamplesSectionText">構成管理データベースの枠組みを提供します。<br>(CMDBテンプレートは後日公開予定)</dd>
-              </dl>
-          </th>
-          <td class="settingSamplesListData underConstruction">
-            <span class="settingSamplesItemNoLink">
-              <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> データセンタ管理(DCIM)</dt>
-                <dd class="settingSamplesItemText">Coming Soon.</dd>
-              </dl>
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <td class="settingSamplesListData underConstruction">
-            <span class="settingSamplesItemNoLink">
-              <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> IPアドレス管理(IPAM)</dt>
-                <dd class="settingSamplesItemText">Coming Soon.</dd>
-              </dl>
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <td class="settingSamplesListData underConstruction">
-            <span class="settingSamplesItemNoLink">
-              <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> 資源管理</dt>
-                <dd class="settingSamplesItemText">Coming Soon.</dd>
-              </dl>
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <td class="settingSamplesListData underConstruction">
-            <span class="settingSamplesItemNoLink">
-              <dl class="settingSamplesItem">
-                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> クラウド管理</dt>
-                <dd class="settingSamplesItemText">Coming Soon.</dd>
-              </dl>
-            </span>
-          </td>
-        </tr>        
-      </tbody>
-    </table>
   </div>
 </section>
 
-<section id="cloudSystem">
+<section id="AWS-model">
   <div class="sectionInner">
-    <h2>Cloud Systemテンプレート</h2>
-    <p>CloudSystemテンプレートは「設計済みクラウドシステムモデルのIaC(Infrastructure as a Code)」です。 運用管理やセキュリテイなど運用上必須の機能が構築済みであることが特徴です。<br>
-    自動構築ツール”Exastro IT Automation”に本テンプレートを組み込むことで、パラメータ調整＋実行の2アクションでクラウドサービス上にシステムを提供することが可能です。</p>
-    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/cstemplate_image01.png" alt="Cloud Systemテンプレートイメージ図"></span></span></p>
-
-    
-    <h3 id="cloudSystem1stAWS"><small class="settingSamplesSubTitle">Cloud Systemテンプレート 1st-Model</small>オートスケーリングWebシステム(AWS)</h3>
+    <h2>AWSモデル</h2>
+    <!-- <h3 id="AWS-model">AWSモデル</h3> -->
     <p>AWSクラウドサービス上でのWeb/APシステム提供を想定した、スケールアウト型サーバと付帯機能を組合せたプラットフォームを提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでAWSクラウドサービスへの環境自動構築が実現可能です。</p>
-    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/cstemplate_aws_image01.png" alt="Cloud Systemテンプレート(AWS) イメージ図"></span></span></p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/cstemplate_aws_image01.png" alt="AWS-model イメージ図"></span></span></p>
     
-    <h4>オートスケールWebサーバモデルにおけるAWSサービス／ITA管理メニュー関連図</h4>
-    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/aws_cloud_association_chart.png" alt="オートスケールWebサーバにおけるAWSサービスの関連図"></span></span></p>
+    <h4>AWSモデルのサービス関連図</h4>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/aws_cloud_association_chart.png" alt="AWSサービスの関連図"></span></span></p>
 
     <p><a href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a></p>
     <div class="floatContents">
       <div class="halfContent">
         <h4>概要</h4>
         <div class="viewDocument only" data-document="cloudSystem_overview"></div>
-        <p><a href="https://exastro-suite.github.io/it-automation-docs/asset/SettingSamples_ja/cloud-system-template-1st-aws-overview_ja.pdf" class="download" download="Cloud Systemテンプレート概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
+        <p><a href="https://exastro-suite.github.io/it-automation-docs/asset/SettingSamples_ja/cloud-system-template-1st-aws-overview_ja.pdf" class="download" download="AWS-model概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
       </div>
       <div class="halfContent">
         <h4>導入手順</h4>
         <div class="viewDocument only" data-document="cloudSystem_install"></div>
-        <p><a href="https://exastro-suite.github.io/it-automation-docs/asset/SettingSamples_ja/cloud-system-template-1st-aws-install_ja.pdf" class="download" download="Cloud Systemテンプレート導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
+        <p><a href="https://exastro-suite.github.io/it-automation-docs/asset/SettingSamples_ja/cloud-system-template-1st-aws-install_ja.pdf" class="download" download="AWS-model導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="cmdb">
+<section id="ServiceNow-model">
   <div class="sectionInner">
-    <h2>CMDBテンプレート</h2>
-    <p>CMDBテンプレートは構成管理データベースの枠組みを提供します。構成管理の対象ごとに過去事例からリファレンスモデル化した構成管理データベースをExastro IT Automationに適合するように設計、利用しやすい形でユーザに提供します。<br>(CMDBテンプレートは後日公開予定)</p>
+    <h2>ServiceNow連携モデル</h2>
+    <!--  <h3 id="ServiceNow-model"><small class="settingSamplesSubTitle">Setting samplesテンプレート</small> ServiceNow連携モデル</h3> -->
+    <p>Exastro IT Automation上に設定した構成管理情報をServiceNowの構成管理(CMDB)へ同期する機能を提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでServiceNowの構成管理(CMDB)へ同期が可能です。</p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_servicenow_image01.png" alt="ServiceNow連携modelイメージ図"></span></span></p>
+    
+    <p><a href="https://github.com/exastro-suite/SettingSamples-ServiceNow/releases" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a></p>
+    <div class="floatContents">
+      <div class="halfContent">
+        <h4>概要</h4>
+        <div class="viewDocument only" data-document="setting_samples_servicenow_overview_ja"></div>
+        <p><a href="https://github.com/exastro-suite/SettingSamples-ServiceNow/raw/main/docs/setting-samples-servicenow-overview_ja.pdf" class="download" download="ServiceNow連携モデル概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <div class="halfContent">
+        <h4>導入手順</h4>
+        <div class="viewDocument only" data-document="setting_samples_servicenow_install_ja"></div>
+        <p><a href="https://github.com/exastro-suite/SettingSamples-ServiceNow/raw/main/docs/setting-samples-servicenow-install_ja.pdf" class="download" download="ServiceNow連携モデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h3 id="cmdbData" class="toggleHeading">データセンタ管理(DCIM)</h3>    
-    <div class="toggleText">
+<section id="VMware-model">
+  <div class="sectionInner">
+    <h2>VMwareモデル</h2>
     <div class="leftImage image25"><img src="../it-automation-docs/asset/img/coming_soon.png" alt="Coming soon."></div>
-    <p>CMDB(DCIM) is under construction.</p>
-    </div>
-    
-    <h3 id="cmdbIP" class="toggleHeading">IPアドレス管理(IPAM)</h3>    
-    <div class="toggleText">
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/coming_soon.png" alt="Coming soon."></div>
-    <p>CMDB(IPAM) is under construction.</p>
-    </div>
-    
-    <h3 id="cmdbMaterial" class="toggleHeading">資源管理</h3>    
-    <div class="toggleText">
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/coming_soon.png" alt="Coming soon."></div>
-    <p>CMDB(資源管理) is under construction.</p>
-    </div>
-    
-    <h3 id="cmdbCloud" class="toggleHeading">クラウド管理</h3>    
-    <div class="toggleText">
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/coming_soon.png" alt="Coming soon."></div>
-    <p>CMDB(クラウド管理) is under construction.</p>
-    </div>
-    
+    <p>VMwareモデル is under construction.</p>
   </div>
 </section>
 <!-- InstanceEndEditable -->
@@ -366,49 +322,7 @@ Setting samples</h1>
 
     <div id="footerMenu">
 
-      <ul id="footerMainMenu">
-        <li id="footerExastro">
-          <div class="footerMainMenuHome"><a href="../docs/index_ja.html"><img src="../docs/asset/img/exastro_logotype.svg" alt="Exastro"></a></div>
-          <ul class="footerMainMenuChildren">
-            <li><a href="../docs/index_ja.html#why">Why Exastro</a></li>
-            <li><a href="../docs/index_ja.html#suite">Exastro Suite</a></li>
-            <li><a href="../docs/index_ja.html#overview">Overview</a></li>
-            <li><a href="../docs/newsroom_ja.html">News Room</a></li>
-            <li><a href="../docs/event_ja.html">Event</a></li>
-            <li><a href="../docs/asset_ja.html">Asset</a></li>
-          </ul>
-        </li>
-        <li id="footerIta">
-          <div class="footerMainMenuHome"><a href="index_ja.html"><img src="asset/img/ita.svg" alt="IT Automation"></a></div>
-          <ul class="footerMainMenuChildren">
-            <li><a href="overview_ja.html" class="overview">Overview</a></li>
-            <li><a href="learn_ja.html" class="learn">Learn</a></li>
-            <li><a href="webinar_ja.html" class="webinar">Webinar</a></li>
-            <li><a href="case_ja.html" class="case">Case</a></li>
-            <li><a href="documents_ja.html" class="documents">Documents</a></li>
-            <li><a href="downloads_ja.html" class="downloads">Downloads</a></li>
-            <li><a href="setting-samples_ja.html" class="setting-samples">Setting samples</a></li>
-            <li><a href="faq_ja.html" class="downloads">FAQ</a></li>
-          </ul>
-        </li>
-				<li id="footerOase">
-          <div class="footerMainMenuHome"><a href="../oase-docs/index_ja.html"><img src="../oase-docs/asset/img/oase.svg" alt="OASE | Operation Autonomy Support Engine"></a></div>
-          <ul class="footerMainMenuChildren">
-            <li><a href="../oase-docs/overview_ja.html" class="overview">Overview</a></li>
-            <li><a href="../oase-docs/learn_ja.html" class="learn">Learn</a></li>
-            <li><a href="../oase-docs/case_ja.html" class="case">Case</a></li>
-            <li><a href="../oase-docs/documents_ja.html" class="documents">Documents</a></li>
-            <li><a href="../oase-docs/downloads_ja.html" class="downloads">Downloads</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul id="footerSubMenu">
-        <li><a href="https://twitter.com/ExastroSuite" class="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a><span>Twitter</span></li>
-        <li><a href="https://www.facebook.com/ExastroSuite/" class="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a><span>facebook</span></li>
-        <li><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="youtube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a><span>YouTube</span></li>
-        <li><a href="https://github.com/exastro-suite" class="github" target="_blank" rel="noopener"><i class="fab fa-github-square"></i></a><span>GitHub</span></li>
-      </ul>
+      <script src="../docs/asset/js/menu_footer.js"></script>
 
       <div id="footerShareMenu">
         <dl>
@@ -428,7 +342,7 @@ Setting samples</h1>
   </div><!-- /#footerInner -->
 
   <div id="copyright">
-    <p><small>Copyright © NEC Corporation 2019-2020</small></p>
+    <p><small><script src="../docs/asset/js/copyright.js"></script></small></p>
   </div>
 
 </footer>
