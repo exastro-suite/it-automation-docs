@@ -176,11 +176,11 @@
     },
 		"setting_samples_servicenow_install_ja": {
       "type": "pdf",
-      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/docs/setting-samples-servicenow-install_ja.pdf"
+      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/setting-samples-servicenow-install_ja.pdf"
     },
 		"setting_samples_servicenow_overview_ja": {
       "type": "pdf",
-      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/docs/setting-samples-servicenow-overview_ja.pdf"
+      "url": "https://exastro-suite.github.io/SettingSamples-ServiceNow/setting-samples-servicenow-overview_ja.pdf"
     },
     "test": {
       "type": "pdf",
