@@ -151,16 +151,16 @@
       "url": "Learn_ja/ITA-collect-contrast_classroom_lecture_ja.pdf"
     },
 		"collect-contrast_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/ITA-collect-compare_practice_ja.pdf"
     },
 		"Terraform_Tutorial": {
       "type": "pdf",
       "url": "Learn_ja/ITA-Terraform-Driver_ja.pdf"
     },
 		"Terraform_Practice": {
-      "type": "none",
-      "url": ""
+      "type": "pdf",
+      "url": "Learn_ja/ITA-Terraform-driver-practice_ja.pdf"
     },
 		"Guide_Book_ScOp": {
       "type": "pdf",
