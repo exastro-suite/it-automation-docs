@@ -21,7 +21,7 @@ background-image: url("../img/header_ita_home_monitor.png");
 #article.learn #articleTitle .background { background-image: url("../img/header_learn.jpg"); }
 #article.case #articleTitle .background { background-image: url("../img/header_case.jpg"); }
 #article.documents #articleTitle .background { background-image: url("../img/header_documents.jpg"); }
-#article.downloads #articleTitle .background { background-image: url("../img/header_downloads.jpg"); }
+#article.install #articleTitle .background { background-image: url("../img/header_downloads.jpg"); }
 #article.faq #articleTitle .background { background-image: url("../img/header_faq.jpg"); }
 #article.webinar #articleTitle .background { background-image: url("../img/header_webinar.jpg"); }
 #article.setting-samples #articleTitle .background { background-image: url("../img/header_setting-samples.jpg"); }
