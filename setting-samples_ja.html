@@ -185,29 +185,34 @@ Setting samples</h1>
     <h2>Setting samples list</h2>
     <table class="settingSamplesList">
       <tbody>
+
         <tr>
           <th class="settingSamplesListTitle" rowspan="3">
             <a class="settingSamplesSectionLink anker">
               <dl class="settingSamplesSection">
                 <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> テンプレート集</dt>
-                <dd class="settingSamplesSectionText">設計済みIaCとCMDBのテンプレートです。GitHubよりダウンロードができます。</dd>
+                <dd class="settingSamplesSectionText">設計済みIaCとCMDBのテンプレートです。<br>GitHubよりダウンロード、またはDockerHubよりテンプレート搭載済のコンテナイメージが利用できます。</dd>
               </dl>
             </a>
           </th>
-          <td class="settingSamplesListData" colspan="2">
+          <td class="settingSamplesListData" colspan="3">
             <a class="settingSamplesItemLink anker" href="#AWS-model" title="詳細">
               <dl class="settingSamplesItem">
                 <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> AWSモデル</dt>
-                <dd class="settingSamplesItemText">AWSクラウドサービス上でのWeb/APシステム提供を想定したプラットフォームを提供。</dd>
+                <dd class="settingSamplesItemText">AWSクラウドサービス上でのWeb/APシステム構築を想定したプラットフォームを提供。</dd>
               </dl>
             </a>
           </td>
           <td class="settingSamplesListData fit">
-            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i>ダウンロード</a>
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://hub.docker.com/r/exastro/settingsamples-aws" title="DockerHubページへ" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ</a>
           </td>
         </tr>
+
         <tr>
-          <td class="settingSamplesListData" colspan="2">
+          <td class="settingSamplesListData" colspan="3">
             <a class="settingSamplesItemLink anker" href="#ServiceNow-model" title="詳細">
               <dl class="settingSamplesItem">
                 <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> ServiceNow連携モデル</dt>
@@ -218,15 +223,22 @@ Setting samples</h1>
           <td class="settingSamplesListData fit">
             <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/SettingSamples-ServiceNow/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
           </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://hub.docker.com/r/exastro/settingsamples-servicenow" title="DockerHubページへ" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ</a>
+          </td>
         </tr>
+
         <tr>
-          <td class="settingSamplesListData underConstruction" colspan="2">
-            <span class="settingSamplesItemNoLink">
+          <td class="settingSamplesListData" colspan="3">
+            <a class="settingSamplesItemLink anker" href="#VMware-model" title="詳細">
               <dl class="settingSamplesItem">
                 <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> VMwareモデル</dt>
-                <dd class="settingSamplesItemText">Coming Soon.</dd>
+                <dd class="settingSamplesItemText">オンプレミスで構築されたVM基盤上(vSphere/NSX-T)におけるWeb/APシステム構築を想定したプラットフォームを提供</dd>
               </dl>
-            </span>
+            </a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/SettingSamples-VMware/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
           </td>
         </tr>
         
@@ -239,14 +251,15 @@ Setting samples</h1>
 <section id="AWS-model">
   <div class="sectionInner">
     <h2>AWSモデル</h2>
-    <!-- <h3 id="AWS-model">AWSモデル</h3> -->
-    <p>AWSクラウドサービス上でのWeb/APシステム提供を想定した、スケールアウト型サーバと付帯機能を組合せたプラットフォームを提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでAWSクラウドサービスへの環境自動構築が実現可能です。</p>
+    <p>AWSクラウドサービス上でのWeb/APシステム構築を想定した、スケールアウト型サーバと付帯機能を組合せたプラットフォームを提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでAWSクラウドサービスへの環境自動構築が実現可能です。</p>
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/cstemplate_aws_image01.png" alt="AWS-model イメージ図"></span></span></p>
     
     <h4>AWSモデルのサービス関連図</h4>
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/aws_cloud_association_chart.png" alt="AWSサービスの関連図"></span></span></p>
 
-    <p><a href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a></p>
+    <p><a href="https://github.com/exastro-suite/Settings-CloudSystemTemplate-1st/releases" class="githubLink" target="_blank" style="margin-right:16px"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
+    <a href="https://hub.docker.com/r/exastro/settingsamples-aws" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ利用方法へ<i class="note">(DockerHub)</i></a></p>
+
     <div class="floatContents">
       <div class="halfContent">
         <h4>概要</h4>
@@ -269,7 +282,9 @@ Setting samples</h1>
     <p>Exastro IT Automation上に設定した構成管理情報をServiceNowの構成管理(CMDB)へ同期する機能を提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでServiceNowの構成管理(CMDB)へ同期が可能です。</p>
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_servicenow_image01.png" alt="ServiceNow連携modelイメージ図"></span></span></p>
     
-    <p><a href="https://github.com/exastro-suite/SettingSamples-ServiceNow/releases" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a></p>
+    <p><a href="https://github.com/exastro-suite/SettingSamples-ServiceNow/releases" class="githubLink" target="_blank" style="margin-right:16px"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
+    <a href="https://hub.docker.com/r/exastro/settingsamples-servicenow" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ利用方法へ<i class="note">(DockerHub)</i></a></p>
+
     <div class="floatContents">
       <div class="halfContent">
         <h4>概要</h4>
@@ -288,10 +303,27 @@ Setting samples</h1>
 <section id="VMware-model">
   <div class="sectionInner">
     <h2>VMwareモデル</h2>
-    <div class="leftImage image25"><img src="../it-automation-docs/asset/img/coming_soon.png" alt="Coming soon."></div>
-    <p>VMwareモデル is under construction.</p>
+    <p>オンプレミスで構築されたVM基盤上におけるWeb/APシステム構築を想定した、Web3層モデルで構築されたサーバとネットワークのプラットフォームを提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでVMware基盤(vSphere/NSX-T)への環境自動構築が実現可能です。</p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_vmware_image01.png" alt="VMware-modelイメージ図"></span></span></p>
+    <p>※Terraform Enterprize Agentsは2021年9月以降に利用開始</p>
+    
+    <p><a href="https://github.com/exastro-suite/SettingSamples-VMware/releases" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a></p>
+    
+    <div class="floatContents">
+      <div class="halfContent">
+        <h4>概要</h4>
+        <div class="viewDocument only" data-document="setting_samples_vmware_overview_ja"></div>
+        <p><a href="https://exastro-suite.github.io/SettingSamples-VMware/setting-samples-vmware-overview_ja.pdf" class="download" download="VMwareモデル概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <div class="halfContent">
+        <h4>導入手順</h4>
+        <div class="viewDocument only" data-document="setting_samples_vmware_install_ja"></div>
+        <p><a href="https://exastro-suite.github.io/SettingSamples-VMware/setting-samples-vmware-install_ja.pdf" class="download" download="VMwareモデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+    </div>
   </div>
 </section>
+
 <!-- InstanceEndEditable -->
 </div>
 
