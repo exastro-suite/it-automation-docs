@@ -68,6 +68,22 @@
       "type": "pdf",
       "url": "Learn/ITA-Ansible-Driver_en_practice.pdf"
     },
+		"collect-compare_Tutorial": {
+      "type": "pdf",
+      "url": "Learn/Collect-Contrast%20Classroom.pdf.pdf"
+    },
+		"collect-compare_Practice": {
+      "type": "pdf",
+      "url": "Learn/ITA-collect-compare_practice_en.pdf"
+    },
+		"Terraform_Tutorial": {
+      "type": "pdf",
+      "url": "Learn/ITA-Terraform-Driver_en.pdf"
+    },
+		"Terraform_Practice": {
+      "type": "pdf",
+      "url": "Learn/ITA-Terraform-driver-practice_en.pdf"
+    },
 		"Guide_Book_ScOp": {
       "type": "pdf",
       "url": "Learn/Exastro_System_Operation_and_Construction_Efficiency_Guide.pdf"
