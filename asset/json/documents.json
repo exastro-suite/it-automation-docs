@@ -183,7 +183,7 @@
       "url": "Learn_ja/ITA-CICD_for_lac_ja.pdf"
     },
 		"cicd_Practice": {
-      "type": "none",
+      "type": "pdf",
       "url": "Learn_ja/ITA-CICD_for_IaC_practice_ja.pdf"
     },
 		"Guide_Book_ScOp": {
