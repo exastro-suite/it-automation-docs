@@ -45,7 +45,7 @@
 "2":{"id":"create-menu2","Q":"メニュー作成　＞　メニュー定義/作成　で項目を定義する際、入力方式を「プルダウン選択」にしたが、「選択項目」にプルダウン選択の対象となる項目が表示されない。","A":"問題原因として下記が考えられますので、設定をご確認ください。\n\n・参照元の項目定義で「必須」「一意制約」が選択されているか\n下図のように参照先となるメニューがA、参照元となるメニューがBだとすると、メニューAの「選択項目」にメニューBの項目Xを表示させたい場合、メニューBの項目Xの定義において「必須」「一意制約」が選択されている必要があります。\n{img{asset/faq/create_menu_002.png}70%}\n\n・参照元の項目定義の「入力方式」で下記のいずれかが選択されているか\nメニューBの項目Xの定義において、入力方式が「文字列(単一行)」「文字列(複数行)」「整数」「小数」「日時」「日付」「リンク」のいずれかが選択されているか、ご確認ください。\n{img{asset/faq/create_menu_003.png}70%}"},
 "3":{"id":"create-menu3","Q":"メニュー作成時に、『Row size too large』というSQLエラーが発生し、メニュー作成できなかった。","A":"MariaDBの制約で、1レコードの容量の上限に達しているためエラーとなっております。\n一例としては、カラム数が344以上になるとエラーとなります。\nカラムの数を減らす、またはメニューを分割するなどして容量内での設定を行って下さい。"},
 "4":{"id":"create-menu4","Q":"メニュー名に記号は使えるの？","A":"メニュー名に「\\/:*?\"<>|[]：￥／＊［］」は使用できません。"},
-"5":{"id":"create-menu5","Q":"メニューはどのように削除(廃止)するんでしょうか？ 「メニュー定義一覧」で一覧表示に廃止ボタンがありませんでした。","A":"管理コンソール ＞ メニュー管理　から「廃止」ボタンを押すと表示されなくなります。\nまた「復活」ボタンを押せば再表示されます。\n{img{asset/faq/create_menu_004.jpg}80%}\n一度作成したメニューのテーブルを物理的に削除する機能はありません。"}
+"5":{"id":"create-menu5","Q":"メニューはどのように削除(廃止)するんでしょうか？ 「メニュー定義一覧」で一覧表示に廃止ボタンがありませんでした。","A":"管理コンソール ＞ メニュー管理　から「廃止」ボタンを押すと表示されなくなります。\nまた「復活」ボタンを押せば再表示されます。\n{img{asset/faq/create_menu_004.jpg}90%}\n一度作成したメニューのテーブルを物理的に削除する機能はありません。"}
 },
 "ホストグループ管理":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-server","id":"host-group"},
@@ -92,8 +92,8 @@
 "1":{"id":"documents1","Q":"過去バージョンのドキュメントが見たい。","A":"こちらからご参照頂けます。\n「vx.x.x」を参照したいバージョンにして、ご確認ください。\n\n日本語版：https://github.com/exastro-suite/it-automation-docs/tree/vx.x.x/asset/Documents_ja\n英語版：https://github.com/exastro-suite/it-automation-docs/tree/vx.x.x/asset/Documents"}
 },
 "その他":{
-"data":{"frequently":"","abbreviation":"","icon":"fa-list-ul","id":"others"},
-"1":{"id":"others1","Q":"Exastro ITAへのログイン履歴が参照できるメニューやログはありますか？","A":"以下にWeb操作ログが出力されます。\n(ITAインストールディレクトリ)/ita-root/logs/webaplogs\n\nログの詳細は『{a{​​​​​​​https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_【参考】ログ一覧.pdf}Exastro-ITA_【参考】ログ一覧.pdf}』を参照ください。"}
+"data":{"frequently":"","abbreviation":"","icon":"fa-clipboard","id":"others"},
+"1":{"id":"others1","Q":"Exastro ITAへのログイン履歴が参照できるメニューやログはありますか？","A":"以下にWeb操作ログが出力されます。\n(ITAインストールディレクトリ)/ita-root/logs/webaplogs\n\nログの詳細は『{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E3%80%90%E5%8F%82%E8%80%83%E3%80%91%E3%83%AD%E3%82%B0%E4%B8%80%E8%A6%A7.pdf}Exastro-ITA_【参考】ログ一覧.pdf}』を参照ください。"}
 }
 },
 "en": {
@@ -142,7 +142,7 @@
 "2":{"id":"create-menu2","Q":"When defining items in the Menu Create -> Define/Create Menu, the select items will not be displayed in the pulldown selection when choosing Pulldown selection as input method.","A":"The following can be thought of as the problem.\n\n1.The \"Required\" or \"Unique constraint\" box is not checked for the reference item.\nIf Menu A in the picture below is where it is will be refered to, and Menu B is where it is referenced from, if you want to have Item X from Menu B be displayed in Menu A as a \"Select item\", Item X must have its checkboxes for \"Required\" and \"Unique constraint\" checked.\n{img{asset/faq/create_menu_002_en.png}70%}\n\n2.One of the following is selected as input method from the reference item (The source item)\nWhen defining Item X in Menu B, make sure that one of these is selected for Input method: \" String\", \"Multi string\", \"Integer\" ,\"Decimal Number\", \"Time/Date\", \"Date\" or \"Link\".\n{img{asset/faq/create_menu_003_en.png}70%}"},
 "3":{"id":"create-menu3","Q":"The SQL error \"Row size too large\" displays when I try to make a menu.","A":"The error occurs because the capacity limit of the record has been reached due to MariaDB restrictions.\nAs an example, an error will occur if the number of columns is more than 344.\nReduce the number of columns or split the menu to keep it within capacity."},
 "4":{"id":"create-menu4","Q":"Can you use symbols when naming menus?","A":"Menu names cannot contain the following characters:\n「\\/:*?\"<>|[]：￥／＊［］」"},
-"5":{"id":"create-menu5","Q":"How do you delete (abolish) menus? The abolish button wont display in the \"Menu definition list\" menu.","A":"Pressing the \"Abolish\" button for the respective menus in the \"Management console > Menu list\" menu will hide the menu.\nPress the \"Restore\" button in order to display it again.\n{img{asset/faq/create_menu_004_en.jpg}75%}\nThere is no function that allows users to completely delete menu tables that has been created."}
+"5":{"id":"create-menu5","Q":"How do you delete (abolish) menus? The abolish button wont display in the \"Menu definition list\" menu.","A":"Pressing the \"Abolish\" button for the respective menus in the \"Management console > Menu list\" menu will hide the menu.\nPress the \"Restore\" button in order to display it again.\n{img{asset/faq/create_menu_004_en.jpg}85%}\nThere is no function that allows users to completely delete menu tables that has been created."}
 },
 "Host group management":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-server","id":"host-group"},
@@ -189,8 +189,8 @@
 "1":{"id":"documents1","Q":"I want to see documents for earlier versions.","A":"Please see the following URLs for earlier documents.\n (Change the \"vx.x.x\" in the URL with the version you want to see)\n\nJapanese:https: //github.com/exastro-suite/it-automation-docs/tree/vx.x.x/asset/Documents_ja\nEnglish: https://github.com/exastro-suite/it-automation-docs/tree/vx.x.x/asset/Documents"}
 },
 "Others":{
-"data":{"frequently":"","abbreviation":"","icon":"fa-list-ul","id":"others"},
-"1":{"id":"others1","Q":"Are there any menus or logs where users can see login history for Exastro ITA?","A":"The Web operation logs are output to the following directory.\n(ITA installation directory)/ita-root/logs/webaplogs\n\nFor more information, please see \"{a{https://github.com/exastro-suite/it-automation-docs/blob/master/asset/Documents/Exastro-ITA_%5BReference%5DLog_list.pdf}Exastro-ITA_[Reference]Log_list.pdf}\". "}
+"data":{"frequently":"","abbreviation":"","icon":"fa-clipboard","id":"others"},
+"1":{"id":"others1","Q":"Are there any menus or logs where users can see login history for Exastro ITA?","A":"The Web operation logs are output to the following directory.\n(ITA installation directory)/ita-root/logs/webaplogs\n\nFor more information, please see \"{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_[Reference]Log_list.pdf}Exastro-ITA_[Reference]Log_list.pdf}\". "}
 }
 }
 }
