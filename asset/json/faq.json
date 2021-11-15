@@ -25,7 +25,8 @@
 },
 "管理コンソール":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-user-cog","id":"management"},
-"1":{"id":"management1","Q":"RBACの設定の単位は？","A":"v1.6.0以降は、「メニュー単位のRBAC」「レコード単位のRBAC」の2パターンで設定が可能です。\n\nメニューに対してRBACを設定すると、メニュー全体への設定となります。\nメニュー内の各レコードでRBACを分けたい場合は、レコード単位での設定となります。\n\nレコード単位のRBACの詳細については『{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E6%AF%8E%E3%81%AE%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1.pdf}利用手順マニュアル　データレコード毎のロールベースアクセス制御}』をご参照ください。"}
+"1":{"id":"management1","Q":"RBACの設定の単位は？","A":"v1.6.0以降は、「メニュー単位のRBAC」「レコード単位のRBAC」の2パターンで設定が可能です。\n\nメニューに対してRBACを設定すると、メニュー全体への設定となります。\nメニュー内の各レコードでRBACを分けたい場合は、レコード単位での設定となります。\n\nレコード単位のRBACの詳細については『{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents_ja/Exastro-ITA_%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB_%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E6%AF%8E%E3%81%AE%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1.pdf}利用手順マニュアル　データレコード毎のロールベースアクセス制御}』をご参照ください。"},
+"2":{"id":"management2","Q":"各ユーザのITAログインIDとパスワードはどうやって確認できますか？","A":"ユーザIDは、管理者権限でログインして　管理コンソール ＞ ユーザ管理 の［一覧/更新］から確認できます。\nパスワードは不可逆に変換の上格納しているので取得できません。"}
 },
 "エクスポート/インポート":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-exchange-alt","id":"export-inport"},
@@ -122,7 +123,8 @@
 },
 "Management Console":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-user-cog","id":"management"},
-"1":{"id":"management1","Q":"What kind of RBAC setting units can I use?","A":"For v1.6.0 and later, there are possible to configure RBAC in two different patterns. \"Menu unit RBAC\" and \"Record unit RBAC\".\n\nIf you set RBAC for Menus, it will count for the whole menu. \nIf you want to set RBAC for records within menus, use Record unit RBAC.\n\nFor more information regarding Record Unit RBAC, please refer to \"{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_User_Instruction_Manual_Role-based_access_control_for_data_records.pdf}Exastro-ITA_User_Instruction_Manual_Role-based_access_control_for_data_records}\"."}
+"1":{"id":"management1","Q":"What kind of RBAC setting units can I use?","A":"For v1.6.0 and later, there are possible to configure RBAC in two different patterns. \"Menu unit RBAC\" and \"Record unit RBAC\".\n\nIf you set RBAC for Menus, it will count for the whole menu. \nIf you want to set RBAC for records within menus, use Record unit RBAC.\n\nFor more information regarding Record Unit RBAC, please refer to \"{a{https://exastro-suite.github.io/it-automation-docs/asset/Documents/Exastro-ITA_User_Instruction_Manual_Role-based_access_control_for_data_records.pdf}Exastro-ITA_User_Instruction_Manual_Role-based_access_control_for_data_records}\"."},
+"2":{"id":"management2","Q":"How can I see the User IDs and Passwords for all the ITA users?","A":"User IDs can be seen in the Management console > User list menu as long as the user is logged in as user with admin permission.\nPasswords are stored with irreversable encryption, meaning that they cannot be acquired."}
 },
 "Export/Import":{
 "data":{"frequently":"","abbreviation":"","icon":"fa-exchange-alt","id":"export-inport"},
