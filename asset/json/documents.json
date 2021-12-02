@@ -114,6 +114,10 @@
       "type": "pdf",
       "url": "Learn_ja/ITA-サーバ分散型HA構成インストールマニュアル.pdf"
     },
+		"Install_Manual_aws": {
+      "type": "pdf",
+      "url": "Learn_ja/ITA-サーバ分散型HA構成(aws)インストールマニュアル.pdf"
+    },
 		"VersionUp_Manual": {
       "type": "pdf",
       "url": "Learn_ja/ITA-version-up_ja.pdf"
