@@ -86,11 +86,11 @@
     },
 		"cicd_Tutorial": {
       "type": "pdf",
-      "url": "Learn_ja/ITA-CICD_for_lac_en.pdf"
+      "url": "Learn/ITA-CICD_for_lac_en.pdf"
     },
 		"cicd_Practice": {
       "type": "pdf",
-      "url": "Learn_ja/ITA-CICD_for_IaC_practice_en.pdf"
+      "url": "Learn/ITA-CICD_for_IaC_practice_en.pdf"
     },
 		"Guide_Book_ScOp": {
       "type": "pdf",
