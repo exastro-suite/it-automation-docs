@@ -167,6 +167,7 @@ Setting samples</h1>
         <li><a href="#AWS-model" class="touch anker">AWSモデル <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#ServiceNow-model" class="touch anker">ServiceNow連携モデル <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#VMware-model" class="touch anker">VMwareモデル <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#Hyper-V-model" class="touch anker">Hyper-vモデル <i class="fas fa-angle-down"></i></a></li>
       </ul>
     </li>
   </ul>
@@ -187,7 +188,7 @@ Setting samples</h1>
       <tbody>
 
         <tr>
-          <th class="settingSamplesListTitle" rowspan="3">
+          <th class="settingSamplesListTitle" rowspan="4">
             <a class="settingSamplesSectionLink anker">
               <dl class="settingSamplesSection">
                 <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> テンプレート集</dt>
@@ -244,7 +245,21 @@ Setting samples</h1>
             <a class="settingSamplesKymLink" href="https://hub.docker.com/r/exastro/settingsamples-vmware" title="DockerHubページへ" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ</a>
           </td>
         </tr>
-        
+
+        <tr>
+          <td class="settingSamplesListData" colspan="3">
+            <a class="settingSamplesItemLink anker" href="#Hyper-V-model" title="詳細">
+              <dl class="settingSamplesItem">
+                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> Hyper-Vモデル</dt>
+                <dd class="settingSamplesItemText">Windows Hyper-Vマネージャ上の仮想マシン自動構築運用を想定したプラットフォームを提供</dd>
+              </dl>
+            </a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/SettingSamples-ITA-HyperV/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
+          </td>
+        </tr>        
+
       </tbody>
     </table>
     
@@ -308,9 +323,8 @@ Setting samples</h1>
     <h2>VMwareモデル</h2>
     <p>オンプレミスで構築されたVM基盤上におけるWeb/APシステム構築を想定した、Web3層モデルで構築されたサーバとネットワークのプラットフォームを提供します。<br>Exastro IT Automationに本テンプレートを組み込むことにより、以下のような流れでVMware基盤(vSphere/NSX-T)への環境自動構築が実現可能です。</p>
     <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_vmware_image01.png" alt="VMware-modelイメージ図"></span></span></p>
-    <p>※Terraform Enterprize Agentsは2021年9月以降に利用開始</p>
-    
-    <p><a href="https://github.com/exastro-suite/SettingSamples-VMware/releases" class="githubLink" target="_blank" style="margin-right:16px">><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
+
+    <p><a href="https://github.com/exastro-suite/SettingSamples-VMware/releases" class="githubLink" target="_blank" style="margin-right:16px"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
     <a href="https://hub.docker.com/r/exastro/settingsamples-vmware" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ利用方法へ<i class="note">(DockerHub)</i></a></p>
 
     <div class="floatContents">
@@ -323,6 +337,31 @@ Setting samples</h1>
         <h4>導入手順</h4>
         <div class="viewDocument only" data-document="setting_samples_vmware_install_ja"></div>
         <p><a href="https://exastro-suite.github.io/SettingSamples-VMware/setting-samples-vmware-install_ja.pdf" class="download" download="VMwareモデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Hyper-V-model">
+  <div class="sectionInner">
+    <h2>Hyper-Vモデル</h2>
+    <p>Hyper-Vモデルは、Hyper-Vマネージャを使った煩雑な仮想マシン操作を自動化するモデルです。
+    <br>仮想マシンの作成・起動・停止・削除だけでなく、IPアドレス設定、ハードディスクの追加まで自動化します。Hyper-Vを使ったことがない人でも簡単に仮想マシンを操作出来るようPlaybookとパラメータシートが準備されています。
+    <br>Exastro IT Automationに本テンプレートを組み込むことで、Hyper-V上の仮想マシン自動構築プラットフォームを提供します。</p>
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_hyperv_image01.png" alt="Hyper-v-modelイメージ図"></span></span></p>
+    
+    <p><a href="https://github.com/exastro-suite/SettingSamples-ITA-HyperV/releases" class="githubLink" target="_blank" style="margin-right:16px"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
+
+    <div class="floatContents">
+      <div class="halfContent">
+        <h4>概要</h4>
+        <div class="viewDocument only" data-document="setting_samples_hyperv_overview_ja"></div>
+        <p><a href="https://exastro-suite.github.io/SettingSamples-ITA-HyperV/setting-samples-hyperv-overview_ja.pdf" class="download" download="Hyper-Vモデル概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <div class="halfContent">
+        <h4>導入手順</h4>
+        <div class="viewDocument only" data-document="setting_samples_hyperv_install_ja"></div>
+        <p><a href="https://exastro-suite.github.io/SettingSamples-ITA-HyperV/setting-samples-hyperv-install_ja.pdf" class="download" download="Hyper-Vモデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
       </div>
     </div>
   </div>
