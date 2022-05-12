@@ -233,6 +233,14 @@
 		"setting_samples_hyperv_install_ja": {
       "type": "pdf",
       "url": "https://exastro-suite.github.io/SettingSamples-ITA-HyperV/setting-samples-hyperv-install_ja.pdf"
+    },
+		"setting_samples_azure_overview_ja": {
+      "type": "pdf",
+      "url": "https://exastro-suite.github.io/it-automation-settingsamples-azure/setting-samples-azure-overview_ja.pdf"
+    },
+		"setting_samples_azure_install_ja": {
+      "type": "pdf",
+      "url": "https://exastro-suite.github.io/it-automation-settingsamples-azure/setting-samples-azure-install_ja.pdf"
     }
 	},
 	"config": {
