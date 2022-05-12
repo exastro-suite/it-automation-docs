@@ -168,6 +168,7 @@ Setting samples</h1>
         <li><a href="#ServiceNow-model" class="touch anker">ServiceNow連携モデル <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#VMware-model" class="touch anker">VMwareモデル <i class="fas fa-angle-down"></i></a></li>
         <li><a href="#Hyper-V-model" class="touch anker">Hyper-vモデル <i class="fas fa-angle-down"></i></a></li>
+        <li><a href="#Azure-model" class="touch anker">Azureモデル <i class="fas fa-angle-down"></i></a></li>
       </ul>
     </li>
   </ul>
@@ -188,7 +189,7 @@ Setting samples</h1>
       <tbody>
 
         <tr>
-          <th class="settingSamplesListTitle" rowspan="4">
+          <th class="settingSamplesListTitle" rowspan="5">
             <a class="settingSamplesSectionLink anker">
               <dl class="settingSamplesSection">
                 <dt class="settingSamplesSectionTitle"><i class="fas fa-cog"></i> テンプレート集</dt>
@@ -262,6 +263,23 @@ Setting samples</h1>
             <a class="settingSamplesKymLink" href="https://hub.docker.com/r/exastro/it-automation-settingsamples-hyperv" title="DockerHubページへ" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ</a>
           </td>
         </tr>        
+
+        <tr>
+          <td class="settingSamplesListData" colspan="3">
+            <a class="settingSamplesItemLink anker" href="#Azure-model" title="詳細">
+              <dl class="settingSamplesItem">
+                <dt class="settingSamplesItemTitle"><i class="fas fa-dice-d6"></i> Azureモデル</dt>
+                <dd class="settingSamplesItemText">Azure Portalでの仮想マシン自動構築運用を想定したプラットフォームを提供</dd>
+              </dl>
+            </a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://github.com/exastro-suite/it-automation-settingsamples-azure/releases" title="ダウンロードページへ(GitHub)" target="_blank"><i class="fas fa-external-link-alt"></i> ダウンロード</a>
+          </td>
+          <td class="settingSamplesListData fit">
+            <a class="settingSamplesKymLink" href="https://hub.docker.com/r/exastro/it-automation-settingsamples-azure" title="DockerHubページへ" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ</a>
+          </td>
+        </tr>   
 
       </tbody>
     </table>
@@ -366,6 +384,32 @@ Setting samples</h1>
         <h4>導入手順</h4>
         <div class="viewDocument only" data-document="setting_samples_hyperv_install_ja"></div>
         <p><a href="https://exastro-suite.github.io/SettingSamples-ITA-HyperV/setting-samples-hyperv-install_ja.pdf" class="download" download="Hyper-Vモデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Azure-model">
+  <div class="sectionInner">
+    <h2>Azureモデル</h2>
+    <p>Azureモデルは、Azure Portalを使った煩雑な仮想マシン作成作業を自動化するモデルです。
+    <br>仮想マシンの作成だけでなく、仮想ネットワーク設定、サブネット設定、ネットワークセキュリティグループ（NSG）作成を自動化します。
+    <br>本モデルを使うことで、セキュリティ設定やネットワーク設定を統一したVMグループを簡単に作成することが出来ます。
+    <p class="image"><span class="loupe touch"><span class="exImage"><img src="./asset/img/settings_samples_azure_image01.png" alt="Azure-modelイメージ図"></span></span></p>
+    
+    <p><a href="https://github.com/exastro-suite/it-automation-settingsamples-azure/releases" class="githubLink" target="_blank" style="margin-right:16px"><i class="fas fa-external-link-alt"></i> ダウンロードページへ<i class="note">(GitHub)</i></a>
+    <a href="https://hub.docker.com/r/exastro/it-automation-settingsamples-Azure" class="githubLink" target="_blank"><i class="fas fa-external-link-alt"></i> コンテナイメージ利用方法へ<i class="note">(DockerHub)</i></a></p>
+
+    <div class="floatContents">
+      <div class="halfContent">
+        <h4>概要</h4>
+        <div class="viewDocument only" data-document="setting_samples_azure_overview_ja"></div>
+        <p><a href="https://exastro-suite.github.io/it-automation-settingsamples-azure/setting-samples-azure-overview_ja.pdf" class="download" download="Azureモデル概要" target="_blank"><i class="fas fa-file-pdf"></i> 概要をダウンロード<i class="note">(PDF)</i></a></p>
+      </div>
+      <div class="halfContent">
+        <h4>導入手順</h4>
+        <div class="viewDocument only" data-document="setting_samples_azure_install_ja"></div>
+        <p><a href="https://exastro-suite.github.io/it-automation-settingsamples-azure/setting-samples-azure-install_ja.pdf" class="download" download="Azureモデル導入手順" target="_blank"><i class="fas fa-file-pdf"></i> 導入手順をダウンロード<i class="note">(PDF)</i></a></p>
       </div>
     </div>
   </div>
