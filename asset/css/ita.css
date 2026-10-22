@@ -34,3 +34,55 @@ background-image: url("../img/header_ita_home_monitor.png");
   }
   
 }
+/* Important notice */
+#articleBody .importantNotice {
+padding: 32px 16px 0;
+}
+#articleBody .importantNotice-Link {
+display: flex;
+align-items: center;
+max-width: 980px;
+margin: 0 auto; padding: 16px 24px;
+background-color: #FFF0F0;
+border: 2px solid #D7000F;
+border-radius: 4px;
+box-shadow: 0 0 16px rgba(0,0,0,.1);
+font-weight: 700;
+color: #D7000F;
+text-decoration: none;
+}
+#articleBody .importantNotice-Link:hover {
+background-color: #FFE0E0;
+}
+#articleBody .importantNotice-Label {
+flex-shrink: 0;
+margin-right: 16px; padding: 4px 12px;
+background-color: #D7000F;
+border-radius: 4px;
+font-size: 14px;
+color: #FFF;
+}
+#articleBody .importantNotice-Text {
+flex-grow: 1;
+line-height: 1.5;
+font-size: 17px;
+text-decoration: underline;
+}
+#articleBody .importantNotice-Arrow {
+flex-shrink: 0;
+margin-left: 16px;
+font-size: 20px;
+}
+@media screen and ( max-width: 640px ){
+  #articleBody .importantNotice-Link {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+  #articleBody .importantNotice-Text {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+  #articleBody .importantNotice-Arrow {
+    display: none;
+  }
+}
