@@ -73,6 +73,20 @@ flex-shrink: 0;
 margin-left: 16px;
 font-size: 20px;
 }
+#articleBody .importantNotice-Info {
+padding-top: 16px;
+}
+#articleBody .importantNotice-Info .importantNotice-Link {
+background-color: #EEF5FC;
+border-color: #0063B1;
+color: #0063B1;
+}
+#articleBody .importantNotice-Info .importantNotice-Link:hover {
+background-color: #DCEBF9;
+}
+#articleBody .importantNotice-Info .importantNotice-Label {
+background-color: #0063B1;
+}
 @media screen and ( max-width: 640px ){
   #articleBody .importantNotice-Link {
     flex-wrap: wrap;
